@@ -13,12 +13,32 @@
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
   }
-  /* .router-link-active,
+  .router-link-active,
   .router-link-exact-active {
     @apply border-b-[2px] border-b-white;
-  } */
+  }
 
   p {
     font-size: 18px;
   }
+}
+@media screen and (max-width: 768px) {
+  [data-aos] {
+    pointer-events: auto !important;
+  }
+
+  html:not(.no-js) [data-aos^='fade'][data-aos^='fade'] {
+    opacity: 1 !important;
+  }
+
+  html:not(.no-js) [data-aos='fade-up'] {
+    transform: none !important;
+  }
+  html:not(.no-js) [data-aos='fade-left'] {
+    transform: none !important;
+  }
+  html:not(.no-js) [data-aos='fade-right'] {
+    transform: none !important;
+  }
+}
 }
