@@ -21,7 +21,8 @@ const props = defineProps({
                     <!-- Content -->
                     <div class="flex flex-1 flex-col items-center lg:items-start" :data-aos="blok.animation"
                         data-aos-duration="2000" data-aos-offset="250">
-                        <h1 class="text-3xl text-center text-bookmark-blue">{{ blok.title }}</h1>
+                        <h2 class="text-3xl text-center">{{ blok.title }}</h2>
+                        <p class="text-justify my-4 lg:text-left">{{ blok.subtitle }}</p>
                         <p class="text-justify my-4 lg:text-left">
                             {{ blok.text }}
                         </p>

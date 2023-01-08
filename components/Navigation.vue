@@ -14,21 +14,11 @@
           </NuxtLink>
         </li>
 
-        <li>
-          <NuxtLink
-            class=" pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent hover:border-b-white"
-            to="/umgebung">Umgebung</NuxtLink>
-        </li>
 
-        <li>
-          <NuxtLink
-            class="mx-2 pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent hover:border-b-white"
-            to="/highlights">Highlights</NuxtLink>
-        </li>
 
         <li class="group relative dropdown ">
           <NuxtLink class="pb-1 flex items-center mt-2 transition duration-500 ease-in-outborder-transparent"
-            to="/more">
+            to="/more/mietobjekte">
             Weitere Angebote
             <ChevronDownIcon class="h-4 w-4 mt-1"></ChevronDownIcon>
           </NuxtLink>
@@ -54,10 +44,26 @@
             <li class="pb-1">
               <NuxtLink class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
                 to="/more/back2basic">
-                Events</NuxtLink>
+                Back 2 Basic Wiese</NuxtLink>
             </li>
 
           </ul>
+        </li>
+        <li>
+          <NuxtLink
+            class=" pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent hover:border-b-white"
+            to="/umgebung">Umgebung</NuxtLink>
+        </li>
+
+        <li>
+          <NuxtLink
+            class="mx-2 pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent hover:border-b-white"
+            to="/highlights">Highlights</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink
+            class="mx-2 pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent hover:border-b-white"
+            to="/termine">Termine</NuxtLink>
         </li>
         <li>
           <NuxtLink
@@ -83,22 +89,61 @@
       leave-to-class="translate-x-[-250px]" enter-active-class="transition-all ease-out duration-500"
       leave-active-class="transition-all ease-out duration-500">
       <ul v-show="mobileNav"
-        class="dropdown-nav flex flex-col w-full max-w-[250px] bg-white top-0 left-0 h-auto z-50 absolute pt-5 pl-5">
-        <li class="ml-0 p-4" @click="toggleMobileNav">
-          <NuxtLink class="text-black" to="/">Home</NuxtLink>
-        </li>
-        <li class="ml-0 p-4" @click="toggleMobileNav">
-          <NuxtLink class="text-black" to="/camping">Unser Angebot</NuxtLink>
-        </li>
-        <li class="ml-0 p-4" @click="toggleMobileNav">
-          <NuxtLink class="text-black" to="/umgebung">Umgebung</NuxtLink>
+        class="flex gap-3 flex-col w-full max-w-[250px] bg-primary-green top-0 left-0 h-auto z-50 absolute p-5">
+        <li class="" @click="toggleMobileNav">
+          <NuxtLink class="" to="/">Home</NuxtLink>
         </li>
 
-        <li class="ml-0 p-4" @click="toggleMobileNav">
-          <NuxtLink class="text-black" to="/highlights">Highlights</NuxtLink>
+        <li class="" @click="toggleMobileNav">
+          <NuxtLink class="" to="/camping">Camping</NuxtLink>
         </li>
-        <li class="ml-0 p-4" @click="toggleMobileNav">
-          <NuxtLink class="text-black" to="/kontakt">Kontakt</NuxtLink>
+        <li class="group relative dropdown  ">
+          <div class="pb-1 flex items-center mt-2 transition duration-500 ease-in-outborder-transparent">
+            Weitere Angebote
+            <ChevronDownIcon class="h-4 w-4 mt-1"></ChevronDownIcon>
+          </div>
+
+          <ul
+            class="w-[200px] p-3 shadow-sm group-hover:block absolute  bg-secondary-green hidden transition duration-700 text-lg rounded-sm mt-[-5px] ">
+            <li class=" " @click="toggleMobileNav">
+              <NuxtLink class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
+                to="/more/mietobjekte">
+                Mietobjekte
+              </NuxtLink>
+            </li>
+            <li class="pb-1 " @click="toggleMobileNav">
+              <NuxtLink class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
+                to="/more/dauercamping">
+                Dauercamping</NuxtLink>
+            </li>
+            <li class="pb-1 " @click="toggleMobileNav">
+              <NuxtLink class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
+                to="/more/events">
+                Events</NuxtLink>
+            </li>
+            <li class="pb-1 " @click="toggleMobileNav">
+              <NuxtLink class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
+                to="/more/back2basic">
+                Back 2 Basic Wiese</NuxtLink>
+            </li>
+
+          </ul>
+        </li>
+        <li class="" @click="toggleMobileNav">
+          <NuxtLink class="" to="/umgebung">Umgebung</NuxtLink>
+        </li>
+
+        <li class="" @click="toggleMobileNav">
+          <NuxtLink class="" to="/highlights">Highlights</NuxtLink>
+        </li>
+        <li class="" @click="toggleMobileNav">
+          <NuxtLink class="" to="/kontakt">Termine</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink
+            class=" pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent bg-secondary-green p-1 rounded-md"
+            to="https://wildbach-camping.camping.care/" target="_blank">
+            Jetzt buchen</NuxtLink>
         </li>
       </ul>
     </transition>
