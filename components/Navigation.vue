@@ -7,7 +7,7 @@
           <img class="w-60" src="~/assets/images/WBC_white.svg" alt="Wildbach-Logo" />
         </NuxtLink>
       </div>
-      <ul v-show="!mobile" class="navigation flex justify-end items-center w-full text-2xl gap-x-3 text-white">
+      <ul v-show="!mobile" class="navigation flex justify-end items-center w-full gap-2 lg:gap-x-4 text-2xl text-white">
         <li class="">
           <NuxtLink class="border-b-[2px] pb-1 border-b-transparent transition duration-500 hover:border-b-white"
             to="/camping">Camping
@@ -51,23 +51,23 @@
         </li>
         <li>
           <NuxtLink
-            class=" pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent hover:border-b-white"
+            class="pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent hover:border-b-white"
             to="/umgebung">Umgebung</NuxtLink>
         </li>
 
         <li>
           <NuxtLink
-            class="mx-2 pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent hover:border-b-white"
+            class="pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent hover:border-b-white"
             to="/highlights">Highlights</NuxtLink>
         </li>
         <li>
           <NuxtLink
-            class="mx-2 pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent hover:border-b-white"
+            class="pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent hover:border-b-white"
             to="/termine">Termine</NuxtLink>
         </li>
         <li>
           <NuxtLink
-            class="mx-2 pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent bg-secondary-green p-1 rounded-md"
+            class="pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent bg-secondary-green p-1 rounded-md"
             to="https://wildbach-camping.camping.care/" target="_blank">
             Jetzt buchen</NuxtLink>
         </li>
