@@ -17,11 +17,10 @@
 
 
         <li class="group relative dropdown ">
-          <NuxtLink class="pb-1 flex items-center mt-2 transition duration-500 ease-in-outborder-transparent"
-            to="/more/mietobjekte">
+          <div class="pb-1 flex items-center mt-2 transition duration-500 ease-in-outborder-transparent">
             Weitere Angebote
             <ChevronDownIcon class="h-4 w-4 mt-1"></ChevronDownIcon>
-          </NuxtLink>
+          </div>
 
           <ul
             class="w-[200px] p-3 shadow-sm group-hover:block absolute  bg-secondary-green hidden transition duration-700 text-lg rounded-sm mt-[-5px] ">
