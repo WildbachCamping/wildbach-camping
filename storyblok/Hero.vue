@@ -9,24 +9,25 @@ const props = defineProps({
 </script>
 
 <template>
-  <div>
-    <div class="min-h-full min-w-screen flex flex-col items-center relative mt-[-80px]">
-      <div
-        class="absolute bg-primary-white/[.7] p-3 md:p-10 mt-10 md:bottom-[60%] text-secondary-green font-bold tracking-widest">
-        <div class="flex flex-col items-center">
-          <h1 class="pb-5 font-bold text-3xl md:text-5xl">{{ blok.title }}</h1>
-          <div class="text-sm md:text-xl">{{ blok.subtitle }}</div>
-        </div>
+  <div class="flex flex-col items-center">
+    <div
+      class="absolute bg-primary-white/[.7] p-10 mt-10 md:bottom-[50%] text-secondary-green font-bold tracking-widest z-10">
+      <div class="flex flex-col items-center text-center">
+        <h1 class="pb-5 font-bold text-4xl md:text-5xl">{{ blok.title }}</h1>
+        <div class="text-xl">{{ blok.subtitle }}</div>
+      </div>
 
-      </div>
-      <img class="max-h-[90vh] w-full" :src="blok.image.filename" />
-      <div
-        class="animate-bounce absolute shadow-lg mx-auto bottom-10 h-10 w-10 rounded-full bg-primary-green flex items-center justify-center">
-        <a href="#welcome">
-          <ArrowDownIcon class="h-8 w-8" />
-        </a>
-      </div>
     </div>
+    <div
+      class="animate-bounce absolute shadow-lg min-w-screen mx-auto bottom-10 h-10 w-10 rounded-full bg-primary-green flex items-center justify-center z-10">
+      <a href="#welcome">
+        <ArrowDownIcon class="h-8 w-8" />
+      </a>
+    </div>
+  </div>
+  <div class="relative max-h-[90vh] mt-[-80px]  bg-no-repeat bg-cover bg-bottom" style="background-position: 50%; background-image: url('./hero.jpeg');
+          height: 100vh;">
 
   </div>
+
 </template>

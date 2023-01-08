@@ -51,6 +51,11 @@
                 to="/more/events">
                 Events</NuxtLink>
             </li>
+            <li class="pb-1">
+              <NuxtLink class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
+                to="/more/back2basic">
+                Events</NuxtLink>
+            </li>
 
           </ul>
         </li>
