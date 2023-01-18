@@ -1,9 +1,13 @@
 <template>
-    <div>
+    <main class="">
 
+        <Head>
+            <Title>Camping</Title>
+            <Meta name="description" />
+        </Head>
         <StoryblokComponent v-if="story" :blok="story.content" />
 
-    </div>
+    </main>
 </template>
 
 

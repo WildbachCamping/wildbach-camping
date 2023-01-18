@@ -1,6 +1,10 @@
 <template>
     <div>
 
+        <Head>
+            <Title>Dauercamping</Title>
+            <Meta name="description" />
+        </Head>
         <StoryblokComponent v-if="story" :blok="story.content" />
 
     </div>

@@ -2,7 +2,7 @@
     <div>
 
         <Head>
-            <Title>Datenschutz</Title>
+            <Title>Impressumg</Title>
             <Meta name="description" />
         </Head>
     </div>

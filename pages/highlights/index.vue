@@ -1,5 +1,10 @@
 <template>
     <div>
+
+        <Head>
+            <Title>Highlights</Title>
+            <Meta name="description" />
+        </Head>
         <section class="container flex flex-col text-justify">
             <div class="text-justify">
                 <h1 class="text-5xl font-bold mb-4">Highlights</h1>

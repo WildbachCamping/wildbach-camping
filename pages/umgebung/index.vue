@@ -1,4 +1,9 @@
 <template>
+
+    <Head>
+        <Title>Umgebung</Title>
+        <Meta name="description" />
+    </Head>
     <section class="container px-5 md:px-10 flex flex-col items-center ">
         <div class="text-justify">
             <h1 class="text-5xl mb-4">Umgebung</h1>

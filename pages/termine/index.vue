@@ -1,6 +1,10 @@
 <template>
-    <div class="min-h-screen">
+    <div>
 
+        <Head>
+            <Title>Termine</Title>
+            <Meta name="description" />
+        </Head>
     </div>
 </template>
 
