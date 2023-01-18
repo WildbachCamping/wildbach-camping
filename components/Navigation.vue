@@ -1,7 +1,7 @@
 <template>
   <header :class="{ 'scrolled-nav': scrolledNav }"
-    class="sticky items-center w-full z-40 shadow-bottom bg-primary-green text-white">
-    <nav class="flex items-center justify-between md:py-4 py-2 container">
+    class="sticky items-center w-full z-40 shadow-bottom bg-primary-green text-white flex justify-center">
+    <nav class="flex items-center justify-between md:py-4 py-2 w-[95%]">
       <div class="branding pl-4 lg:pl-0">
         <NuxtLink to="/">
           <img class="w-60" src="~/assets/images/WBC_white.svg" alt="Wildbach-Logo" />
@@ -17,7 +17,7 @@
 
 
         <li class="group relative dropdown ">
-          <div class="pb-1 flex items-center mt-2 transition duration-500 ease-in-outborder-transparent">
+          <div class="pb-1 flex items-center mt-2 transition duration-500 ease-in-outborder-transparent cursor-pointer">
             Weitere Angebote
             <ChevronDownIcon class="h-4 w-4 mt-1"></ChevronDownIcon>
           </div>

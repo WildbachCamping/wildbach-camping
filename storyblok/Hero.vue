@@ -11,7 +11,7 @@ const props = defineProps({
 <template>
   <div class="flex flex-col items-center">
     <div
-      class="absolute bg-primary-white/[.7] p-10 mt-10 md:bottom-[50%] text-secondary-green font-bold tracking-widest z-10"
+      class="absolute bg-primary-white/[.7] p-20 mt-10 md:bottom-[50%] text-secondary-green font-bold tracking-widest z-10"
       data-aos="fade-up" data-aos-duration="2500" data-aos-delay="500">
       <div class="flex flex-col items-center text-center">
         <h1 class="pb-5 font-bold text-4xl md:text-5xl">{{ blok.title }}</h1>

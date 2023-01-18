@@ -1,5 +1,5 @@
 <template>
-    <main role="main">
+    <main role="main" class="min-h-screen">
 
         <StoryblokComponent v-if="story" :blok="story.content" />
 
