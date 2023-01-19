@@ -6,7 +6,8 @@
         }" :spaceBetween="10" :navigation="true" :thumbs="{ swiper: thumbsSwiper }" :modules="modules"
             class="mySwiper2">
             <swiper-slide><img src="https://swiperjs.com/demos/images/nature-1.jpg" /></swiper-slide><swiper-slide><img
-                    src="https://swiperjs.com/demos/images/nature-2.jpg" /></swiper-slide><swiper-slide><img
+                    src="https://swiperjs.com/demos/images/nature-2.jpg" />Guten Tag hier könnte ihre Werbung
+                stehen</swiper-slide><swiper-slide><img
                     src="https://swiperjs.com/demos/images/nature-3.jpg" /></swiper-slide><swiper-slide><img
                     src="https://swiperjs.com/demos/images/nature-4.jpg" /></swiper-slide><swiper-slide><img
                     src="https://swiperjs.com/demos/images/nature-5.jpg" /></swiper-slide><swiper-slide><img
@@ -54,6 +55,7 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    cursor: pointer;
 }
 </style>
 
