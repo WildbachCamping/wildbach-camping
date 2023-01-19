@@ -136,7 +136,7 @@
           <NuxtLink class="" to="/highlights">Highlights</NuxtLink>
         </li>
         <li class="" @click="toggleMobileNav">
-          <NuxtLink class="" to="/kontakt">Termine</NuxtLink>
+          <NuxtLink class="" to="/termine">Termine</NuxtLink>
         </li>
         <li>
           <NuxtLink
