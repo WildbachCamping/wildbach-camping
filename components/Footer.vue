@@ -59,6 +59,7 @@ const cookie = useCookie();
 
 
 const modalActive = ref(false)
+// uncomment when going live
 // const modalActive = ref(allowCookies.value === undefined ? true : false)
 
 const toggleModal = () => {

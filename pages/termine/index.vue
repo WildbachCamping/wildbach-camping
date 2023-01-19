@@ -1,13 +1,13 @@
 <template>
-    <div>
+    <div class="w-full">
 
         <Head>
             <Title>Termine</Title>
             <Meta name="description" />
         </Head>
-        <div class="container">
 
-            <swiper class="h-[80vh]" :slides-per-view="1" :space-between="50" @swiper="onSwiper"
+
+        <!-- <swiper class="h-[80vh]" :slides-per-view="1" :space-between="50" @swiper="onSwiper"
                 @slideChange="onSlideChange" :navigation="true" :pagination="{ type: 'fraction' }" :modules="modules">
                 <swiper-slide class="h-full"><img src="@/assets/images/umgebung/umgebung-1.jpeg" alt=""
                         class="col-span-4 row-span-2 w-full h-full object-cover rounded-sm shadow-md">
@@ -18,8 +18,10 @@
                 <swiper-slide><img src="@/assets/images/umgebung/umgebung-3.jpeg" alt=""
                         class="col-span-3 row-span-2 w-full h-full object-cover rounded-sm shadow-md"></swiper-slide>
             </swiper>
-        </div>
+        </div> -->
         <!-- <button @click="swipe.slideNext()">Slide to the next slide</button> -->
+        <Gallery />
+
     </div>
 </template>
 
@@ -30,14 +32,16 @@ import { Navigation, Pagination } from 'swiper';
 // Import Swiper styles
 import 'swiper/css';
 import "swiper/css/navigation";
-
-const onSwiper = (swiper) => {
-    console.log(swiper);
-};
-const onSlideChange = () => {
-    console.log('slide change');
-};
+import "swiper/css/pagination";
+// const modules = ref([Navigation, Pagination])
+// const onSwiper = (swiper) => {
+//     console.log(swiper);
+// };
+// const onSlideChange = () => {
+//     console.log('slide change');
+// };
 // const swipe = useSwiper();
-const modules = ref([Navigation, Pagination])
+
+
 
 </script>
