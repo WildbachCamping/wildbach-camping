@@ -20,11 +20,18 @@
   h1,
   h2,
   h3 {
-    font-weight: 700;
+    @apply font-bold;
+  }
+  h1 {
+    @apply text-3xl sm:text-4xl md:text-5xl;
   }
 
+  h2,
+  h3 {
+    @apply text-2xl lg:text-3xl;
+  }
   p {
-    font-size: 18px;
+    @apply text-base sm:text-lg;
   }
 }
 @media screen and (max-width: 768px) {

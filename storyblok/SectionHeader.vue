@@ -9,15 +9,15 @@ const props = defineProps({
 
 <template>
 
-    <section class="container  pt-10 flex ">
+    <section class="container  mt-32 flex ">
 
-        <div class="">
+        <div class="w-full text-center">
             <h2 class="text-3xl mb-4">{{ blok.title }}</h2>
 
         </div>
         <div class="text-center pt-6" data-aos="fade-right" data-aos-delay="700" data-aos-offset="500"
             data-aos-duration="2000">
-            <h1 class="text-5xl mb-4">{{ blok.subtitle }}</h1>
+            <h2 class="text-5xl mb-4">{{ blok.subtitle }}</h2>
 
         </div>
     </section>
