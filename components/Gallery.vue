@@ -4,7 +4,7 @@
             '--swiper-navigation-color': '#fff',
             '--swiper-pagination-color': '#fff',
         }" :spaceBetween="10" :navigation="true" :thumbs="{ swiper: thumbsSwiper }" :modules="modules"
-            class="mySwiper2">
+            class="mySwiper2 ">
             <swiper-slide><img src="https://swiperjs.com/demos/images/nature-1.jpg" /></swiper-slide><swiper-slide><img
                     src="https://swiperjs.com/demos/images/nature-2.jpg" />Guten Tag hier könnte ihre Werbung
                 stehen</swiper-slide><swiper-slide><img
@@ -56,6 +56,7 @@ img {
     height: 100%;
     object-fit: cover;
     cursor: pointer;
+    border-radius: 0.25rem;
 }
 </style>
 

@@ -17,6 +17,11 @@
   .router-link-exact-active {
     @apply border-b-[2px] border-b-white;
   }
+  h1,
+  h2,
+  h3 {
+    font-weight: 700;
+  }
 
   p {
     font-size: 18px;
