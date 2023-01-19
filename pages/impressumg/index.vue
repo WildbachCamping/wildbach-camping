@@ -2,7 +2,7 @@
     <div>
 
         <Head>
-            <Title>Impressumg</Title>
+            <Title>Impressum</Title>
             <Meta name="description" />
         </Head>
     </div>
