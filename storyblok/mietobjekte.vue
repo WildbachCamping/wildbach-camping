@@ -9,7 +9,7 @@ const props = defineProps({
 
 <template>
     <div class="container mt-10">
-        <h2 class="text-3xl">{{ blok.title }}</h2>
+        <h2 class="">{{ blok.title }}</h2>
         <div class="grid  grid-cols-1 md:grid-cols-2 gap-4">
             <div>
                 <img class="object-cover w-full max-h-full rounded-md shadow-md" :src="blok.image1.filename" alt="">

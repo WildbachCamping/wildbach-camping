@@ -20,7 +20,7 @@
   h1,
   h2,
   h3 {
-    @apply font-bold;
+    @apply font-bold text-primary-grey;
   }
   h1 {
     @apply text-3xl sm:text-4xl md:text-5xl;
