@@ -38,7 +38,7 @@
 
     </section>
 
-    <section class="container flex flex-col items-center">
+    <section class="container flex flex-col items-center mt-20">
         <div class="grid grid-cols-12 grid-row-11 gap-4">
             <img src="@/assets/images/umgebung/umgebung-1.jpeg" alt=""
                 class="col-span-4 row-span-2 w-full h-full object-cover rounded-sm shadow-md">

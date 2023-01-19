@@ -8,7 +8,7 @@
         <div class="container">
 
             <swiper class="h-[80vh]" :slides-per-view="1" :space-between="50" @swiper="onSwiper"
-                @slideChange="onSlideChange">
+                @slideChange="onSlideChange" :navigation="true" :pagination="{ type: 'fraction' }" :modules="modules">
                 <swiper-slide class="h-full"><img src="@/assets/images/umgebung/umgebung-1.jpeg" alt=""
                         class="col-span-4 row-span-2 w-full h-full object-cover rounded-sm shadow-md">
                 </swiper-slide>
@@ -24,10 +24,12 @@
 </template>
 
 <script setup>
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/vue';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Navigation, Pagination } from 'swiper';
 
 // Import Swiper styles
 import 'swiper/css';
+import "swiper/css/navigation";
 
 const onSwiper = (swiper) => {
     console.log(swiper);
@@ -36,5 +38,6 @@ const onSlideChange = () => {
     console.log('slide change');
 };
 // const swipe = useSwiper();
+const modules = ref([Navigation, Pagination])
 
 </script>
