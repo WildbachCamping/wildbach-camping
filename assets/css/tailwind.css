@@ -15,12 +15,12 @@
   }
   .router-link-active,
   .router-link-exact-active {
-    @apply border-b-[2px] border-b-white;
+    @apply border-b-[2px] border-b-secondary-green;
   }
   h1,
   h2,
   h3 {
-    @apply font-bold text-primary-grey;
+    @apply font-normal md:font-bold text-primary-grey;
   }
   h1 {
     @apply text-3xl sm:text-4xl md:text-5xl;
