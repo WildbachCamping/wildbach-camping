@@ -4,7 +4,7 @@
     <nav class="flex items-center justify-between md:py-4 py-2 w-[90%]">
       <div class="branding pl-4 lg:pl-0">
         <NuxtLink to="/">
-          <img class="w-60" src="~/assets/images/WBC_white.svg" alt="Wildbach-Logo" />
+          <img class="w-44 md:w-60" src="~/assets/images/WBC_white.svg" alt="Wildbach-Logo" />
         </NuxtLink>
       </div>
       <ul v-show="!mobile" class="navigation flex justify-end items-center w-full gap-2 lg:gap-x-6 text-2xl text-white">
@@ -62,7 +62,7 @@
         </li>
         <li>
           <NuxtLink
-            class="pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent bg-secondary-green p-1 rounded-md"
+            class="pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent bg-primary-white text-secondary-green font-bold p-1 px-2 rounded-md"
             to="https://wildbach-camping.camping.care/" target="_blank">
             Jetzt buchen</NuxtLink>
         </li>
@@ -132,7 +132,7 @@
         </li>
         <li>
           <NuxtLink
-            class=" pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent bg-secondary-green p-1 rounded-md"
+            class=" pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent bg-primary-white text-secondary-green font-bold p-1 rounded-md"
             to="https://wildbach-camping.camping.care/" target="_blank">
             Jetzt buchen</NuxtLink>
         </li>

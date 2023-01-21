@@ -7,7 +7,7 @@
         </Head>
         <StoryblokComponent v-if="story" :blok="story.content" />
         <div class="container flex flex-col justify-center gap-6 items-center mt-28">
-            <h2>Möchtest du mehr erfahren?</h2>
+            <h2 class="text-3xl text-center">Möchtest du mehr erfahren?</h2>
             <div class="container flex flex-col lg:flex-row justify-center gap-6 items-center mt-8">
                 <div class="flex flex-col items-center md:pt-12">
                     <h2>Camping</h2>
