@@ -6,7 +6,7 @@
     </Head>
     <section class="container px-5 md:px-10 flex flex-col items-center ">
         <div class="text-justify">
-            <h1 class="text-5xl mb-4">Umgebung</h1>
+            <h1 class="text-4xl md:text-5xl mb-4">Umgebung</h1>
             <p class="text-lg">Wildbach Camping liegt in der Gemeinde Hellenthal, dem Tor zum Nationalpark Eifel. Die
                 Gegend ist ein Paradies für Wanderer, Radfahrer und Naturliebhaber: Unser Platz ist an viele gut
                 ausgezeichnete Trails und Trekkingrouten angebunden – zum Warmwerden empfehlen wir die kleine
@@ -17,7 +17,8 @@
                 großer Greifvogelstation.</p>
         </div>
         <div class="flex flex-col items-center pt-10">
-            <p>Auf der Webseite des Nordeifel Tourismus findet ihr eine gute Übersicht über unsere Region.</p>
+            <p class="text-center">Auf der Webseite des Nordeifel Tourismus findet ihr eine gute Übersicht über unsere
+                Region.</p>
             <NuxtLink class="flex flex-col items-center">
                 <img src="@/assets/images/umgebung/nordeifeltourismus.jpeg" class="h-26 w-24" alt="">
                 <p class="underline underline-offset-2">Hier klicken für mehr Infos</p>
