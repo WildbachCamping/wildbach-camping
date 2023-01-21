@@ -17,7 +17,7 @@
         <span>Adresse:</span>
         <span>Platiß 1</span>
         <span>53940 Hellenthal</span>
-        <span>Germany</span>
+        <span>Deutschland</span>
         <br />
         <p>
           Öffnungszeiten Rezeption:<br />Montag:&nbsp;10 - 12 und 14 - 17
@@ -29,29 +29,26 @@
       </div>
       <div class="text-justify flex-1">
         <h2 class="text-5xl mt-4 md:mt-0 mb-4">Schreibt uns</h2>
-        <div class="text-justify min-w-[350px]">
-          <h2 class="mb-4 text-2xl">Kontaktformular</h2>
-          <form @submit.prevent="sendMessage" name="wildbach" class="grid grid-cols-4 grid-flow-row gap-2">
-            <input v-model="form.senderName" type="text" name="name" placeholder="Name" class="col-span-2" />
-            <input v-model="form.senderEmail" type="email" name="email" placeholder="Email" id="" required
-              class="col-span-2" />
-            <input v-model="form.senderSubject" type="text" name="subject" placeholder="Betreff" class="col-span-2" />
-            <input v-model="form.senderPhone" type="tel" name="phone" placeholder="Phone" class="col-span-2" />
-            <input v-model="form.senderAddress.street" type="text" name="street" placeholder="Straße"
-              class="col-span-2" />
-            <input v-model="form.senderAddress.postcode" type="text" name="postcode" placeholder="PLZ"
-              class="col-span-2" />
-            <input v-model="form.senderAddress.city" type="text" name="city" placeholder="Stadt" class="col-span-2" />
-            <input v-model="form.senderAddress.country" type="text" name="country" placeholder="Land"
-              class="col-span-2" />
-            <textarea v-model="form.senderMessage" name="message" id="" cols="30" rows="8"
-              class="col-span-4"></textarea>
-            <button type="submit"
-              class="bg-gray-800/90 rounded-full w-24 h-8 hover:bg-gray-800/70 duration-300 text-white">
-              Senden
-            </button>
-          </form>
-        </div>
+        <h2 class="mb-4 text-2xl">Kontaktformular</h2>
+        <form @submit.prevent="sendMessage" name="wildbach" class="grid grid-cols-4 grid-flow-row gap-2">
+          <input v-model="form.senderName" type="text" name="name" placeholder="Name" class="col-span-2" />
+          <input v-model="form.senderEmail" type="email" name="email" placeholder="Email" id="" required
+            class="col-span-2" />
+          <input v-model="form.senderSubject" type="text" name="subject" placeholder="Betreff" class="col-span-2" />
+          <input v-model="form.senderPhone" type="tel" name="phone" placeholder="Phone" class="col-span-2" />
+          <input v-model="form.senderAddress.street" type="text" name="street" placeholder="Straße"
+            class="col-span-2" />
+          <input v-model="form.senderAddress.postcode" type="text" name="postcode" placeholder="PLZ"
+            class="col-span-2" />
+          <input v-model="form.senderAddress.city" type="text" name="city" placeholder="Stadt" class="col-span-2" />
+          <input v-model="form.senderAddress.country" type="text" name="country" placeholder="Land"
+            class="col-span-2" />
+          <textarea v-model="form.senderMessage" name="message" id="" cols="30" rows="8" class="col-span-4"></textarea>
+          <button type="submit"
+            class="bg-gray-800/90 rounded-full w-24 h-8 hover:bg-gray-800/70 duration-300 text-white">
+            Senden
+          </button>
+        </form>
       </div>
     </section>
     <section>
