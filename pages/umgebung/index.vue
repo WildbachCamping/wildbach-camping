@@ -23,15 +23,69 @@
                 <p class="underline underline-offset-2">Hier klicken für mehr Infos</p>
             </NuxtLink>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-4 grid-flow-row gap-6 pt-6">
-            <img class="rounded-md shadow-md" src="@/assets/images/umgebung/icon-1.svg" alt="">
-            <img class="rounded-md shadow-md" src="@/assets/images/umgebung/icon-1.svg" alt="">
-            <img class="rounded-md shadow-md" src="@/assets/images/umgebung/icon-1.svg" alt="">
-            <img class="rounded-md shadow-md" src="@/assets/images/umgebung/icon-1.svg" alt="">
-            <img class="rounded-md shadow-md" src="@/assets/images/umgebung/icon-1.svg" alt="">
-            <img class="rounded-md shadow-md" src="@/assets/images/umgebung/icon-1.svg" alt="">
-            <img class="rounded-md shadow-md" src="@/assets/images/umgebung/icon-1.svg" alt="">
-            <img class="rounded-md shadow-md" src="@/assets/images/umgebung/icon-1.svg" alt="">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 grid-flow-row gap-6 pt-6">
+            <NuxtLink to="https://nordeifel-tourismus.de/aktivzeit/natur-erleben/nationalpark-eifel" target="_blank"
+                class="flex flex-col items-center justify-center">
+
+                <img class="rounded-md shadow-md w-48 h-48" src="@/assets/images/umgebung/Nationalpark.svg"
+                    alt="Nationalpark Eifel">
+                <p class="text-base mt-2 text-center">Infos über den <br> Nationalpark Eifel</p>
+            </NuxtLink>
+            <NuxtLink
+                to="https://regio.outdooractive.com/oar-nordeifel-tourismus/de/touren/#area=*&filter=r-fullyTranslatedLangus-,r-onlyOpened-,sb-sortedBy-0&q=hellenthal"
+                target="_blank" class="flex flex-col items-center justify-center">
+
+                <img class="rounded-md shadow-md w-48 h-48" src="@/assets/images/umgebung/Wanderung.svg"
+                    alt="Wanderung">
+                <p class="text-base mt-2 text-center">Tipps für die Planung deiner <br> nächsten Wanderung</p>
+            </NuxtLink>
+            <NuxtLink to="https://nordeifel-tourismus.de/aktivzeit/radfahren" target="_blank"
+                class="flex flex-col items-center justify-center">
+
+                <img class="rounded-md shadow-md w-48 h-48" src="@/assets/images/umgebung/Radfahren.svg"
+                    alt="Infos zum Radfahren">
+                <p class="text-base mt-2 text-center">Allgemeine Infos zum <br> Radfahren in der Eifel</p>
+            </NuxtLink>
+            <NuxtLink to="https://nordeifel-tourismus.de/aktivzeit/radfahren/uebersicht-radrouten" target="_blank"
+                class="flex flex-col items-center justify-center">
+
+                <img class="rounded-md shadow-md w-48 h-48" src="@/assets/images/umgebung/MTB.svg"
+                    alt="Fahrrad und Mountainbike Touren">
+                <p class="text-base mt-2 text-center">Übersicht konkreter Fahrrad <br> und Mountainbike Touren</p>
+            </NuxtLink>
+            <NuxtLink to="https://www.naturpark-eifel.de/de/landschaften/hohes-venn/" target="_blank"
+                class="flex flex-col items-center justify-center">
+
+                <img class="rounded-md shadow-md w-48 h-48" src="@/assets/images/umgebung/HohesVenn.svg"
+                    alt="Naturpark Hohes Venn">
+                <p class="text-base mt-2 text-center">Wissenswertes zum <br> Naturpark "Hohes Venn"</p>
+            </NuxtLink>
+            <NuxtLink to="https://www.monschau.de/de/" target="_blank"
+                class="flex flex-col items-center justify-center">
+
+                <img class="rounded-md shadow-md w-48 h-48" src="@/assets/images/umgebung/Monschau.svg"
+                    alt="Altstadt Monschau">
+                <p class="text-base mt-2 text-center">Infos für Kulturbegeisterte zur <br> historischen Altstadt
+                    Monschau</p>
+            </NuxtLink>
+            <NuxtLink
+                to="https://nordeifel-tourismus.de/familienzeit/wildparks/greifvogelstation-wildfreigehege-hellenthal"
+                target="_blank" class="flex flex-col items-center justify-center">
+
+                <img class="rounded-md shadow-md w-48 h-48" src="@/assets/images/umgebung/Wildgehege.svg"
+                    alt="Wildfreigehege Hellentahl">
+                <p class="text-base mt-2 text-center">Das Richtige für Tierliebhaber - <br> das Hellenthaler
+                    Wildfreigehege
+                </p>
+            </NuxtLink>
+            <NuxtLink to="https://nordeifel-tourismus.de/familienzeit/eifel-guides" target="_blank"
+                class="flex flex-col items-center justify-center">
+
+                <img class="rounded-md shadow-md w-48 h-48" src="@/assets/images/umgebung/Touren.svg"
+                    alt="Individuelle Touren">
+                <p class="text-base mt-2 text-center">Individuelle Touren <br> durch GastführerInnen</p>
+            </NuxtLink>
+
 
 
         </div>
@@ -39,7 +93,7 @@
     </section>
 
     <section class="container flex flex-col items-center mt-20">
-        <div class="grid grid-cols-12 grid-row-11 gap-4">
+        <div class="grid grid-cols-12 grid-row-11 gap-1 sm:gap-2 md:gap-3 ld:gap-4">
             <img src="@/assets/images/umgebung/umgebung-1.jpeg" alt=""
                 class="col-span-4 row-span-2 w-full h-full object-cover rounded-sm shadow-md">
             <img src="@/assets/images/umgebung/umgebung-2.jpeg" alt=""

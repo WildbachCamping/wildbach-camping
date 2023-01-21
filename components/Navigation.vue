@@ -1,13 +1,13 @@
 <template>
   <header :class="{ 'scrolled-nav': scrolledNav }"
     class="sticky items-center w-full z-40 shadow-bottom bg-primary-green text-white flex justify-center">
-    <nav class="flex items-center justify-between md:py-4 py-2 w-[95%]">
+    <nav class="flex items-center justify-between md:py-4 py-2 w-[90%]">
       <div class="branding pl-4 lg:pl-0">
         <NuxtLink to="/">
           <img class="w-60" src="~/assets/images/WBC_white.svg" alt="Wildbach-Logo" />
         </NuxtLink>
       </div>
-      <ul v-show="!mobile" class="navigation flex justify-end items-center w-full gap-2 lg:gap-x-4 text-2xl text-white">
+      <ul v-show="!mobile" class="navigation flex justify-end items-center w-full gap-2 lg:gap-x-6 text-2xl text-white">
         <li class="">
           <NuxtLink class="border-b-[2px] pb-1 border-b-transparent transition duration-500 hover:border-b-white"
             to="/camping">Camping
@@ -54,11 +54,7 @@
             to="/umgebung">Umgebung</NuxtLink>
         </li>
 
-        <li>
-          <NuxtLink
-            class="pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent hover:border-b-white"
-            to="/highlights">Highlights</NuxtLink>
-        </li>
+
         <li>
           <NuxtLink
             class="pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent hover:border-b-white"
@@ -130,10 +126,6 @@
         </li>
         <li class="" @click="toggleMobileNav">
           <NuxtLink class="" to="/umgebung">Umgebung</NuxtLink>
-        </li>
-
-        <li class="" @click="toggleMobileNav">
-          <NuxtLink class="" to="/highlights">Highlights</NuxtLink>
         </li>
         <li class="" @click="toggleMobileNav">
           <NuxtLink class="" to="/termine">Termine</NuxtLink>
