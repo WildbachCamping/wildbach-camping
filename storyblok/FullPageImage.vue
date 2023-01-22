@@ -9,7 +9,7 @@ const props = defineProps({
 
 <template>
 
-    <section class="container  pt-10 md:pt-32 flex flex-col items-center">
+    <section class="container  mt-32 flex flex-col items-center">
 
 
         <h2 class="text-4xl md:text-5xl mb-4 md:mb-10">{{ blok.title }}</h2>

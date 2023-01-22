@@ -10,8 +10,6 @@
         </section>
         <StoryblokComponent v-if="story" :blok="story.content" />
 
-        <Gallery />
-
     </div>
 </template>
 

@@ -9,13 +9,13 @@ const props = defineProps({
 
 <template>
     <section class="container">
-
+        <h2 v-if="blok.header" class="mt-20">{{ blok.header }}</h2>
         <table class="table border-separate w-full">
             <thead>
                 <tr class="">
                     <th class="header" v-for="th in blok.preise.thead">
                         {{
-                                th.value
+                            th.value
                         }}
                     </th>
                 </tr>
