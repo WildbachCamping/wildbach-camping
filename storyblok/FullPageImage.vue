@@ -9,18 +9,18 @@ const props = defineProps({
 
 <template>
 
-    <section class="container min-h-[60vh] pt-10 flex flex-col justify-center items-center">
-
-        <div class="text-center">
-            <h2 class="text-5xl mb-4">{{}}</h2>
-
-            <picture>
-                <img :src="blok.image[0]?.filename" alt="">
-            </picture>
+    <section class="container  pt-10 md:pt-32 flex flex-col items-center">
 
 
+        <h2 class="text-4xl md:text-5xl mb-4 md:mb-10">{{ blok.title }}</h2>
 
-        </div>
+
+        <img :src="blok.image[0]?.filename" alt="" class="shadow-md">
+
+
+
+
+
     </section>
 
 

@@ -18,12 +18,12 @@
                         <li class="cursor-pointer">
                             <NuxtLink
                                 class="transition-all duration-500 ease border-b-[2px] border-transparent hover:border-b-white"
-                                to="Umgebung">Umgebung</NuxtLink>
+                                to="/umgebung">Umgebung</NuxtLink>
                         </li>
                         <li class="cursor-pointer">
                             <NuxtLink
                                 class="transition-all duration-500 ease border-b-[2px] border-transparent hover:border-b-white"
-                                to="Termine">Termine</NuxtLink>
+                                to="/termine">Termine</NuxtLink>
                         </li>
                         <li class="cursor-pointer">
                             <NuxtLink
