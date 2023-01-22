@@ -93,10 +93,11 @@
           <NuxtLink class="" to="/camping">Camping</NuxtLink>
         </li>
         <li class="group relative dropdown  ">
-          <div class="pb-1 flex items-center mt-2 transition duration-500 ease-in-outborder-transparent cursor-pointer">
+          <NuxtLink
+            class="pb-1 flex items-center mt-2 transition duration-500 ease-in-outborder-transparent cursor-pointer">
             Weitere Angebote
             <ChevronDownIcon class="h-4 w-4 mt-1"></ChevronDownIcon>
-          </div>
+          </NuxtLink>
 
           <ul
             class="w-[200px] p-3 shadow-sm group-hover:block absolute  bg-secondary-green hidden transition duration-700 text-lg rounded-sm mt-[-5px] ">
