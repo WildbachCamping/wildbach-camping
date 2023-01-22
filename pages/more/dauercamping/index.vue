@@ -21,7 +21,7 @@
                 <img src="@/assets/images/dauercamping/dauercamping-3.jpeg" alt=""
                     class="col-span-6 row-span-2 w-full h-full object-cover rounded-sm shadow-md">
                 <img src="@/assets/images/dauercamping/dauercamping-4.jpeg" alt=""
-                    class="col-span-6 row-span-1 w-full h-full  object-cover rounded-sm shadow-md">
+                    class="col-span-6 row-span-2 w-full h-full  object-cover rounded-sm shadow-md">
 
             </div>
         </section>
