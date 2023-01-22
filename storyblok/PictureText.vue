@@ -9,7 +9,7 @@ const props = defineProps({
 <template>
     <div class="container">
 
-        <section class=" flex flex-col items-center ">
+        <section class=" flex flex-col items-center mt-32">
             <h2 class="text-4xl md:text-5xl mb-4 md:mb-20 ">{{ blok.Header }}</h2>
             <div class="relative  flex flex-col items-center">
                 <div class="w-full flex flex-col  items-center justify-center gap-x-24 lg:flex-row">
