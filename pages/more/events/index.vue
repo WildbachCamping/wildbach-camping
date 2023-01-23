@@ -5,7 +5,7 @@
             <Title>Events</Title>
             <Meta name="description" />
         </Head>
-        <section class="container flex flex-col items-center">
+        <section class="container flex flex-col items-center mt-20 ">
             <div class="text-justify">
                 <h1 class="text-4xl md:text-5xl mb-4">Events</h1>
                 <p class="text-lg">Du suchst einen außergewöhnlichen Ort für dein Event? Ob kleine Gruppe oder

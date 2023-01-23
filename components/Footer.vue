@@ -95,7 +95,7 @@
                         </span>
                         <span class="flex my-1"><img src="@/assets/images/logo-instagram.svg" alt="Facebook"
                                 class="w-6 h-6 mr-1">
-                            <NuxtLink to="https://www.facebook.com/people/Wildbach-Camping/100064720399133/">Instagram
+                            <NuxtLink to="https://www.instagram.com/wildbachcamping/?igshid=wbbdewqhox3r">Instagram
                             </NuxtLink>
                         </span>
                     </div>

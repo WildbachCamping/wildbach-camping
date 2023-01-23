@@ -5,10 +5,13 @@
             <Title>Back2Basic</Title>
             <Meta name="description" />
         </Head>
-        <section class="container flex flex-col items-center">
+        <section class="container flex flex-col items-center mt-20 ">
             <div class="text-justify w-full">
                 <h1 class="text-4xl md:text-5xl mb-4 w-full text-left">Back2Basic Wiese</h1>
-                <p class="text-lg">Hier könnte ihre Werbung stehen</p>
+                <p class="text-lg">Unsere abgelegene Back2Basic-Wiese eignet sich perfekt für Gruppen, die abends länger
+                    am Lagerfeuer sitzen möchten. Auf der Wiese gibt es keinen Strom und keine Platzbeleuchtung, dafür
+                    steht ihr direkt am Bach.
+                    Sprecht uns für die Buchung der Wiese bitte direkt an.</p>
             </div>
         </section>
         <section class="container flex flex-col items-center mt-20">

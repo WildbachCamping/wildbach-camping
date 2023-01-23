@@ -8,8 +8,8 @@ const props = defineProps({
 </script>
 
 <template>
-
-    <section class="container min-h-[60vh] pt-10 flex flex-col justify-center items-center" id="welcome">
+    <div id="welcome" class="mt-[-75px]"></div>
+    <section class=" container min-h-[60vh] pt-10 flex flex-col justify-center items-center mt-20" id="welcome">
 
         <div class="text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="500">
             <h2 class=" font-bold text-3xl md:text-4xl md:mb-4">{{ blok.title }}</h2>
