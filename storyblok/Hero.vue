@@ -11,7 +11,7 @@ const props = defineProps({
 <template>
   <div class="flex flex-col items-center">
     <div
-      class="absolute bg-primary-white/[.7] p-20 mt-10 md:bottom-[50%] text-secondary-green font-bold tracking-widest z-10 rounded-sm"
+      class="absolute bg-primary-white/[.7] p-6 md:p-20 mt-10 bottom-[50%] text-secondary-green font-bold tracking-widest z-10 rounded-sm"
       data-aos="fade-up" data-aos-duration="2500" data-aos-delay="500">
       <div class="flex flex-col items-center text-center ">
         <h1 class="pb-5 font-bold text-secondary-green text-4xl md:text-5xl min-w-max">{{ blok.title }}</h1>
@@ -26,7 +26,7 @@ const props = defineProps({
       </a>
     </div>
   </div>
-  <div class="relative max-h-screen  bg-no-repeat bg-cover object-top mt-6" style="background-position: 50%; background-image: url('./hero.jpeg');
+  <div class="relative max-h-screen  bg-no-repeat bg-cover md:mt-6" style="background-position: 50%; background-image: url('./hero.jpeg');
           height: 100vh;">
 
   </div>
