@@ -26,7 +26,7 @@ const props = defineProps({
       </a>
     </div>
   </div>
-  <div class="relative max-h-screen  bg-no-repeat bg-cover md:mt-6" style=" background-image: url('./hero.jpeg');
+  <div class="relative max-h-screen  bg-no-repeat bg-cover md:mt-6 bg-bottom md:bg-top" style=" background-image: url('./hero.jpeg');
           height: 100vh;">
 
   </div>

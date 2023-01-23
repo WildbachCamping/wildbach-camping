@@ -5,26 +5,7 @@
                 <ul class="text-white mb-4 font-Cormorant  flex flex-col font-thin">
                     <h2 class="text-2xl font-semibold text-white">Navigation</h2>
                     <div class="flex gap-x-2 flex-col">
-                        <li class="cursor-pointer">
-                            <NuxtLink
-                                class="transition-all duration-500 ease border-b-[2px] border-transparent hover:border-b-white"
-                                to="/">Home</NuxtLink>
-                        </li>
-                        <li class="cursor-pointer">
-                            <NuxtLink
-                                class="transition-all duration-500 ease border-b-[2px] border-transparent hover:border-b-white"
-                                to="/camping">Camping</NuxtLink>
-                        </li>
-                        <li class="cursor-pointer">
-                            <NuxtLink
-                                class="transition-all duration-500 ease border-b-[2px] border-transparent hover:border-b-white"
-                                to="/umgebung">Umgebung</NuxtLink>
-                        </li>
-                        <li class="cursor-pointer">
-                            <NuxtLink
-                                class="transition-all duration-500 ease border-b-[2px] border-transparent hover:border-b-white"
-                                to="/termine">Termine</NuxtLink>
-                        </li>
+
                         <li class="cursor-pointer">
                             <NuxtLink
                                 class="transition-all duration-500 ease border-b-[2px] border-transparent hover:border-b-white"
