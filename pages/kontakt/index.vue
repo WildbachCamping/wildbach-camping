@@ -10,7 +10,6 @@
       <div class="grid grid-cols-1 md:grid-cols-2 pt-10 mb-10">
         <div class="text-justify flex flex-col">
           <h2 class="mb-4">Wildbach Camping</h2>
-          <span>Mobil: +49 171 4155489</span>
           <span>Telefon: +49 2482 1500</span>
           <span>Mail: info@wildbach-camping.de</span>
           <span>Web: www.wildbach-camping.de</span>

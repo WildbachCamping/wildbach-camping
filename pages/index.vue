@@ -3,7 +3,13 @@
 
         <Head>
             <Title>Wildbach Camping</Title>
-            <Meta name="description" />
+            <Meta
+                content="Wildbach Camping in Hellenthal am Nationalpark Eifel I Familienfreundliche und entspannte Atmosphäre I Naturbelassen am Bach mit Feuerstellen I Auszeit und Urlaub in der Natur"
+                name="description" />
+
+            <Meta content="Startseite" />
+
+
         </Head>
         <StoryblokComponent v-if="story" :blok="story.content" />
         <div class="container flex flex-col justify-center gap-6 items-center mt-28">
@@ -44,7 +50,7 @@
                 </div>
             </div>
         </div>
-        <div class="container mt-20 flex justify-center">
+        <div class="container my-40 flex justify-center">
             <button type="button"
                 class="rounded-md w-7/8 md:w-1/2 h-20 bg-primary-green px-4 py-1 hover:bg-secondary-green/70 duration-300">
                 <NuxtLink class="text-white text-3xl" to="https://wildbach-camping.camping.care/" target="_blank">Zum
