@@ -76,7 +76,7 @@ const cookieConsent = computed(() => {
   return cookie.getCookie('cookie_consent') === 'true';
 });
 
-const endpoint = `https://wyyk4q3zxh.execute-api.eu-central-1.amazonaws.com/SendWildbachEmail`;
+const endpoint = `https://wyyk4q3zxh.execute-api.eu-central-1.amazonaws.com/default/SendWildbachEmail`;
 
 const form = reactive({
   senderName: '',
