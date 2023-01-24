@@ -7,7 +7,7 @@
                 <Title>Datenschutz</Title>
                 <Meta name="description" />
             </Head>
-            <div class="container pt-10 mb-32">
+            <div class="container pt-10 mb-32 mt-20">
                 <h1></h1>
                 <div class="flex flex-col mb-8 md:mb-16">
                     <h1 class="text-3xl md:text-5xl">Datenschutz & Disclaimer</h1>

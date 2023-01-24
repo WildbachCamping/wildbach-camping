@@ -5,7 +5,7 @@
             <Title>Impressum</Title>
             <Meta name="description" />
         </Head>
-        <section class="container pt-10 mb-24">
+        <section class="container pt-10 mb-24 mt-20">
             <div class="flex flex-col  mb-8 md:mb-16">
                 <h1 class="text-5xl">Impressum</h1>
             </div>

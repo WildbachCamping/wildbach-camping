@@ -5,7 +5,7 @@
       <Title>Kontakt</Title>
       <Meta name="description" />
     </Head>
-    <section class="container">
+    <section class="container  mt-20">
       <h1 class="text-5xl mb-10">Kontakt</h1>
       <div class="grid grid-cols-1 md:grid-cols-2 pt-10 mb-10">
         <div class="text-justify flex flex-col">
