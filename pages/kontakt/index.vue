@@ -19,24 +19,24 @@
           <span>53940 Hellenthal</span>
           <span>Deutschland</span>
           <br />
-          <p>
-            Öffnungszeiten Rezeption:<br />Montag:&nbsp;10 - 12 und 14 - 17
-            <br />Dienstag:&nbsp;10 - 12 und 14 - 17 <br />Mittwoch:&nbsp;10 - 12
-            und 14 - 17 <br />Donnerstag:&nbsp;10 - 12 und 14 - 17
-            <br />Freitag:&nbsp;10 - 12 und 14 - 18 <br />Samstag:&nbsp;10 - 12
-            und 14 - 18 <br />Sonntag:&nbsp;10 - 12 und 14 - 17
-          </p>
+          <h3>
+            Rezeption:
+          </h3>
+          <br />Montag:&nbsp;10 - 12 und 14 - 17
+          <br />Dienstag:&nbsp;10 - 12 und 14 - 17 <br />Mittwoch:&nbsp;10 - 12
+          und 14 - 17 <br />Donnerstag:&nbsp;10 - 12 und 14 - 17
+          <br />Freitag:&nbsp;10 - 12 und 14 - 18 <br />Samstag:&nbsp;10 - 12
+          und 14 - 18 <br />Sonntag:&nbsp;10 - 12 und 14 - 17
         </div>
         <div class="text-justify flex-1">
           <h2 class="text-4xl mt-4 md:mt-0 mb-4">Schreibt uns</h2>
           <h2 class="mb-4 text-2xl">Kontaktformular</h2>
           <form @submit.prevent="sendMessage" name="wildbach" class="grid grid-cols-4 grid-flow-row gap-2">
             <input v-model="form.senderName" type="text" name="name" placeholder="Name" class="col-span-2" />
-            <input v-model="form.senderEmail" type="email" name="email" placeholder="Email" id="" required
-              class="col-span-2" />
+            <input v-model="form.senderEmail" type="email" name="email" placeholder="Email*" id="" class="col-span-2" />
             <input v-model="form.senderSubject" type="text" name="subject" placeholder="Betreff" class="col-span-2" />
             <input v-model="form.senderPhone" type="tel" name="phone" placeholder="Phone" class="col-span-2" />
-            <input v-model="form.senderAddress.street" type="text" name="street" placeholder="Straße"
+            <input v-model="form.senderAddress.street" type="text" name="street" placeholder="Straße, Nr"
               class="col-span-2" />
             <input v-model="form.senderAddress.postcode" type="text" name="postcode" placeholder="PLZ"
               class="col-span-2" />
@@ -75,7 +75,7 @@ const cookieConsent = computed(() => {
   return cookie.getCookie('cookie_consent') === 'true';
 });
 
-const endpoint = ``;
+const endpoint = `https://wyyk4q3zxh.execute-api.eu-central-1.amazonaws.com/SendWildbachEmail`;
 
 const form = reactive({
   senderName: '',
@@ -103,7 +103,8 @@ function resetForm() {
   form.senderAddress.country = '';
 }
 async function sendMessage() {
-  // useFetch(endpoint, { method: 'post', body: form, mode: 'no-cors' });
+  useFetch(endpoint, { method: 'post', body: form, mode: 'no-cors' });
+
   resetForm();
 }
 </script>
