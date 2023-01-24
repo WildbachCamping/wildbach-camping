@@ -67,6 +67,7 @@
 </template>
 
 <script setup>
+import { data } from 'dom7';
 import { useCookie } from 'vue-cookie-next';
 
 const cookie = useCookie();
@@ -103,7 +104,8 @@ function resetForm() {
   form.senderAddress.country = '';
 }
 async function sendMessage() {
-  useFetch(endpoint, { method: 'post', body: form, mode: 'no-cors' });
+  await useFetch(endpoint, { method: 'post', body: form, mode: 'no-cors' });
+
 
   resetForm();
 }
