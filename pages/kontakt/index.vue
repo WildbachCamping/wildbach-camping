@@ -35,7 +35,7 @@
             <input v-model="form.senderName" type="text" name="name" placeholder="Name" class="col-span-2" />
             <input v-model="form.senderEmail" type="email" name="email" placeholder="Email*" id="" class="col-span-2" />
             <input v-model="form.senderSubject" type="text" name="subject" placeholder="Betreff" class="col-span-2" />
-            <input v-model="form.senderPhone" type="tel" name="phone" placeholder="Phone" class="col-span-2" />
+            <input v-model="form.senderPhone" type="tel" name="phone" placeholder="Telefon" class="col-span-2" />
             <input v-model="form.senderAddress.street" type="text" name="street" placeholder="Straße, Nr"
               class="col-span-2" />
             <input v-model="form.senderAddress.postcode" type="text" name="postcode" placeholder="PLZ"
@@ -45,6 +45,7 @@
               class="col-span-2" />
             <textarea v-model="form.senderMessage" name="message" id="" cols="30" rows="8"
               class="col-span-4"></textarea>
+            <p class="col-span-4 text-sm">* Pflichtfeld</p>
             <button type="submit"
               class="bg-gray-800/90 rounded-full w-24 h-8 hover:bg-gray-800/70 duration-300 text-white">
               Senden
