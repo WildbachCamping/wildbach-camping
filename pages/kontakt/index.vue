@@ -31,7 +31,8 @@
         <div class="text-justify flex-1">
           <h2 class="text-4xl mt-4 md:mt-0 mb-4">Schreibt uns</h2>
           <h2 class="mb-4 text-2xl">Kontaktformular</h2>
-          <form @submit.prevent="sendMessage" name="wildbach" class="grid grid-cols-4 grid-flow-row gap-2">
+          <form @submit.prevent="sendMessage" name="wildbach" method="POST"
+            class="grid grid-cols-4 grid-flow-row gap-2">
             <input v-model="form.senderName" type="text" name="name" placeholder="Name" class="col-span-2" />
             <input v-model="form.senderEmail" type="email" name="email" placeholder="Email*" id="" class="col-span-2" />
             <input v-model="form.senderSubject" type="text" name="subject" placeholder="Betreff" class="col-span-2" />
@@ -46,8 +47,7 @@
             <textarea v-model="form.senderMessage" name="message" id="" cols="30" rows="8"
               class="col-span-4"></textarea>
             <p class="col-span-4 text-sm">* Pflichtfeld</p>
-            <button type="submit"
-              class="bg-gray-800/90 rounded-full w-24 h-8 hover:bg-gray-800/70 duration-300 text-white">
+            <button class="bg-gray-800/90 rounded-full w-24 h-8 hover:bg-gray-800/70 duration-300 text-white">
               Senden
             </button>
           </form>
@@ -68,7 +68,6 @@
 </template>
 
 <script setup>
-import { data } from 'dom7';
 import { useCookie } from 'vue-cookie-next';
 
 const cookie = useCookie();
@@ -104,10 +103,10 @@ function resetForm() {
   form.senderAddress.postcode = '';
   form.senderAddress.country = '';
 }
+
 async function sendMessage() {
-  await useFetch(endpoint, { method: 'post', body: form, mode: 'no-cors' });
-
-
+  // useFetch(endpoint, { method: 'post', body: form, mode: 'no-cors' });
+  $fetch(endpoint, { method: 'post', body: form, mode: 'no-cors' })
   resetForm();
 }
 </script>
