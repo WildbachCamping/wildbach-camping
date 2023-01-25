@@ -1,8 +1,8 @@
 <template>
     <footer class="bg-[#444] py-8 w-full mt-40">
         <div class="flex flex-col items-center">
-            <div class="grid grid-cols-1 sm:grid-cols-3 ">
-                <ul class="text-white mb-4 font-Cormorant  flex flex-col font-thin">
+            <div class="grid grid-cols-1 sm:grid-cols-4 ">
+                <ul class="text-white mb-4 font-Cormorant  flex flex-col font-thin sm:pl-4">
                     <h2 class="text-2xl font-semibold text-white">Navigation</h2>
                     <div class="flex gap-x-2 flex-col">
 
@@ -81,6 +81,11 @@
                         </span>
                     </div>
                 </ul>
+                <div class="flex sm:justify-center items-center mt-8 sm:mt-0"><a
+                        href="https://www.beyondcamping.de/camping/campingplaetze/" target="_blank" rel="noopener"><img
+                            src="https://www.beyondcamping.de/wp-content/uploads/award-campingplatz-beyondcamping-2022-rot.png"
+                            alt="BeyondCamping Campingplatz Auszeichnung" width="140" height="140" border="0"
+                            style="border-style:none;"></a></div>
             </div>
         </div>
         <Teleport to="body" class="flex items-center justify-center">
