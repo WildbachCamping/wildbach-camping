@@ -26,8 +26,8 @@ const props = defineProps({
       </a>
     </div>
   </div>
-  <div class="relative md:max-h-[90vh] max-h-[92vh]  bg-no-repeat bg-cover md:mt-6 bg-bottom md:bg-top" style=" background-image: url('./hero.jpeg');
-          height: 100vh;">
+  <div class="relative md:max-h-[90vh] max-h-[92vh]  bg-no-repeat bg-cover md:mt-6 bg-bottom md:bg-top"
+    :style="{ backgroundImage: `url(${blok.image.filename})` }" style="height: 100vh">
 
   </div>
 
