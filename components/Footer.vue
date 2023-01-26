@@ -1,92 +1,52 @@
 <template>
     <footer class="bg-[#444] py-8 w-full mt-40">
-        <div class="flex flex-col items-center">
-            <div class="grid grid-cols-1 sm:grid-cols-4 ">
-                <ul class="text-white mb-4 font-Cormorant  flex flex-col font-thin sm:pl-4">
-                    <h2 class="text-2xl font-semibold text-white">Navigation</h2>
-                    <div class="flex gap-x-2 flex-col">
+        <div class="flex flex-col items-center gap-4 py-10">
 
-                        <li class="cursor-pointer">
-                            <NuxtLink
-                                class="transition-all duration-500 ease border-b-[2px] border-transparent hover:border-b-white"
-                                to="/kontakt">Kontakt</NuxtLink>
-                        </li>
-                        <li class="cursor-pointer">
-                            <NuxtLink
-                                class="transition-all duration-500 ease border-b-[2px] border-transparent hover:border-b-white"
-                                to="/impressum">Impressum</NuxtLink>
-                        </li>
-                        <li class="cursor-pointer">
-                            <NuxtLink
-                                class="transition-all duration-500 ease border-b-[2px] border-transparent hover:border-b-white"
-                                to="/datenschutz">Datenschutz</NuxtLink>
-                        </li>
-                        <li class="cursor-pointer" @click="toggleModal">
-                            <NuxtLink
-                                class="transition-all duration-500 ease border-b-[2px] border-transparent hover:border-b-white"
-                                to="/datenschutz">Cookie-Einstellungen</NuxtLink>
-                        </li>
-                    </div>
-                </ul>
-                <ul class="text-white font-Cormorant mb-4 font-thin flex flex-col min-w-min">
-                    <h2 class="text-2xl font-semibold text-white">Rezeption</h2>
-                    <div class="flex flex-col max-w-max">
-                        <div class="flex justify-between">
-                            <span class="min-w-16 mr-4">Mo:</span>
-                            <span>10-12 u. 14-17</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="min-w-16 mr-4">Di:</span>
-                            <span>10-12 u. 14-17</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="min-w-16 mr-4">Mi:</span>
-                            <span>10-12 u. 14-17</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="min-w-16 mr-4">Do:</span>
-                            <span>10-12 u. 14-17</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="min-w-16 mr-4">Fr:</span>
-                            <span>10-12 u. 14-18</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="min-w-16 mr-4">Sa:</span>
-                            <span>10-12 u. 14-18</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="min-w-16 mr-4">So:</span>
-                            <span>10-12 u. 14-17</span>
-                        </div>
+            <ul
+                class="text-white flex flex-col md:flex-row justify-start  md:gap-x-8 gap-2 items-start md:items-center md:mb-8">
+                <li class="cursor-pointer">
+                    <NuxtLink
+                        class="transition-all duration-500 ease border-b-[2px] border-transparent hover:border-b-white"
+                        to="/kontakt">Kontakt</NuxtLink>
+                </li>
 
-                    </div>
-                </ul>
-                <ul class="text-white font-Cormorant mb-4 flex flex-col font-thin min-w-min">
-                    <h2 class="text-2xl font-semibold text-white">Kontakt</h2>
-                    <div class=" flex-1 flex  flex-col">
-                        <span>Platiß 1</span>
-                        <span class="mb-1">53940 Hellenthal</span>
-                        <span>Telefon: +49 2482 1500</span>
-                        <span>Mail: info@wildbach-camping.de</span>
-                        <span class="flex my-1"><img src="@/assets/images/logo-facebook.svg" alt="Facebook"
-                                class="w-6 h-6 mr-1">
-                            <NuxtLink to="https://www.facebook.com/people/Wildbach-Camping/100064720399133/">Facebook
-                            </NuxtLink>
-                        </span>
-                        <span class="flex my-1"><img src="@/assets/images/logo-instagram.svg" alt="Facebook"
-                                class="w-6 h-6 mr-1">
-                            <NuxtLink to="https://www.instagram.com/wildbachcamping/?igshid=wbbdewqhox3r">Instagram
-                            </NuxtLink>
-                        </span>
-                    </div>
-                </ul>
-                <div class="flex sm:justify-center items-center mt-8 sm:mt-0"><a
-                        href="https://www.beyondcamping.de/camping/campingplaetze/" target="_blank" rel="noopener"><img
-                            src="https://www.beyondcamping.de/wp-content/uploads/award-campingplatz-beyondcamping-2022-rot.png"
-                            alt="BeyondCamping Campingplatz Auszeichnung" width="140" height="140" border="0"
-                            style="border-style:none;"></a></div>
-            </div>
+
+                <li class="cursor-pointer">
+                    <NuxtLink
+                        class="transition-all duration-500 ease border-b-[2px] border-transparent hover:border-b-white"
+                        to="/impressum">Impressum</NuxtLink>
+                </li>
+                <li class="cursor-pointer">
+                    <NuxtLink
+                        class="transition-all duration-500 ease border-b-[2px] border-transparent hover:border-b-white"
+                        to="/datenschutz">Datenschutz</NuxtLink>
+                </li>
+                <li class="cursor-pointer" @click="toggleModal">
+                    <NuxtLink
+                        class="transition-all duration-500 ease border-b-[2px] border-transparent hover:border-b-white"
+                        to="/datenschutz">Cookie-Einstellungen</NuxtLink>
+                </li>
+                <li class="flex my-1">
+                    <NuxtLink
+                        class="transition-all duration-500 ease border-b-[2px] border-transparent hover:border-b-white"
+                        to="https://www.facebook.com/people/Wildbach-Camping/100064720399133/">Facebook
+                    </NuxtLink><img src="@/assets/images/logo-facebook.svg" alt="Facebook" class="w-6 h-6 ml-2">
+
+                </li>
+                <li class="flex my-1">
+                    <NuxtLink
+                        class="transition-all duration-500 ease border-b-[2px] border-transparent hover:border-b-white"
+                        to="https://www.instagram.com/wildbachcamping/?igshid=wbbdewqhox3r">Instagram
+                    </NuxtLink><img src="@/assets/images/logo-instagram.svg" alt="Facebook" class="w-6 h-6 ml-2">
+
+                </li>
+
+            </ul>
+            <div class="flex sm:justify-center items-center mt-8 sm:mt-0"><a
+                    href="https://www.beyondcamping.de/camping/campingplaetze/" target="_blank" rel="noopener"><img
+                        class="md:w-40 md:h-40 w-32 h-32"
+                        src="https://www.beyondcamping.de/wp-content/uploads/award-campingplatz-beyondcamping-2022-rot.png"
+                        alt="BeyondCamping Campingplatz Auszeichnung" border="0" style="border-style:none;"></a></div>
         </div>
         <Teleport to="body" class="flex items-center justify-center">
             <Modal @accept="optIn" @decline="optOut" @close="toggleModal" :modalActive="modalActive">
