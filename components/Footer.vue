@@ -41,34 +41,14 @@
 
                 </li>
 
+            </ul>
         </div>
-        </ul>
-        <ul class="text-white font-Cormorant mb-4 flex flex-col font-thin min-w-min">
-            <h2 class="text-2xl font-semibold text-white">Kontakt</h2>
-            <div class=" flex-1 flex  flex-col">
-                <span>Platiß 1</span>
-                <span class="mb-1">53940 Hellenthal</span>
-                <span>Telefon: +49 2482 1500</span>
-                <span>Mail: info@wildbach-camping.de</span>
-                <span class="flex my-1"><img src="@/assets/images/logo-facebook.svg" alt="Facebook"
-                        class="w-6 h-6 mr-1">
-                    <NuxtLink to="https://www.facebook.com/people/Wildbach-Camping/100064720399133/">Facebook
-                    </NuxtLink>
-                </span>
-                <span class="flex my-1"><img src="@/assets/images/logo-instagram.svg" alt="Facebook"
-                        class="w-6 h-6 mr-1">
-                    <NuxtLink to="https://www.instagram.com/wildbachcamping/?igshid=wbbdewqhox3r">Instagram
-                    </NuxtLink>
-                </span>
-            </div>
-        </ul>
+
         <div class="flex sm:justify-center items-center mt-8 sm:mt-0"><a
                 href="https://www.beyondcamping.de/camping/campingplaetze/" target="_blank" rel="noopener"><img
-                    src="https://www.beyondcamping.de/wp-content/uploads/award-campingplatz-beyondcamping-2022-rot.png"
-                    alt="BeyondCamping Campingplatz Auszeichnung" width="140" height="140" border="0"
-                    style="border-style:none;"></a></div>
-        </div>
-        </div>
+                    src="@/assets/images/award.png" alt="BeyondCamping Campingplatz Auszeichnung" width="140"
+                    height="140" border="0" style="border-style:none;"></a></div>
+
         <Teleport to="body" class="flex items-center justify-center">
             <Modal @accept="optIn" @decline="optOut" @close="toggleModal" :modalActive="modalActive">
                 <div class="flex flex-col items-center z-10">
