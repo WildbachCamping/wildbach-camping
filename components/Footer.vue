@@ -44,7 +44,7 @@
             </ul>
         </div>
 
-        <div class="flex sm:justify-center items-center mt-8 sm:mt-0"><a
+        <div class="flex justify-center items-center mt-8 sm:mt-0"><a
                 href="https://www.beyondcamping.de/camping/campingplaetze/" target="_blank" rel="noopener"><img
                     src="@/assets/images/award.png" alt="BeyondCamping Campingplatz Auszeichnung" width="140"
                     height="140" border="0" style="border-style:none;"></a></div>
