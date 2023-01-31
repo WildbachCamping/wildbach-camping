@@ -1,0 +1,32 @@
+<script setup>
+const props = defineProps({
+    blok: {
+        type: Object,
+        default: () => ({}),
+    },
+});
+</script>
+
+<template>
+    <div>
+        <section class="container flex flex-col items-center mt-20 ">
+            <div class="text-justify w-full">
+                <h1 class="text-4xl md:text-5xl mb-4 w-full text-left">Back2Basic Wiese</h1>
+                <p class="text-lg">{{ blok.text }}</p>
+            </div>
+        </section>
+        <section class="container flex flex-col items-center mt-20">
+            <div class="grid grid-cols-12 grid-row-11 gap-1 sm:gap-2 md:gap-3 ld:gap-4">
+                <img :src="blok.image1.filename" :alt="blok.image1.alt"
+                    class="col-span-7 row-span-2 w-full h-full object-cover rounded-sm shadow-md">
+                <img :src="blok.image2.filename" :alt="blok.image2.alt"
+                    class="col-span-5 row-span-2 object-cover h-full rounded-sm shadow-md">
+                <img :src="blok.image3.filename" :alt="blok.image3.alt"
+                    class="col-span-6 row-span-2 w-full h-full object-cover rounded-sm shadow-md">
+                <img :src="blok.image4.filename" :alt="blok.image4.alt"
+                    class="col-span-6 row-span-2 w-full h-full  object-cover rounded-sm shadow-md">
+
+            </div>
+        </section>
+    </div>
+</template>
