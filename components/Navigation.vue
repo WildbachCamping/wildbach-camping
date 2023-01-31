@@ -53,6 +53,11 @@
             class="pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent hover:border-b-white"
             to="/umgebung">Umgebung</NuxtLink>
         </li>
+        <li>
+          <NuxtLink
+            class="pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent hover:border-b-white"
+            to="/gallerie">Gallerie</NuxtLink>
+        </li>
 
 
         <li>
@@ -127,6 +132,9 @@
         </li>
         <li class="" @click="toggleMobileNav">
           <NuxtLink class="" to="/umgebung">Umgebung</NuxtLink>
+        </li>
+        <li class="" @click="toggleMobileNav">
+          <NuxtLink class="" to="/gallerie">Gallerie</NuxtLink>
         </li>
         <li class="" @click="toggleMobileNav">
           <NuxtLink class="" to="/termine">Termine</NuxtLink>

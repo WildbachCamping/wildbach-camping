@@ -1,48 +1,27 @@
 
 <template>
-    <div class="container">
-        <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <li v-for="images in blok.blocks">
-                <StoryblokComponent :blok="images" />
-            </li>
-        </ul>
-    </div>
-    {{ blok }}
+
+
     <div class="container">
         <swiper :style="{
             '--swiper-navigation-color': '#fff',
             '--swiper-pagination-color': '#fff',
         }" :spaceBetween="10" :navigation="true" :thumbs="{ swiper: thumbsSwiper }" :modules="modules"
-            class="mySwiper2 " v-for="image in blok.blocks">
-            <swiper-slide><img :src="image.image" /></swiper-slide>
+            class="mySwiper2 ">
+            <swiper-slide v-for="image in blok.blocks">
+                <StoryblokComponent :blok="image" />
+            </swiper-slide>
         </swiper>
         <swiper @swiper="setThumbsSwiper" :spaceBetween="10" :slidesPerView="4" :freeMode="true"
             :watchSlidesProgress="true" :modules="modules" class="mySwiper">
-            <swiper-slide><img src="https://swiperjs.com/demos/images/nature-1.jpg" /></swiper-slide>
-            <swiper-slide><img src="https://swiperjs.com/demos/images/nature-2.jpg" /></swiper-slide><swiper-slide><img
-                    src="https://swiperjs.com/demos/images/nature-3.jpg" /></swiper-slide><swiper-slide><img
-                    src="https://swiperjs.com/demos/images/nature-4.jpg" /></swiper-slide><swiper-slide><img
-                    src="https://swiperjs.com/demos/images/nature-5.jpg" /></swiper-slide><swiper-slide><img
-                    src="https://swiperjs.com/demos/images/nature-6.jpg" /></swiper-slide><swiper-slide><img
-                    src="https://swiperjs.com/demos/images/nature-7.jpg" /></swiper-slide><swiper-slide><img
-                    src="https://swiperjs.com/demos/images/nature-8.jpg" /></swiper-slide><swiper-slide><img
-                    src="https://swiperjs.com/demos/images/nature-9.jpg" /></swiper-slide><swiper-slide><img
-                    src="https://swiperjs.com/demos/images/nature-10.jpg" /></swiper-slide>
+            <swiper-slide v-for="image in blok.blocks">
+                <StoryblokComponent :blok="image" />
+            </swiper-slide>
+
         </swiper>
     </div>
+
 </template>
-
-
-
-
-
-
-
-
-
-
-
-
 
 <script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue';

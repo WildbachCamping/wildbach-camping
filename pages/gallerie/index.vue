@@ -1,7 +1,7 @@
 <template>
 
     <Head>
-        <Title>Termine</Title>
+        <Title>Gallerie</Title>
         <Meta name="description" />
     </Head>
     <div class="w-full">
