@@ -50,8 +50,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <section class="container  mt-20">
-        <h1 class="text-5xl mb-10">Kontakt</h1>
+    <section class="container">
         <div class="grid grid-cols-1 md:grid-cols-2 pt-10 mb-10">
             <div class="text-justify flex flex-col">
                 <h2 class="mb-4">Wildbach Camping</h2>

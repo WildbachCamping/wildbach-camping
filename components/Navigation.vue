@@ -56,7 +56,7 @@
         <li>
           <NuxtLink
             class="pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent hover:border-b-white"
-            to="/gallerie">{{ locale == 'nl' ? 'Galerie' : 'Gallerie' }}</NuxtLink>
+            to="/galerie">{{ locale == 'nl' ? 'Galerie' : 'Galerie' }}</NuxtLink>
         </li>
 
 
@@ -134,7 +134,7 @@
           <NuxtLink class="" to="/umgebung">{{ locale == 'nl' ? 'Omgeving' : 'Umgebung' }}</NuxtLink>
         </li>
         <li class="" @click="toggleMobileNav">
-          <NuxtLink class="" to="/gallerie">{{ locale == 'nl' ? 'Galerie' : 'Gallerie' }}
+          <NuxtLink class="" to="/galerie">{{ locale == 'nl' ? 'Galerie' : 'Galerie' }}
           </NuxtLink>
         </li>
         <li class="" @click="toggleMobileNav">
