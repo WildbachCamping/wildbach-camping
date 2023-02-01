@@ -11,6 +11,8 @@
 </template>
 
 <script setup>
-const story = await useAsyncStoryblok("kontakt", { version: "draft" });
+const locale = localStorage.getItem('langStore')
+
+const story = await useAsyncStoryblok(`kontakt?fallback_lang=de&language=${locale}`, { version: "draft" });
 
 </script>

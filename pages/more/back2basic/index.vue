@@ -11,7 +11,9 @@
 </template>
 
 <script setup>
-const story = await useAsyncStoryblok("more/back2basic", { version: "draft" });
+const locale = localStorage.getItem('langStore')
+
+const story = await useAsyncStoryblok(`more/back2basic?fallback_lang=de&language=${locale}`, { version: "draft" });
 
 </script>
 

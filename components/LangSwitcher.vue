@@ -11,7 +11,7 @@
 import { usePreferredLanguages } from '@vueuse/core'
 
 const languages = usePreferredLanguages()
-console.log(languages);
+console.log(languages.value);
 const locales = reactive({ de: 'de', nl: 'nl', en: 'en' })
 
 

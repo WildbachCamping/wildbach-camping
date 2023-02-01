@@ -12,9 +12,8 @@
 
 
 <script setup>
+const locale = localStorage.getItem('langStore')
 
-const story = await useAsyncStoryblok("more/mietobjekte", { version: "draft" });
-
-
+const story = await useAsyncStoryblok(`more/mietobjekte?fallback_lang=de&language=${locale}`, { version: "draft" });
 
 </script>

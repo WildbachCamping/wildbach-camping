@@ -14,6 +14,9 @@
 </template>
 
 <script setup>
-const story = await useAsyncStoryblok("termine", { version: "draft" });
+
+const locale = localStorage.getItem('langStore')
+
+const story = await useAsyncStoryblok(`termine?fallback_lang=de&language=${locale}`, { version: "draft" });
 
 </script>
