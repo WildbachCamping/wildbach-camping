@@ -69,7 +69,7 @@
         </Teleport>
         <Teleport to="body">
 
-            <LangSwitcher class="fixed bottom-0" />
+            <LangSwitcher class="fixed bottom-2 left-5" />
         </Teleport>
     </footer>
 
