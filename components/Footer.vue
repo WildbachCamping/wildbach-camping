@@ -1,6 +1,6 @@
 <template>
     <footer class="bg-[#444] py-8 w-full mt-40">
-        <div class="flex flex-col items-center gap-4 py-10">
+        <div class="flex flex-col items-center gap-4 pt-10">
 
             <ul
                 class="text-white flex flex-col md:flex-row justify-start  md:gap-x-8 gap-2 items-start md:items-center md:mb-8">
@@ -44,10 +44,15 @@
             </ul>
         </div>
 
-        <div class="flex justify-center items-center mt-8 sm:mt-0"><a
+        <div class="flex flex-col md:flex-row justify-center items-center mt-8 sm:mt-0 gap-4"><a
                 href="https://www.beyondcamping.de/camping/campingplaetze/" target="_blank" rel="noopener"><img
-                    src="@/assets/images/award.png" alt="BeyondCamping Campingplatz Auszeichnung" width="140"
-                    height="140" border="0" style="border-style:none;"></a></div>
+                    class="w-[140px]" src="@/assets/images/award1.png"
+                    alt="BeyondCamping Campingplatz Auszeichnung"></a>
+
+            <img class="w-[300px] rounded-sm" src="@/assets/images/award2.jpeg" alt="Tour Certification">
+            <img class="w-[115px] rounded-sm" src="@/assets/images/award3.jpeg" alt="Nachhaltiges Reiseziel" />
+        </div>
+
 
         <Teleport to="body" class="flex items-center justify-center">
             <Modal @accept="optIn" @decline="optOut" @close="toggleModal" :modalActive="modalActive">

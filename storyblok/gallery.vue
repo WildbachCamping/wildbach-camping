@@ -9,13 +9,13 @@
         }" :spaceBetween="10" :navigation="true" :thumbs="{ swiper: thumbsSwiper }" :modules="modules"
             class="mySwiper2 ">
             <swiper-slide v-for="image in blok.blocks">
-                <StoryblokComponent :blok="image" />
+                <StoryblokComponent :blok="image" :visible="true" />
             </swiper-slide>
         </swiper>
         <swiper @swiper="setThumbsSwiper" :spaceBetween="10" :slidesPerView="4" :freeMode="true"
-            :watchSlidesProgress="true" :modules="modules" class="mySwiper">
+            :watchSlidesProgress="true" :modules="modules" class="max-h-[40vh]">
             <swiper-slide v-for="image in blok.blocks">
-                <StoryblokComponent :blok="image" />
+                <StoryblokComponent :blok="image" :visible="false" />
             </swiper-slide>
 
         </swiper>
