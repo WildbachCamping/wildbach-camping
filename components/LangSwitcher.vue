@@ -1,7 +1,9 @@
 <template>
     <div>
         <ul class="w-20 flex gap-2">
-            <li class="bg-gray-50 cursor-pointer p-2" v-for="locale in locales" @click="changeLang(locale)">{{ locale }}
+            <li class="bg-gray-50 cursor-pointer px-2" v-for="locale in locales" @click="changeLang(locale)">{{
+                locale
+            }}
             </li>
         </ul>
     </div>
