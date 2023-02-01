@@ -7,24 +7,24 @@
                 <li class="cursor-pointer">
                     <NuxtLink
                         class="transition-all duration-500 ease border-b-[2px] border-transparent hover:border-b-white"
-                        to="/kontakt">Kontakt</NuxtLink>
+                        to="/kontakt">{{ locale == 'nl' ? 'Contact' : 'Kontakt' }}</NuxtLink>
                 </li>
 
 
                 <li class="cursor-pointer">
                     <NuxtLink
                         class="transition-all duration-500 ease border-b-[2px] border-transparent hover:border-b-white"
-                        to="/impressum">Impressum</NuxtLink>
+                        to="/impressum">{{ locale == 'nl' ? 'Afdruk' : 'Impressum' }}</NuxtLink>
                 </li>
                 <li class="cursor-pointer">
                     <NuxtLink
                         class="transition-all duration-500 ease border-b-[2px] border-transparent hover:border-b-white"
-                        to="/datenschutz">Datenschutz</NuxtLink>
+                        to="/datenschutz">{{ locale == 'nl' ? 'Gegevensbescherming' : 'Datenschutz' }}</NuxtLink>
                 </li>
                 <li class="cursor-pointer" @click="toggleModal">
                     <NuxtLink
                         class="transition-all duration-500 ease border-b-[2px] border-transparent hover:border-b-white"
-                        to="">Cookie-Einstellungen</NuxtLink>
+                        to="">{{ locale == 'nl' ? 'Cookie-instellingen' : 'Cookie-Einstellungen' }}</NuxtLink>
                 </li>
                 <li class="flex my-1">
                     <NuxtLink
@@ -59,10 +59,12 @@
         <Teleport to="body" class="flex items-center justify-center">
             <Modal @accept="optIn" @decline="optOut" @close="toggleModal" :modalActive="modalActive">
                 <div class="flex flex-col items-center z-10">
-                    <h2 class="text-2xl font-bold mb-4">Unsere Website verwendet Cookies</h2>
-                    <p class=" text-justify text-base mb-4">Wir verwenden Cookies, um die Zugriffe auf unsere
-                        Website zu
-                        analysieren.
+                    <h2 class="text-2xl font-bold mb-4">{{ locale == 'nl' ? 'Onze website gebruikt cookies' : `Unsere
+                    Website verwendet Cookies`
+                    }}</h2>
+                    <p class=" text-justify text-base mb-4">{{ locale == 'nl' ? `We gebruiken cookies om het verkeer
+                    naar onze website naar analyseren.` : `Wir verwenden Cookies, um die Zugriffe auf unsere Website
+                    zu analysieren.` }}
                     </p>
                 </div>
             </Modal>
@@ -125,4 +127,5 @@ watch(allowCookies, () => {
         }
     }
 });
+const locale = localStorage.getItem('langStore')
 </script>

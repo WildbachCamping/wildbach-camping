@@ -10,14 +10,16 @@
                     <slot></slot>
                     <button
                         class="bg-secondary-green rounded-3xl m-1 text-white hover:bg-primary-green active:translate-y-px transition-all ease-linear duration-300"
-                        @click="accept">Akzeptieren</button>
+                        @click="accept">{{ locale == 'nl' ? 'Accepteer' : 'Akzeptieren' }}</button>
                     <div class="flex flex-col md:flex-row ">
                         <button
                             class="flex-1 bg-primary-white m-1 rounded-3xl hover:bg-primary-green active:translate-y-px transition-all ease-linear duration-300"
-                            @click="decline">Ablehnen</button>
+                            @click="decline">{{ locale == 'nl' ? 'Daling' : 'Ablehnen'
+                            }}</button>
                         <button
                             class="flex-1 bg-primary-white m-1 rounded-3xl hover:bg-primary-green active:translate-y-px transition-all ease-linear duration-300">
-                            <NuxtLink class="" @click="close" to="/datenschutz">Weitere Informationen
+                            <NuxtLink class="" @click="close" to="/datenschutz">{{ locale == 'nl' ?
+                            'Verdere informatie' : 'Weitere Informationen' }}
                             </NuxtLink>
                         </button>
                     </div>
@@ -45,7 +47,7 @@ const decline = () => {
 const close = () => {
     emit('close')
 }
-
+const locale = localStorage.getItem('langStore')
 </script>
 
 <style lang="scss" scoped>

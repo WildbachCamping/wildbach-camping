@@ -18,7 +18,7 @@
 
         <li class="group relative dropdown ">
           <div class="pb-1 flex items-center mt-2 transition duration-500 ease-in-outborder-transparent cursor-pointer">
-            Weitere Angebote
+            {{ locale == 'nl' ? 'Meer offertes' : 'Weitere Angebote' }}
             <ChevronDownIcon class="h-4 w-4 mt-1"></ChevronDownIcon>
           </div>
 
@@ -27,13 +27,13 @@
             <li class="">
               <NuxtLink class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
                 to="/more/mietobjekte">
-                Mietobjekte
+                {{ locale == 'nl' ? 'Huurwoningen' : 'Mietobjekte' }}
               </NuxtLink>
             </li>
             <li class="pb-1">
               <NuxtLink class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
                 to="/more/dauercamping">
-                Dauercamping</NuxtLink>
+                {{ locale == 'nl' ? 'Permanent kamperen' : 'Dauercamping' }}</NuxtLink>
             </li>
             <li class="pb-1">
               <NuxtLink class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
@@ -43,7 +43,7 @@
             <li class="pb-1">
               <NuxtLink class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
                 to="/more/back2basic">
-                Back 2 Basic Wiese</NuxtLink>
+                {{ locale == 'nl' ? 'Back2Basic Weide' : 'Back2Basic Wiese' }}</NuxtLink>
             </li>
 
           </ul>
@@ -51,25 +51,25 @@
         <li>
           <NuxtLink
             class="pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent hover:border-b-white"
-            to="/umgebung">Umgebung</NuxtLink>
+            to="/umgebung">{{ locale == 'nl' ? 'Omgeving' : 'Umgebung' }}</NuxtLink>
         </li>
         <li>
           <NuxtLink
             class="pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent hover:border-b-white"
-            to="/gallerie">Gallerie</NuxtLink>
+            to="/gallerie">{{ locale == 'nl' ? 'Galerie' : 'Gallerie' }}</NuxtLink>
         </li>
 
 
         <li>
           <NuxtLink
             class="pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent hover:border-b-white"
-            to="/termine">Termine</NuxtLink>
+            to="/termine">{{ locale == 'nl' ? 'Data' : 'Termine' }}</NuxtLink>
         </li>
         <li>
           <NuxtLink
             class="pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent bg-primary-white text-secondary-green font-bold p-1 px-2 rounded-md"
             to="https://wildbach-camping.camping.care/" target="_blank">
-            Jetzt buchen</NuxtLink>
+            {{ locale == 'nl' ? 'Boek nu' : 'Jetzt buchen' }}</NuxtLink>
         </li>
       </ul>
       <div @click="toggleMobileNav" v-show="mobile" class="cursor-pointer flex justify-center items-center z-40">
@@ -100,7 +100,7 @@
         <li class="group relative dropdown  ">
           <NuxtLink
             class="pb-1 flex items-center mt-2 transition duration-500 ease-in-outborder-transparent cursor-pointer">
-            Weitere Angebote
+            {{ locale == 'nl' ? 'Meer offertes' : 'Weitere Angebote' }}
             <ChevronDownIcon class="h-4 w-4 mt-1"></ChevronDownIcon>
           </NuxtLink>
 
@@ -109,13 +109,13 @@
             <li class=" " @click="toggleMobileNav">
               <NuxtLink class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
                 to="/more/mietobjekte">
-                Mietobjekte
+                {{ locale == 'nl' ? 'Huurwoningen' : 'Mietobjekte' }}
               </NuxtLink>
             </li>
             <li class="pb-1 " @click="toggleMobileNav">
               <NuxtLink class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
                 to="/more/dauercamping">
-                Dauercamping</NuxtLink>
+                {{ locale == 'nl' ? 'Permanent kamperen' : 'Dauercamping' }}</NuxtLink>
             </li>
             <li class="pb-1 " @click="toggleMobileNav">
               <NuxtLink class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
@@ -125,25 +125,26 @@
             <li class="pb-1 " @click="toggleMobileNav">
               <NuxtLink class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
                 to="/more/back2basic">
-                Back 2 Basic Wiese</NuxtLink>
+                {{ locale == 'nl' ? 'Back2Basic Weide' : 'Back2Basic Wiese' }}</NuxtLink>
             </li>
 
           </ul>
         </li>
         <li class="" @click="toggleMobileNav">
-          <NuxtLink class="" to="/umgebung">Umgebung</NuxtLink>
+          <NuxtLink class="" to="/umgebung">{{ locale == 'nl' ? 'Omgeving' : 'Umgebung' }}</NuxtLink>
         </li>
         <li class="" @click="toggleMobileNav">
-          <NuxtLink class="" to="/gallerie">Gallerie</NuxtLink>
+          <NuxtLink class="" to="/gallerie">{{ locale == 'nl' ? 'Galerie' : 'Gallerie' }}
+          </NuxtLink>
         </li>
         <li class="" @click="toggleMobileNav">
-          <NuxtLink class="" to="/termine">Termine</NuxtLink>
+          <NuxtLink class="" to="/termine">{{ locale == 'nl' ? 'Data' : 'Termine' }}</NuxtLink>
         </li>
         <li>
           <NuxtLink
             class=" pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent bg-primary-white text-secondary-green font-bold p-1 rounded-md"
             to="https://wildbach-camping.camping.care/" target="_blank">
-            Jetzt buchen</NuxtLink>
+            {{ locale == 'nl' ? 'Boek nu' : 'Jetzt buchen' }}</NuxtLink>
         </li>
       </ul>
     </transition>
@@ -190,6 +191,9 @@ function checkScreen() {
 function closeNav() {
   mobileNav.value = false;
 }
+const locale = localStorage.getItem('langStore')
+
+
 </script>
 
 <style scoped>
