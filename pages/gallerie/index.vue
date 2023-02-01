@@ -10,7 +10,6 @@
         <section class="container mt-20 ">
             <h1>Gallerie</h1>
         </section>
-        <LangSwitcher />
         <StoryblokComponent v-if="story" :blok="story.content" />
 
     </div>
