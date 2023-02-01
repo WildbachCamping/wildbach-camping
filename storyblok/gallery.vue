@@ -13,9 +13,9 @@
             </swiper-slide>
         </swiper>
         <swiper @swiper="setThumbsSwiper" :spaceBetween="10" :slidesPerView="4" :freeMode="true"
-            :watchSlidesProgress="true" :modules="modules" class="max-h-[40vh]">
+            :watchSlidesProgress="true" :modules="modules">
             <swiper-slide v-for="image in blok.blocks">
-                <StoryblokComponent :blok="image" :visible="false" />
+                <StoryblokComponent :blok="image" :visible="false" :thumbnail="true" />
             </swiper-slide>
 
         </swiper>

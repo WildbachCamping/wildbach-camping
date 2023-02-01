@@ -4,9 +4,10 @@ const props = defineProps({
         type: Object,
         default: () => ({})
     },
-    visible: {
-        type: Boolean
-    }
+    visible: Boolean
+
+    ,
+    thumbnail: Boolean
 })
 </script>
 
@@ -15,18 +16,11 @@ const props = defineProps({
 
     <div class="pt-20 flex flex-col justify-center items-center">
         <img :src="blok.image?.filename" alt=""
-            class="max-h-[60vh] min-h-[60vh] object-cover w-full md:w-5/6 rounded-md shadow-md">
+            :class="['object-cover w-full rounded-md shadow-md max-h-[60vh]', thumbnail ? 'max-h-[20vh] ' : '']">
         <p v-if="visible == true" class="mt-4">{{ blok.image.title }}</p>
     </div>
 
 </template>
 <style scoped>
-img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    cursor: pointer;
-    border-radius: 0.25rem;
-}
+
 </style>
