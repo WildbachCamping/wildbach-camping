@@ -44,11 +44,11 @@
             </ul>
         </div>
 
-        <div class="flex flex-col md:flex-row justify-center items-center mt-8 sm:mt-0 gap-4">
-            <img class="w-[130px] rounded-full" src="@/assets/images/award2.jpg" alt="Tour Certification">
+        <div class="flex flex-col md:flex-row justify-center items-center mt-8 sm:mt-0 gap-8">
             <a href="https://www.beyondcamping.de/camping/campingplaetze/" target="_blank" rel="noopener"><img
                     class="w-[150px]" src="@/assets/images/award1.png"
                     alt="BeyondCamping Campingplatz Auszeichnung"></a>
+            <img class="w-[130px] rounded-full" src="@/assets/images/award2.jpg" alt="Tour Certification">
 
 
             <img class="w-[130px] rounded-full object-cover object-top" src="@/assets/images/award3.jpeg"
