@@ -24,7 +24,7 @@
                 <li class="cursor-pointer" @click="toggleModal">
                     <NuxtLink
                         class="transition-all duration-500 ease border-b-[2px] border-transparent hover:border-b-white"
-                        to="/datenschutz">Cookie-Einstellungen</NuxtLink>
+                        to="">Cookie-Einstellungen</NuxtLink>
                 </li>
                 <li class="flex my-1">
                     <NuxtLink
@@ -66,6 +66,10 @@
                     </p>
                 </div>
             </Modal>
+        </Teleport>
+        <Teleport to="body">
+
+            <LangSwitcher class="fixed bottom-0" />
         </Teleport>
     </footer>
 

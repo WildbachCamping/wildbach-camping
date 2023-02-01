@@ -5,13 +5,6 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      script: [
-        {
-          src: 'https://cdn.weglot.com/weglot.min.js',
-          type: 'text/javascript',
-          async: true,
-        },
-      ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         {
@@ -43,7 +36,9 @@ export default defineNuxtConfig({
   ssr: false,
   modules: [
     '@nuxtjs/tailwindcss',
+    '@vueuse/nuxt',
     ['@storyblok/nuxt', { accessToken: process.env.STORYBLOK_ACCESS_TOKEN }],
+
     // ...
   ],
 });

@@ -12,18 +12,17 @@
 
         </Head>
         <StoryblokComponent v-if="story" :blok="story.content" />
-
+        <LangSwitcher />
     </main>
 </template>
 
 
 <script setup>
+const locale = localStorage.getItem('langStore')
 
-const story = await useAsyncStoryblok("home", { version: "draft" });
+const story = await useAsyncStoryblok(`home?language=${locale}`, { version: "draft" });
 
-Weglot.initialize({
-    api_key: 'wg_2895a86e8d48d5ef2d6baf990e41ea880'
-});
+
 
 </script>
 

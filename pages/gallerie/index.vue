@@ -10,6 +10,7 @@
         <section class="container mt-20 ">
             <h1>Gallerie</h1>
         </section>
+        <LangSwitcher />
         <StoryblokComponent v-if="story" :blok="story.content" />
 
     </div>
@@ -17,7 +18,5 @@
 
 <script setup>
 const story = await useAsyncStoryblok("gallerie", { version: "draft" });
-Weglot.initialize({
-    api_key: 'wg_2895a86e8d48d5ef2d6baf990e41ea880'
-});
+
 </script>
