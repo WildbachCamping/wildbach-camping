@@ -68,7 +68,7 @@ const props = defineProps({
                     Rezeption:
                 </h3>
                 <br>
-                <h4 class="text-xl mb-3">{{ blok.header }}</h4>
+                <h4 v-if="blok.header" class="text-xl mb-3">{{ blok.header }}</h4>
                 {{ blok.montag }}
                 <br />{{ blok.dienstag }} <br />{{ blok.mittwoch }}<br />{{ blok.donnerstag }}
                 <br />{{ blok.freitag }}<br />{{ blok.samstag }}<br />{{ blok.sonntag }}
