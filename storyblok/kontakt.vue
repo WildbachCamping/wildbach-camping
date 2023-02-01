@@ -54,6 +54,7 @@ const props = defineProps({
         <div class="grid grid-cols-1 md:grid-cols-2 pt-10 mb-10">
             <div class="text-justify flex flex-col">
                 <h2 class="mb-4">Wildbach Camping</h2>
+
                 <span>{{ blok.telefon }}</span>
                 <span>{{ blok.email }}</span>
                 <span>{{ blok.website }}</span>
@@ -66,7 +67,9 @@ const props = defineProps({
                 <h3>
                     Rezeption:
                 </h3>
-                <br />{{ blok.montag }}
+                <br>
+                <h4 class="text-xl mb-3">{{ blok.header }}</h4>
+                {{ blok.montag }}
                 <br />{{ blok.dienstag }} <br />{{ blok.mittwoch }}<br />{{ blok.donnerstag }}
                 <br />{{ blok.freitag }}<br />{{ blok.samstag }}<br />{{ blok.sonntag }}
             </div>
