@@ -9,6 +9,17 @@ const props = defineProps({
 </script>
 
 <template>
+
+  <Head>
+    <Title>Wildbach Camping</Title>
+    <Meta
+      content="Wildbach Camping in Hellenthal am Nationalpark Eifel I Familienfreundliche und entspannte Atmosphäre I Naturbelassen am Bach mit Feuerstellen I Auszeit und Urlaub in der Natur"
+      name="description" />
+
+    <Meta content="Startseite" />
+
+
+  </Head>
   <div class="flex flex-col items-center">
     <div
       class="absolute bg-primary-white/[.7] p-6 md:p-20 mt-10 bottom-[50%] text-secondary-green font-bold tracking-widest z-10 rounded-sm"
