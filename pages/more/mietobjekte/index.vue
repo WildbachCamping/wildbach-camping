@@ -1,10 +1,6 @@
 <template>
     <div>
 
-        <Head>
-            <Title>Mietobjekte</Title>
-            <Meta name="description" />
-        </Head>
         <StoryblokComponent v-if="story" :blok="story.content" />
 
     </div>

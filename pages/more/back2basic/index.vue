@@ -1,11 +1,6 @@
 <template>
     <div>
 
-        <Head>
-            <Title>Back2Basic</Title>
-            <Meta name="description" />
-        </Head>
-
         <StoryblokComponent v-if="story" :blok="story.content" />
     </div>
 </template>
