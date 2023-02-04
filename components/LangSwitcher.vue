@@ -13,14 +13,13 @@
 import { usePreferredLanguages } from '@vueuse/core'
 
 const languages = usePreferredLanguages()
-console.log(languages.value);
+
 const locales = reactive({ de: 'de', nl: 'nl' })
 
 
 const changeLang = (locale) => {
     localStorage.setItem('langStore', `${locale}`)
     location.reload()
-    console.log(localStorage.getItem('langStore'))
 }
 </script>
 

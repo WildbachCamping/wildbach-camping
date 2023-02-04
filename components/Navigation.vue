@@ -1,6 +1,6 @@
 <template>
   <header :class="{ 'scrolled-nav': scrolledNav }"
-    class="fixed items-center w-full z-40 shadow-bottom bg-primary-green text-white flex justify-center">
+    class="fixed items-center w-full z-40 shadow bg-primary-green text-white flex justify-center">
     <nav class="flex items-center justify-between md:py-4 py-2 w-[90%]">
       <div class="branding pl-4 lg:pl-0">
         <NuxtLink to="/">
