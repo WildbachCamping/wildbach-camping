@@ -9,12 +9,7 @@ const props = defineProps({
 
 <template>
     <div>
-        <section class="container flex flex-col items-center mt-20 ">
-            <div class="text-justify w-full">
-                <h1 class="text-4xl md:text-5xl mb-4 w-full text-left">Back2Basic Wiese</h1>
-                <p class="text-lg">{{ blok.text }}</p>
-            </div>
-        </section>
+
         <section class="container flex flex-col items-center mt-20">
             <div class="grid grid-cols-12 grid-row-11 gap-1 sm:gap-2 md:gap-3 ld:gap-4">
                 <img :src="blok.image1.filename" :alt="blok.image1.alt"

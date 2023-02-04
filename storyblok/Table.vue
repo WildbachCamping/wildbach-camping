@@ -28,7 +28,7 @@ const props = defineProps({
         </table>
 
         <p class="text-xs">{{ blok.footnote1 }}</p>
-        <p class="text-xs" v-if="!blok.footnote2 == ''">{{ blok.footnote2 }}</p>
+        <p class="text-xs pl-2" v-if="!blok.footnote2 == ''">{{ blok.footnote2 }}</p>
         <p class="text-xs" v-if="!blok.footnote3 == ''">{{ blok.footnote3 }}</p>
 
     </section>

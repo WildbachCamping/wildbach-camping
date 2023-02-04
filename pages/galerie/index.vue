@@ -2,7 +2,7 @@
     <div class="w-full">
 
         <StoryblokComponent v-if="story" :blok="story.content" />
-
+        <Gallerie />
     </div>
 </template>
 
