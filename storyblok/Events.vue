@@ -21,7 +21,7 @@
             <img src="@/assets/images/events/event-9.jpeg" alt=""
                 class="col-span-7 row-span-2 w-full h-full object-cover rounded-sm shadow-md">
         </div>
-        <div class="container" v-if="screen">
+        <div class="max-w-[98vw]" v-if="screen">
             <swiper :style="{
                 '--swiper-navigation-color': '#fff',
                 '--swiper-pagination-color': '#fff',
