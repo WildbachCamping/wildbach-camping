@@ -12,11 +12,34 @@
                     class="col-span-6 row-span-2 w-full h-full  object-cover rounded-sm shadow-md">
 
             </div>
+            <div class="container pt-10">
+                <swiper :style="{
+                    '--swiper-navigation-color': '#fff',
+                    '--swiper-pagination-color': '#fff',
+                }" :spaceBetween="10" :navigation="true" :thumbs="{ swiper: thumbsSwiper }" :modules="modules"
+                    class="mySwiper2 ">
+                    <swiper-slide v-for="image in blok.blocks">
+                        <StoryblokComponent :blok="image" :visible="true" />
+                    </swiper-slide>
+                </swiper>
+
+            </div>
         </section>
     </div>
 </template>
 
 <script setup>
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { FreeMode, Navigation, Thumbs } from 'swiper';
+import 'swiper/css/bundle';
+
+
+const modules = ref([FreeMode, Navigation, Thumbs])
+const thumbsSwiper = ref(null);
+
+const setThumbsSwiper = (swiper) => {
+    thumbsSwiper.value = swiper;
+}
 const props = defineProps({
     blok: {
         type: Object,

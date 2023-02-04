@@ -163,7 +163,22 @@ const windowWidth = ref(null);
 onBeforeMount(() => {
   window.addEventListener('resize', checkScreen);
   checkScreen();
+
 });
+
+const screen = useState('screen', () => {
+  windowWidth.value = window.innerWidth;
+  if (windowWidth.value <= 640) {
+    mobile.value = true;
+    return true;
+  } else {
+    mobile.value = false;
+    mobileNav.value = false;
+  }
+  return false
+
+})
+
 
 // function updateScroll() {
 //     const scrollPosition = window.scrollY

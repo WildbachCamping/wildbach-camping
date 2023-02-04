@@ -76,7 +76,7 @@
         </section>
 
         <section class="container flex flex-col items-center mt-20">
-            <div class="grid grid-cols-12 grid-row-11 gap-1 sm:gap-2 md:gap-3 ld:gap-4 w-full">
+            <div class="grid grid-cols-12 grid-row-11 gap-1 sm:gap-2 md:gap-3 ld:gap-4 w-full" v-if="!screen">
                 <img src="@/assets/images/umgebung/umgebung-1.jpeg" alt=""
                     class="col-span-4 row-span-2 w-full h-full object-cover rounded-sm shadow-md">
                 <img src="@/assets/images/umgebung/umgebung-2.jpeg" alt=""
@@ -104,19 +104,37 @@
                 <img src="@/assets/images/umgebung/umgebung-13.jpeg" alt=""
                     class="col-span-4 row-span-2 w-full h-full object-cover rounded-sm shadow-md">
             </div>
+            <div class="container pt-10" v-if="screen">
+                <swiper :style="{
+                    '--swiper-navigation-color': '#fff',
+                    '--swiper-pagination-color': '#fff',
+                }" :spaceBetween="10" :navigation="true" :thumbs="{ swiper: thumbsSwiper }" :modules="modules"
+                    class="mySwiper2 ">
+                    <swiper-slide v-for="image in blok.blocks">
+                        <StoryblokComponent :blok="image" :visible="true" />
+                    </swiper-slide>
+                </swiper>
+
+            </div>
+
         </section>
     </div>
 </template>
 
 <script setup>
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { FreeMode, Navigation, Thumbs } from 'swiper';
+import 'swiper/css/bundle';
 
+const screen = useState('screen')
+const modules = ref([FreeMode, Navigation, Thumbs])
+const thumbsSwiper = ref(null);
 const props = defineProps({
     blok: {
         type: Object,
         default: () => ({})
     }
 })
-
 </script>
 
 <style scoped>
