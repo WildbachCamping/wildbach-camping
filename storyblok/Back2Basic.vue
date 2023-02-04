@@ -11,11 +11,11 @@ const props = defineProps({
     <div>
 
         <section class="container flex flex-col items-center mt-20">
-            <div class="grid grid-cols-12 grid-row-11 gap-1 sm:gap-2 md:gap-3 ld:gap-4">
+            <div class="grid grid-cols-12 grid-row-2 gap-1 sm:gap-2 md:gap-3 ld:gap-4">
                 <img :src="blok.image1.filename" :alt="blok.image1.alt"
-                    class="col-span-7 row-span-2 w-full h-full object-cover rounded-sm shadow-md">
+                    class="col-span-7 row-span-2 w-full h-[40vh] object-cover rounded-sm shadow-md">
                 <img :src="blok.image2.filename" :alt="blok.image2.alt"
-                    class="col-span-5 row-span-2 object-cover h-full rounded-sm shadow-md">
+                    class="col-span-5 row-span-2 object-cover h-[40vh] rounded-sm shadow-md">
                 <img :src="blok.image3.filename" :alt="blok.image3.alt"
                     class="col-span-6 row-span-2 w-full h-full object-cover rounded-sm shadow-md">
                 <img :src="blok.image4.filename" :alt="blok.image4.alt"
@@ -25,3 +25,8 @@ const props = defineProps({
         </section>
     </div>
 </template>
+<style scoped>
+img {
+    height: 40vh;
+}
+</style>
