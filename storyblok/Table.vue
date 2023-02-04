@@ -8,7 +8,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <section class="container p-0">
+    <section class="container">
         <h2 v-if="blok.header" class="mt-20">{{ blok.header }}</h2>
         <table class="table border-separate w-full">
             <thead>
