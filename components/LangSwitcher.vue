@@ -2,7 +2,7 @@
     <div>
         <ul class="w-20 flex gap-2">
             <li class="bg-gray-50 cursor-pointer px" v-for="locale in locales" @click="changeLang(locale)"><img
-                    :src="`/${locale}.svg.webp`" :alt="locale">
+                    :src="`/${locale}.svg`" :alt="locale" class="w-8 max-h-[25px] min-h-[25px] object-cover">
             </li>
         </ul>
     </div>
