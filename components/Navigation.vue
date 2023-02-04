@@ -98,8 +98,8 @@
           <NuxtLink class="" to="/camping">Camping</NuxtLink>
         </li>
         <li class="group relative dropdown  ">
-          <NuxtLink
-            class="pb-1 flex items-center mt-2 transition duration-500 ease-in-outborder-transparent cursor-pointer">
+          <NuxtLink to=""
+            class="pb-1 flex items-center mt-2 transition duration-500 ease-in-outborder-transparent cursor-pointer select-none">
             {{ locale == 'nl' ? 'Meer offertes' : 'Weitere Angebote' }}
             <ChevronDownIcon class="h-4 w-4 mt-1"></ChevronDownIcon>
           </NuxtLink>
