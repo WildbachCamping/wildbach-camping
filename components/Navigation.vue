@@ -17,7 +17,7 @@
 
 
         <li class="group relative dropdown ">
-          <div class="pb-1 flex items-center mt-2 transition duration-500 ease-in-outborder-transparent cursor-pointer">
+          <div class="pb-1 flex items-center mt-2 transition duration-500 ease-in-outborder-transparent">
             {{ locale == 'nl' ? 'Meer offertes' : 'Weitere Angebote' }}
             <ChevronDownIcon class="h-4 w-4 mt-1"></ChevronDownIcon>
           </div>
