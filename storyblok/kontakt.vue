@@ -59,45 +59,46 @@ const props = defineProps({
                 <span>{{ blok.email }}</span>
                 <span>{{ blok.website }}</span>
                 <br />
-                <span>Adresse:</span>
+                <span>{{ blok.header1 }}:</span>
                 <span>{{ blok.strasse }}</span>
                 <span>{{ blok.stadt }}</span>
                 <span>{{ blok.land }}</span>
                 <br />
                 <h3>
-                    Rezeption:
+                    {{ blok.header2 }}
                 </h3>
                 <br>
-                <h4 v-if="blok.header" class="text-xl mb-3">{{ blok.header }}</h4>
+                <h4 v-if="blok.header3" class="text-xl mb-3">{{ blok.header3 }}</h4>
                 {{ blok.montag }}
                 <br />{{ blok.dienstag }} <br />{{ blok.mittwoch }}<br />{{ blok.donnerstag }}
                 <br />{{ blok.freitag }}<br />{{ blok.samstag }}<br />{{ blok.sonntag }}
             </div>
             <div class="text-justify flex-1">
-                <h2 class="text-4xl mt-4 md:mt-0 mb-4">Schreibt uns</h2>
-                <h2 class="mb-4 text-2xl">Kontaktformular</h2>
+                <h2 class="text-4xl mt-4 md:mt-0 mb-4">{{ blok.header4 }}</h2>
+                <h2 class="mb-4 text-2xl">{{ blok.header5 }}</h2>
                 <form @submit.prevent="sendMessage" name="wildbach" method="POST"
                     class="grid grid-cols-4 grid-flow-row gap-2">
-                    <input v-model="form.senderName" type="text" name="name" placeholder="Name" class="col-span-2" />
+                    <input v-model="form.senderName" type="text" name="name" :placeholder="blok.name"
+                        class="col-span-2" />
                     <input v-model="form.senderEmail" type="email" name="email" placeholder="Email*" id=""
                         class="col-span-2" />
-                    <input v-model="form.senderSubject" type="text" name="subject" placeholder="Betreff"
+                    <input v-model="form.senderSubject" type="text" name="subject" :placeholder="blok.betreff"
                         class="col-span-2" />
-                    <input v-model="form.senderPhone" type="tel" name="phone" placeholder="Telefon"
+                    <input v-model="form.senderPhone" type="tel" name="phone" :placeholder="blok.phone"
                         class="col-span-2" />
-                    <input v-model="form.senderAddress.street" type="text" name="street" placeholder="Straße, Nr"
+                    <input v-model="form.senderAddress.street" type="text" name="street" :placeholder="blok.street"
                         class="col-span-2" />
-                    <input v-model="form.senderAddress.postcode" type="text" name="postcode" placeholder="PLZ"
+                    <input v-model="form.senderAddress.postcode" type="text" name="postcode"
+                        :placeholder="blok.postcode" class="col-span-2" />
+                    <input v-model="form.senderAddress.city" type="text" name="city" :placeholder="blok.city"
                         class="col-span-2" />
-                    <input v-model="form.senderAddress.city" type="text" name="city" placeholder="Stadt"
-                        class="col-span-2" />
-                    <input v-model="form.senderAddress.country" type="text" name="country" placeholder="Land"
+                    <input v-model="form.senderAddress.country" type="text" name="country" :placeholder="blok.country"
                         class="col-span-2" />
                     <textarea v-model="form.senderMessage" name="message" id="" cols="30" rows="8"
                         class="col-span-4"></textarea>
-                    <p class="col-span-4 text-sm">* Pflichtfeld</p>
+                    <p class="col-span-4 text-sm">* {{ blok.required }}</p>
                     <button class="bg-gray-800/90 rounded-full w-24 h-8 hover:bg-gray-800/70 duration-300 text-white">
-                        Senden
+                        {{ blok.button }}
                     </button>
                 </form>
             </div>

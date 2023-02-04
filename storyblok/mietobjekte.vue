@@ -51,7 +51,7 @@ const props = defineProps({
             </tbody>
         </table>
 
-        <p class="text-xs">{{ blok.footnote.content[0].content[0].text }}</p>
+        <p class="text-xs" v-for="item in blok.footnote.content ">{{ item.content[0].text }} </p>
 
     </div>
 </template>
