@@ -52,6 +52,10 @@ const props = defineProps({
         </table>
 
         <p class="text-xs" v-for="item in blok.footnote.content ">{{ item.content[0].text }} </p>
-
+        <button type="button" class="rounded-full bg-gray-800/90 px-4 py-1 hover:bg-gray-800/70 duration-300 mt-10"
+            v-if="blok.pdf">
+            <NuxtLink class="text-white flex gap-2" :to="blok.pdf?.filename" target="_blank">{{ blok.label }} <img
+                    src="@/assets/images/open-outline.svg" class="w-5" alt=""></NuxtLink>
+        </button>
     </div>
 </template>

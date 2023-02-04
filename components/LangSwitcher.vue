@@ -1,9 +1,8 @@
 <template>
     <div>
         <ul class="w-20 flex gap-2">
-            <li class="bg-gray-50 cursor-pointer px-2" v-for="locale in locales" @click="changeLang(locale)">{{
-                locale
-            }}
+            <li class="bg-gray-50 cursor-pointer px" v-for="locale in locales" @click="changeLang(locale)"><img
+                    :src="`/${locale}.svg.webp`" :alt="locale">
             </li>
         </ul>
     </div>
