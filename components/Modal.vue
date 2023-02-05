@@ -1,7 +1,7 @@
 <template>
     <transition name="modal-animation" enter-from-class="opacity-0" leave-to-class="opacity-0"
         leave-active-class="transition-all ease-[cubic-bezier(0.52,0.02,0.19, 1.02)] duration-700"
-        enter-active-class="transition-all ease-[cubic-bezier(0.52,0.02,0.19, 1.02)] duration-700">
+        enter-active-class="transition-all ease-[cubic-bezier(0.52,0.02,0.19, 1.02)] duration-700" class="z-50">
         <div v-show="props.modalActive"
             class="modal flex justify-center items-center h-screen w-full top-0 left-0 fixed bg-gray-700/60">
             <transition name="modal-animation-inner">
