@@ -104,7 +104,7 @@
                 <img src="@/assets/images/umgebung/umgebung-13.jpeg" alt=""
                     class="col-span-4 row-span-2 w-full h-full object-cover rounded-sm shadow-md">
             </div>
-            <div class="container pt-10" v-if="screen">
+            <div class="max-w-[98vw]" v-if="screen">
                 <swiper :style="{
                     '--swiper-navigation-color': '#fff',
                     '--swiper-pagination-color': '#fff',
