@@ -81,7 +81,7 @@ const props = defineProps({
                     class="grid grid-cols-4 grid-flow-row gap-2">
                     <input v-model="form.senderName" type="text" name="name" :placeholder="blok.name"
                         class="col-span-2" />
-                    <input v-model="form.senderEmail" type="email" name="email" placeholder="Email*" id=""
+                    <input v-model="form.senderEmail" type="email" name="email" placeholder="Email*" required id=""
                         class="col-span-2" />
                     <input v-model="form.senderSubject" type="text" name="subject" :placeholder="blok.betreff"
                         class="col-span-2" />
