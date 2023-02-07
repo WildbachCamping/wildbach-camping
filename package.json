@@ -11,7 +11,8 @@
   "devDependencies": {
     "@vueuse/core": "^9.12.0",
     "@vueuse/nuxt": "^9.12.0",
-    "nuxt": "3.0.0"
+    "nuxt": "3.0.0",
+    "nuxt-simple-sitemap": "^1.0.7"
   },
   "dependencies": {
     "@heroicons/vue": "^2.0.13",

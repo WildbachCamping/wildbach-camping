@@ -20,23 +20,17 @@ export default defineNuxtConfig({
           hreflang: 'de',
           href: 'https://www.wildbach-camping.de',
         },
-        {
-          rel: 'alternate',
-          hreflang: 'nl',
-          href: 'https://nl.wildbach-camping.de',
-        },
-        {
-          rel: 'alternate',
-          hreflang: 'en',
-          href: 'https://en.wildbach-camping.de',
-        },
       ],
     },
+  },
+  sitemap: {
+    hostname: 'https://wildbach-camping.de',
   },
   ssr: false,
   modules: [
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
+    'nuxt-simple-sitemap',
     ['@storyblok/nuxt', { accessToken: process.env.STORYBLOK_ACCESS_TOKEN }],
 
     // ...
