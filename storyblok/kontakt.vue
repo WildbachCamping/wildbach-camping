@@ -38,6 +38,7 @@ function resetForm() {
 async function sendMessage() {
     // useFetch(endpoint, { method: 'post', body: form, mode: 'no-cors' });
     $fetch(endpoint, { method: 'post', body: form, mode: 'no-cors' })
+    window.alert('Deine Anfrage wurde versendet.')
     resetForm();
 }
 const props = defineProps({
