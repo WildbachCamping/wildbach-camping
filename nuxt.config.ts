@@ -4,6 +4,7 @@ export default defineNuxtConfig({
     shim: false,
   },
   app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -27,6 +28,9 @@ export default defineNuxtConfig({
     hostname: 'https://wildbach-camping.de',
   },
   ssr: false,
+  build: {
+    transpile: ['fsevents'],
+  },
   modules: [
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',

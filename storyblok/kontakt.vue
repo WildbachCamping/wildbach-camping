@@ -36,7 +36,6 @@ function resetForm() {
 }
 
 async function sendMessage() {
-    // useFetch(endpoint, { method: 'post', body: form, mode: 'no-cors' });
     $fetch(endpoint, { method: 'post', body: form, mode: 'no-cors' })
     window.alert('Deine Anfrage wurde versendet.')
     resetForm();
@@ -79,8 +78,7 @@ const props = defineProps({
                 <h2 class="mb-4 text-2xl">{{ blok.header5 }}</h2>
                 <form @submit.prevent="sendMessage" name="wildbach" method="POST"
                     class="grid grid-cols-4 grid-flow-row gap-2">
-                    <input v-model="form.senderName" type="text" name="name" :placeholder="blok.name"
-                        class="col-span-2" />
+                    <input v-model="form.senderName" type="text" name="name" :placeholder="blok.name" class="col-span-2" />
                     <input v-model="form.senderEmail" type="email" name="email" placeholder="Email*" required id=""
                         class="col-span-2" />
                     <input v-model="form.senderSubject" type="text" name="subject" :placeholder="blok.betreff"
@@ -89,8 +87,8 @@ const props = defineProps({
                         class="col-span-2" />
                     <input v-model="form.senderAddress.street" type="text" name="street" :placeholder="blok.street"
                         class="col-span-2" />
-                    <input v-model="form.senderAddress.postcode" type="text" name="postcode"
-                        :placeholder="blok.postcode" class="col-span-2" />
+                    <input v-model="form.senderAddress.postcode" type="text" name="postcode" :placeholder="blok.postcode"
+                        class="col-span-2" />
                     <input v-model="form.senderAddress.city" type="text" name="city" :placeholder="blok.city"
                         class="col-span-2" />
                     <input v-model="form.senderAddress.country" type="text" name="country" :placeholder="blok.country"

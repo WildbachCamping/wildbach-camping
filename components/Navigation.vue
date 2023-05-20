@@ -77,10 +77,10 @@
           class="w-10 h-10 relative transition duration-700 ease-[cubic-bezier(.165, .84, .44, 1)] origin-center flex justify-center items-center"
           :class="{ '-rotate-180': mobileNav }">
           <span class="bg-white w-8 h-[2px] absolute origin-center mb-4"
-            :class="{ 'rotate-45 mb-0': mobileNav }"></span>
+            :class="{ 'rotate-45 absolute origin-center mt-4': mobileNav }"></span>
           <span class="bg-white w-8 h-[2px] absolute origin-center" :class="{ 'opacity-0': mobileNav }"></span>
           <span class="bg-white w-8 h-[2px] absolute origin-center mt-4"
-            :class="{ '-rotate-45 mt-0': mobileNav }"></span>
+            :class="{ '-rotate-45 absolute origin-center mb-4': mobileNav }"></span>
         </div>
       </div>
     </nav>
@@ -211,6 +211,4 @@ const locale = localStorage.getItem('langStore')
 
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
