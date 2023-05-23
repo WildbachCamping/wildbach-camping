@@ -18,7 +18,7 @@
                 <br>
                 <p>HRB 8522 B Amtsgericht Düren</p>
                 <br>
-                <p>Bildquellen: Nicole Laskowski, Eppo Karsijns, Wildbach Camping</p>
+                <p>{{ blok.Sources }}</p>
             </div>
         </section>
     </div>
