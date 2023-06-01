@@ -1,5 +1,5 @@
 <script setup>
-import { ArrowDownIcon } from '@heroicons/vue/24/outline';
+import { ArrowDownIcon } from "@heroicons/vue/24/outline";
 const props = defineProps({
   blok: {
     type: Object,
@@ -9,37 +9,42 @@ const props = defineProps({
 </script>
 
 <template>
-
   <Head>
     <Title>Wildbach Camping</Title>
     <Meta
       content="Wildbach Camping in Hellenthal am Nationalpark Eifel I Familienfreundliche und entspannte Atmosphäre I Naturbelassen am Bach mit Feuerstellen I Auszeit und Urlaub in der Natur"
-      name="description" />
+      name="description"
+    />
 
     <Meta content="Startseite" />
-
-
   </Head>
   <div class="flex flex-col items-center">
     <div
-      class="absolute bg-primary-white/[.7] p-6 md:p-20 mt-10 bottom-[50%] text-secondary-green font-bold tracking-widest z-10 rounded-sm"
-      data-aos="fade-up" data-aos-duration="2500" data-aos-delay="500">
-      <div class="flex flex-col items-center text-center ">
-        <h1 class="pb-5 font-bold text-secondary-green text-4xl md:text-5xl min-w-max">{{ blok.title }}</h1>
+      class="absolute bottom-[50%] z-10 mt-10 rounded-sm bg-primary-white/[.7] p-6 font-bold tracking-widest text-secondary-green md:p-20"
+      data-aos="fade-up"
+      data-aos-duration="2500"
+      data-aos-delay="500"
+    >
+      <div class="flex flex-col items-center text-center">
+        <h1
+          class="min-w-max pb-5 text-4xl font-bold text-secondary-green md:text-5xl"
+        >
+          {{ blok.title }}
+        </h1>
         <div class="text-xl">{{ blok.subtitle }}</div>
       </div>
-
     </div>
     <div
-      class="animate-bounce absolute shadow-lg min-w-screen mx-auto bottom-10 h-10 w-10 rounded-full bg-primary-green flex items-center justify-center z-10">
+      class="min-w-screen absolute bottom-10 z-10 mx-auto flex h-10 w-10 animate-bounce items-center justify-center rounded-full bg-primary-green shadow-lg"
+    >
       <a href="#welcome">
         <ArrowDownIcon class="h-8 w-8" />
       </a>
     </div>
   </div>
-  <div class="relative md:max-h-[90vh] max-h-[92vh]  bg-no-repeat bg-cover md:mt-6 bg-bottom md:bg-top"
-    :style="{ backgroundImage: `url(${blok.image.filename})` }" style="height: 100vh">
-
-  </div>
-
+  <div
+    class="relative max-h-[92vh] bg-cover bg-bottom bg-no-repeat md:mt-6 md:max-h-[90vh] md:bg-top"
+    :style="{ backgroundImage: `url(${blok.image.filename})` }"
+    style="height: 100vh"
+  ></div>
 </template>

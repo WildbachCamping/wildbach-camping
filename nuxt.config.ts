@@ -28,11 +28,19 @@ export default defineNuxtConfig({
     hostname: 'https://wildbach-camping.de',
   },
   ssr: false,
+  devtools: {
+    // Enable devtools (default: true)
+    enabled: true,
+    // VS Code Server options
+    vscode: {},
+    // ...other options
+  },
   build: {
     transpile: ['fsevents'],
   },
   modules: [
     '@nuxtjs/tailwindcss',
+    '@nuxt/devtools',
     '@vueuse/nuxt',
     'nuxt-simple-sitemap',
     ['@storyblok/nuxt', { accessToken: process.env.STORYBLOK_ACCESS_TOKEN }],
