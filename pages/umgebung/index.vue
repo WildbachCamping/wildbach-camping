@@ -7,8 +7,9 @@
 <script setup>
 const locale = localStorage.getItem("langStore");
 
-const story = await useAsyncStoryblok(
-  `umgebung?fallback_lang=de&language=${locale}`,
-  { version: "draft" }
-);
+const story = await useAsyncStoryblok("umgebung", {
+  version: "draft",
+  language: locale,
+  fallback_lang: "de",
+});
 </script>
