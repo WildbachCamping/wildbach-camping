@@ -15,5 +15,6 @@ const props = defineProps({
       class="max-h-[60vh] min-h-[60vh] w-full rounded-md object-cover shadow-md md:w-5/6"
     />
     <p class="mt-4">{{ blok.caption }}</p>
+    <p class="mt-4">{{ blok.caption2 }}</p>
   </div>
 </template>
