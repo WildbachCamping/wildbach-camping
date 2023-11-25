@@ -20,6 +20,7 @@
   "dependencies": {
     "@headlessui/vue": "^1.7.16",
     "@heroicons/vue": "^2.0.18",
+    "@nuxtjs/robots": "^3.0.0",
     "@nuxtjs/tailwindcss": "^6.7.0",
     "@storyblok/nuxt": "^5.4.5",
     "@tailwindcss/forms": "^0.5.3",
