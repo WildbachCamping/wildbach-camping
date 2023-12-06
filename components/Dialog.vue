@@ -39,7 +39,7 @@
                 <p class="text-sm text-gray-500">
                   Liebe Gäste, wir gehen am 1. November in die Winterpause und
                   sind ab Ostern 2024 wieder für euch da. Die Stellplätze für
-                  2024 sind ab dem 1.1.2024 über unsere Website buchbar. Wir
+                  2024 sind ab dem 15.12.2023 über unsere Website buchbar. Wir
                   wünschen euch einen schönen Winter und freuen uns auf ein
                   Wiedersehen in der nächsten Saison.
                 </p>

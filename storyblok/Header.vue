@@ -10,7 +10,6 @@ const props = defineProps({
 <template>
   <Head>
     <Title>{{ blok.title }}</Title>
-    <Meta :content="blok.meta" name="description" />
   </Head>
   <section class="container mt-20">
     <div class="text-justify">
