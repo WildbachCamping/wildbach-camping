@@ -9,9 +9,6 @@ const props = defineProps({
 </script>
 
 <template>
-  <Head>
-    <Title>Wildbach Camping</Title>
-  </Head>
   <div class="flex flex-col items-center">
     <div
       class="absolute bottom-[50%] z-10 mt-10 rounded-sm bg-primary-white/[.7] p-6 font-bold tracking-widest text-secondary-green md:p-20"
