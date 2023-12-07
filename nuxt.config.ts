@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     head: {
       meta: [
         {
+          name: "description",
           content:
             " Wildbach Camping in Hellenthal am Nationalpark Eifel I Familienfreundliche und entspannte Atmosphäre I Naturbelassen am Bach mit Feuerstellen I Auszeit und Urlaub in der Natur",
         },
