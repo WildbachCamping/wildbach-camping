@@ -11,8 +11,6 @@ const props = defineProps({
 <template>
   <Head>
     <Title>Wildbach Camping</Title>
-
-    <Meta content="Startseite" />
   </Head>
   <div class="flex flex-col items-center">
     <div
