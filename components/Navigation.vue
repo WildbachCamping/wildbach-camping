@@ -218,7 +218,7 @@
         <li>
           <NuxtLink
             class="rounded-md border-b-[2px] border-transparent bg-primary-white p-1 pb-1 font-bold text-secondary-green transition-all duration-500 ease-in-out"
-            to="https://wildbach-camping.camping.care/"
+            to="https://wildbach-camping.campalot.de/de"
             target="_blank"
           >
             {{ locale == "nl" ? "Boek nu" : "Jetzt buchen" }}</NuxtLink
