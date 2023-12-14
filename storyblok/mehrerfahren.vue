@@ -96,7 +96,7 @@ const props = defineProps({
     >
       <NuxtLink
         class="text-3xl text-white"
-        to="https://wildbach-camping.camping.care/"
+        to="https://wildbach-camping.campalot.de/de"
         target="_blank"
       >
         {{ blok.buchung }}</NuxtLink

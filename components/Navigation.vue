@@ -1,95 +1,148 @@
 <template>
-  <header :class="{ 'scrolled-nav': scrolledNav }"
-    class="fixed items-center w-full z-40 shadow bg-primary-green text-white flex justify-center">
-    <nav class="flex items-center justify-between md:py-4 py-2 w-[90%]">
+  <header
+    :class="{ 'scrolled-nav': scrolledNav }"
+    class="fixed z-40 flex w-full items-center justify-center bg-primary-green text-white shadow"
+  >
+    <nav class="flex w-[90%] items-center justify-between py-2 md:py-4">
       <div class="branding pl-4 lg:pl-0">
         <NuxtLink to="/">
-          <img class="w-44 md:w-60" src="~/assets/images/WBC_white.svg" alt="Wildbach-Logo" />
+          <img
+            class="w-44 md:w-60"
+            src="~/assets/images/WBC_white.svg"
+            alt="Wildbach-Logo"
+          />
         </NuxtLink>
       </div>
-      <ul v-show="!mobile" class="navigation flex justify-end items-center w-full gap-2 lg:gap-x-6 text-2xl text-white">
+      <ul
+        v-show="!mobile"
+        class="navigation flex w-full items-center justify-end gap-2 text-2xl text-white lg:gap-x-6"
+      >
         <li class="">
-          <NuxtLink class="border-b-[2px] pb-1 border-b-transparent transition duration-500 hover:border-b-white"
-            to="/camping">Camping
+          <NuxtLink
+            class="border-b-[2px] border-b-transparent pb-1 transition duration-500 hover:border-b-white"
+            to="/camping"
+            >Camping
           </NuxtLink>
         </li>
 
-
-
-        <li class="group relative dropdown ">
-          <div class="pb-1 flex items-center mt-2 transition duration-500 ease-in-outborder-transparent">
-            {{ locale == 'nl' ? 'Meer offertes' : 'Weitere Angebote' }}
-            <ChevronDownIcon class="h-4 w-4 mt-1"></ChevronDownIcon>
+        <li class="dropdown group relative">
+          <div
+            class="ease-in-outborder-transparent mt-2 flex items-center pb-1 transition duration-500"
+          >
+            {{ locale == "nl" ? "Meer offertes" : "Weitere Angebote" }}
+            <ChevronDownIcon class="mt-1 h-4 w-4"></ChevronDownIcon>
           </div>
 
           <ul
-            class="w-[200px] p-3 shadow-sm group-hover:block absolute  bg-secondary-green hidden transition duration-700 text-lg rounded-sm mt-[-5px] ">
+            class="absolute mt-[-5px] hidden w-[200px] rounded-sm bg-secondary-green p-3 text-lg shadow-sm transition duration-700 group-hover:block"
+          >
             <li class="">
-              <NuxtLink class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
-                to="/more/mietobjekte">
-                {{ locale == 'nl' ? 'Huurwoningen' : 'Mietobjekte' }}
+              <NuxtLink
+                class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
+                to="/more/mietobjekte"
+              >
+                {{ locale == "nl" ? "Huurwoningen" : "Mietobjekte" }}
               </NuxtLink>
             </li>
             <li class="pb-1">
-              <NuxtLink class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
-                to="/more/dauercamping">
-                {{ locale == 'nl' ? 'Permanent kamperen' : 'Dauercamping' }}</NuxtLink>
+              <NuxtLink
+                class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
+                to="/more/dauercamping"
+              >
+                {{
+                  locale == "nl" ? "Permanent kamperen" : "Dauercamping"
+                }}</NuxtLink
+              >
             </li>
             <li class="pb-1">
-              <NuxtLink class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
-                to="/more/events">
-                Events</NuxtLink>
+              <NuxtLink
+                class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
+                to="/more/events"
+              >
+                Events</NuxtLink
+              >
             </li>
             <li class="pb-1">
-              <NuxtLink class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
-                to="/more/back2basic">
-                {{ locale == 'nl' ? 'Back2Basic Weide' : 'Back2Basic Wiese' }}</NuxtLink>
+              <NuxtLink
+                class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
+                to="/more/back2basic"
+              >
+                {{
+                  locale == "nl" ? "Back2Basic Weide" : "Back2Basic Wiese"
+                }}</NuxtLink
+              >
             </li>
-
           </ul>
         </li>
         <li>
           <NuxtLink
-            class="pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent hover:border-b-white"
-            to="/umgebung">{{ locale == 'nl' ? 'Omgeving' : 'Umgebung' }}</NuxtLink>
+            class="border-b-[2px] border-transparent pb-1 transition-all duration-500 ease-in-out hover:border-b-white"
+            to="/umgebung"
+            >{{ locale == "nl" ? "Omgeving" : "Umgebung" }}</NuxtLink
+          >
         </li>
         <li>
           <NuxtLink
-            class="pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent hover:border-b-white"
-            to="/galerie">{{ locale == 'nl' ? 'Galerie' : 'Galerie' }}</NuxtLink>
+            class="border-b-[2px] border-transparent pb-1 transition-all duration-500 ease-in-out hover:border-b-white"
+            to="/galerie"
+            >{{ locale == "nl" ? "Galerie" : "Galerie" }}</NuxtLink
+          >
         </li>
 
-
         <li>
           <NuxtLink
-            class="pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent hover:border-b-white"
-            to="/termine">{{ locale == 'nl' ? 'Data' : 'Termine' }}</NuxtLink>
+            class="border-b-[2px] border-transparent pb-1 transition-all duration-500 ease-in-out hover:border-b-white"
+            to="/termine"
+            >{{ locale == "nl" ? "Data" : "Termine" }}</NuxtLink
+          >
         </li>
         <li>
           <NuxtLink
-            class="pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent bg-primary-white text-secondary-green font-bold p-1 px-2 rounded-md"
-            to="https://wildbach-camping.camping.care/" target="_blank">
-            {{ locale == 'nl' ? 'Boek nu' : 'Jetzt buchen' }}</NuxtLink>
+            class="rounded-md border-b-[2px] border-transparent bg-primary-white p-1 px-2 pb-1 font-bold text-secondary-green transition-all duration-500 ease-in-out"
+            to="https://wildbach-camping.campalot.de/de"
+            target="_blank"
+          >
+            {{ locale == "nl" ? "Boek nu" : "Jetzt buchen" }}</NuxtLink
+          >
         </li>
       </ul>
-      <div @click="toggleMobileNav" v-show="mobile" class="cursor-pointer flex justify-center items-center z-40">
+      <div
+        @click="toggleMobileNav"
+        v-show="mobile"
+        class="z-40 flex cursor-pointer items-center justify-center"
+      >
         <div
-          class="w-10 h-10 relative transition duration-700 ease-[cubic-bezier(.165, .84, .44, 1)] origin-center flex justify-center items-center"
-          :class="{ '-rotate-180': mobileNav }">
-          <span class="bg-white w-8 h-[2px] absolute origin-center mb-4"
-            :class="{ 'rotate-45 absolute origin-center mt-4': mobileNav }"></span>
-          <span class="bg-white w-8 h-[2px] absolute origin-center" :class="{ 'opacity-0': mobileNav }"></span>
-          <span class="bg-white w-8 h-[2px] absolute origin-center mt-4"
-            :class="{ '-rotate-45 absolute origin-center mb-4': mobileNav }"></span>
+          class="ease-[cubic-bezier(.165, .84, .44, 1)] relative flex h-10 w-10 origin-center items-center justify-center transition duration-700"
+          :class="{ '-rotate-180': mobileNav }"
+        >
+          <span
+            class="absolute mb-4 h-[2px] w-8 origin-center bg-white"
+            :class="{ 'absolute mt-4 origin-center rotate-45': mobileNav }"
+          ></span>
+          <span
+            class="absolute h-[2px] w-8 origin-center bg-white"
+            :class="{ 'opacity-0': mobileNav }"
+          ></span>
+          <span
+            class="absolute mt-4 h-[2px] w-8 origin-center bg-white"
+            :class="{ 'absolute mb-4 origin-center -rotate-45': mobileNav }"
+          ></span>
         </div>
       </div>
     </nav>
 
-    <transition name="mobile-nav" enter-from-class="translate-x-[-250px]" enter-to-class="translate-x-0"
-      leave-to-class="translate-x-[-250px]" enter-active-class="transition-all ease-out duration-500"
-      leave-active-class="transition-all ease-out duration-500">
-      <ul v-show="mobileNav"
-        class="flex gap-3 flex-col w-full max-w-[250px] bg-primary-green top-0 left-0 h-auto z-50 absolute p-5">
+    <transition
+      name="mobile-nav"
+      enter-from-class="translate-x-[-250px]"
+      enter-to-class="translate-x-0"
+      leave-to-class="translate-x-[-250px]"
+      enter-active-class="transition-all ease-out duration-500"
+      leave-active-class="transition-all ease-out duration-500"
+    >
+      <ul
+        v-show="mobileNav"
+        class="absolute left-0 top-0 z-50 flex h-auto w-full max-w-[250px] flex-col gap-3 bg-primary-green p-5"
+      >
         <li class="" @click="toggleMobileNav">
           <NuxtLink class="" to="/">Home</NuxtLink>
         </li>
@@ -97,76 +150,103 @@
         <li class="" @click="toggleMobileNav">
           <NuxtLink class="" to="/camping">Camping</NuxtLink>
         </li>
-        <li class="group relative dropdown  ">
-          <NuxtLink to=""
-            class="pb-1 flex items-center mt-2 transition duration-500 ease-in-outborder-transparent cursor-pointer select-none">
-            {{ locale == 'nl' ? 'Meer offertes' : 'Weitere Angebote' }}
-            <ChevronDownIcon class="h-4 w-4 mt-1"></ChevronDownIcon>
+        <li class="dropdown group relative">
+          <NuxtLink
+            to=""
+            class="ease-in-outborder-transparent mt-2 flex cursor-pointer select-none items-center pb-1 transition duration-500"
+          >
+            {{ locale == "nl" ? "Meer offertes" : "Weitere Angebote" }}
+            <ChevronDownIcon class="mt-1 h-4 w-4"></ChevronDownIcon>
           </NuxtLink>
 
           <ul
-            class="w-[200px] p-3 shadow-sm group-hover:block absolute  bg-secondary-green hidden transition duration-700 text-lg rounded-sm mt-[-5px] ">
+            class="absolute mt-[-5px] hidden w-[200px] rounded-sm bg-secondary-green p-3 text-lg shadow-sm transition duration-700 group-hover:block"
+          >
             <li class=" " @click="toggleMobileNav">
-              <NuxtLink class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
-                to="/more/mietobjekte">
-                {{ locale == 'nl' ? 'Huurwoningen' : 'Mietobjekte' }}
+              <NuxtLink
+                class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
+                to="/more/mietobjekte"
+              >
+                {{ locale == "nl" ? "Huurwoningen" : "Mietobjekte" }}
               </NuxtLink>
             </li>
-            <li class="pb-1 " @click="toggleMobileNav">
-              <NuxtLink class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
-                to="/more/dauercamping">
-                {{ locale == 'nl' ? 'Permanent kamperen' : 'Dauercamping' }}</NuxtLink>
+            <li class="pb-1" @click="toggleMobileNav">
+              <NuxtLink
+                class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
+                to="/more/dauercamping"
+              >
+                {{
+                  locale == "nl" ? "Permanent kamperen" : "Dauercamping"
+                }}</NuxtLink
+              >
             </li>
-            <li class="pb-1 " @click="toggleMobileNav">
-              <NuxtLink class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
-                to="/more/events">
-                Events</NuxtLink>
+            <li class="pb-1" @click="toggleMobileNav">
+              <NuxtLink
+                class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
+                to="/more/events"
+              >
+                Events</NuxtLink
+              >
             </li>
-            <li class="pb-1 " @click="toggleMobileNav">
-              <NuxtLink class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
-                to="/more/back2basic">
-                {{ locale == 'nl' ? 'Back2Basic Weide' : 'Back2Basic Wiese' }}</NuxtLink>
+            <li class="pb-1" @click="toggleMobileNav">
+              <NuxtLink
+                class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
+                to="/more/back2basic"
+              >
+                {{
+                  locale == "nl" ? "Back2Basic Weide" : "Back2Basic Wiese"
+                }}</NuxtLink
+              >
             </li>
-
           </ul>
         </li>
         <li class="" @click="toggleMobileNav">
-          <NuxtLink class="" to="/umgebung">{{ locale == 'nl' ? 'Omgeving' : 'Umgebung' }}</NuxtLink>
+          <NuxtLink class="" to="/umgebung">{{
+            locale == "nl" ? "Omgeving" : "Umgebung"
+          }}</NuxtLink>
         </li>
         <li class="" @click="toggleMobileNav">
-          <NuxtLink class="" to="/galerie">{{ locale == 'nl' ? 'Galerie' : 'Galerie' }}
+          <NuxtLink class="" to="/galerie"
+            >{{ locale == "nl" ? "Galerie" : "Galerie" }}
           </NuxtLink>
         </li>
         <li class="" @click="toggleMobileNav">
-          <NuxtLink class="" to="/termine">{{ locale == 'nl' ? 'Data' : 'Termine' }}</NuxtLink>
+          <NuxtLink class="" to="/termine">{{
+            locale == "nl" ? "Data" : "Termine"
+          }}</NuxtLink>
         </li>
         <li>
           <NuxtLink
-            class=" pb-1 transition-all duration-500 ease-in-out border-b-[2px] border-transparent bg-primary-white text-secondary-green font-bold p-1 rounded-md"
-            to="https://wildbach-camping.camping.care/" target="_blank">
-            {{ locale == 'nl' ? 'Boek nu' : 'Jetzt buchen' }}</NuxtLink>
+            class="rounded-md border-b-[2px] border-transparent bg-primary-white p-1 pb-1 font-bold text-secondary-green transition-all duration-500 ease-in-out"
+            to="https://wildbach-camping.camping.care/"
+            target="_blank"
+          >
+            {{ locale == "nl" ? "Boek nu" : "Jetzt buchen" }}</NuxtLink
+          >
         </li>
       </ul>
     </transition>
-    <div class="backdrop h-screen w-screen bg-transparent absolute top-0 left-0" @click="closeNav" v-show="mobileNav">
-    </div>
+    <div
+      class="backdrop absolute left-0 top-0 h-screen w-screen bg-transparent"
+      @click="closeNav"
+      v-show="mobileNav"
+    ></div>
   </header>
 </template>
 
 <script setup>
-import { ChevronDownIcon } from '@heroicons/vue/24/solid';
+import { ChevronDownIcon } from "@heroicons/vue/24/solid";
 const scrolledNav = ref(null);
 const mobile = ref(null);
 const mobileNav = ref(null);
 const windowWidth = ref(null);
 
 onBeforeMount(() => {
-  window.addEventListener('resize', checkScreen);
+  window.addEventListener("resize", checkScreen);
   checkScreen();
-
 });
 
-const screen = useState('screen', () => {
+const screen = useState("screen", () => {
   windowWidth.value = window.innerWidth;
   if (windowWidth.value <= 640) {
     mobile.value = true;
@@ -175,10 +255,8 @@ const screen = useState('screen', () => {
     mobile.value = false;
     mobileNav.value = false;
   }
-  return false
-
-})
-
+  return false;
+});
 
 // function updateScroll() {
 //     const scrollPosition = window.scrollY
@@ -206,9 +284,7 @@ function checkScreen() {
 function closeNav() {
   mobileNav.value = false;
 }
-const locale = localStorage.getItem('langStore')
-
-
+const locale = localStorage.getItem("langStore");
 </script>
 
 <style scoped></style>
