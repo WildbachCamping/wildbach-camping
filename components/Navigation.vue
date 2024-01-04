@@ -39,7 +39,7 @@
             <li class="">
               <NuxtLink
                 class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
-                to="/more/mietobjekte"
+                to="/mietobjekte"
               >
                 {{ locale == "nl" ? "Huurwoningen" : "Mietobjekte" }}
               </NuxtLink>
@@ -47,7 +47,7 @@
             <li class="pb-1">
               <NuxtLink
                 class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
-                to="/more/dauercamping"
+                to="/dauercamping"
               >
                 {{
                   locale == "nl" ? "Permanent kamperen" : "Dauercamping"
@@ -57,7 +57,7 @@
             <li class="pb-1">
               <NuxtLink
                 class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
-                to="/more/events"
+                to="/events"
               >
                 Events</NuxtLink
               >
@@ -65,7 +65,7 @@
             <li class="pb-1">
               <NuxtLink
                 class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
-                to="/more/back2basic"
+                to="/back2basic"
               >
                 {{
                   locale == "nl" ? "Back2Basic Weide" : "Back2Basic Wiese"
@@ -165,7 +165,7 @@
             <li class=" " @click="toggleMobileNav">
               <NuxtLink
                 class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
-                to="/more/mietobjekte"
+                to="/mietobjekte"
               >
                 {{ locale == "nl" ? "Huurwoningen" : "Mietobjekte" }}
               </NuxtLink>
@@ -173,7 +173,7 @@
             <li class="pb-1" @click="toggleMobileNav">
               <NuxtLink
                 class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
-                to="/more/dauercamping"
+                to="/dauercamping"
               >
                 {{
                   locale == "nl" ? "Permanent kamperen" : "Dauercamping"
@@ -183,7 +183,7 @@
             <li class="pb-1" @click="toggleMobileNav">
               <NuxtLink
                 class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
-                to="/more/events"
+                to="/events"
               >
                 Events</NuxtLink
               >
@@ -191,7 +191,7 @@
             <li class="pb-1" @click="toggleMobileNav">
               <NuxtLink
                 class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
-                to="/more/back2basic"
+                to="/back2basic"
               >
                 {{
                   locale == "nl" ? "Back2Basic Weide" : "Back2Basic Wiese"

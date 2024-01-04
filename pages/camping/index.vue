@@ -5,10 +5,11 @@
 </template>
 
 <script setup>
+const config = useRuntimeConfig();
 const locale = localStorage.getItem("langStore");
 
 const story = await useAsyncStoryblok(`camping`, {
-  version: "draft",
+  version: config.public.version,
   language: locale,
   fallback_lang: "de",
 });

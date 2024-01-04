@@ -47,6 +47,11 @@ export default defineNuxtConfig({
   build: {
     transpile: ["fsevents"],
   },
+  runtimeConfig: {
+    public: {
+      version: process.env.VERSION,
+    },
+  },
 
   modules: [
     "@nuxtjs/tailwindcss",

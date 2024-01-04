@@ -60,7 +60,7 @@ const props = defineProps({
           type="button"
           class="mt-6 w-1/2 rounded-lg bg-secondary-green/90 px-4 py-1 duration-300 hover:bg-secondary-green/70"
         >
-          <NuxtLink class="text-white" to="more/mietobjekte">
+          <NuxtLink class="text-white" to="/mietobjekte">
             {{ blok.information }}
           </NuxtLink>
         </button>
@@ -82,7 +82,7 @@ const props = defineProps({
           type="button"
           class="mt-6 w-1/2 rounded-lg bg-secondary-green/90 px-4 py-1 duration-300 hover:bg-secondary-green/70"
         >
-          <NuxtLink class="text-white" to="more/dauercamping">
+          <NuxtLink class="text-white" to="/dauercamping">
             {{ blok.information }}
           </NuxtLink>
         </button>
