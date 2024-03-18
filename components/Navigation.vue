@@ -234,57 +234,62 @@
   </header>
 </template>
 
-<script setup>
+<script setup clientOnlySymbol>
 import { ChevronDownIcon } from "@heroicons/vue/24/solid";
 const scrolledNav = ref(null);
 const mobile = ref(null);
 const mobileNav = ref(null);
 const windowWidth = ref(null);
 
-onBeforeMount(() => {
-  window.addEventListener("resize", checkScreen);
-  checkScreen();
-});
+if (process.client) {
+  onBeforeMount(() => {
+    window.addEventListener("resize", checkScreen);
+    checkScreen();
+  });
 
-const screen = useState("screen", () => {
-  windowWidth.value = window.innerWidth;
-  if (windowWidth.value <= 640) {
-    mobile.value = true;
-    return true;
-  } else {
-    mobile.value = false;
+  const screen = useState("screen", () => {
+    windowWidth.value = window.innerWidth;
+    if (windowWidth.value <= 640) {
+      mobile.value = true;
+      return true;
+    } else {
+      mobile.value = false;
+      mobileNav.value = false;
+    }
+    return false;
+  });
+
+  // function updateScroll() {
+  //     const scrollPosition = window.scrollY
+  //     if (scrollPosition > 50) {
+  //         scrolledNav.value = true
+  //     } else {
+  //         scrolledNav.value = false
+  //     }
+  // }
+
+  function toggleMobileNav() {
+    mobileNav.value = !mobileNav.value;
+  }
+  function checkScreen() {
+    windowWidth.value = window.innerWidth;
+    if (windowWidth.value <= 1005) {
+      mobile.value = true;
+      return;
+    } else {
+      mobile.value = false;
+      mobileNav.value = false;
+    }
+  }
+
+  function closeNav() {
     mobileNav.value = false;
   }
-  return false;
-});
-
-// function updateScroll() {
-//     const scrollPosition = window.scrollY
-//     if (scrollPosition > 50) {
-//         scrolledNav.value = true
-//     } else {
-//         scrolledNav.value = false
-//     }
-// }
-
-function toggleMobileNav() {
-  mobileNav.value = !mobileNav.value;
-}
-function checkScreen() {
-  windowWidth.value = window.innerWidth;
-  if (windowWidth.value <= 1005) {
-    mobile.value = true;
-    return;
-  } else {
-    mobile.value = false;
-    mobileNav.value = false;
+  let locale = "de";
+  if (typeof window !== "undefined") {
+    const locale = localStorage.getItem("langStore");
   }
 }
-
-function closeNav() {
-  mobileNav.value = false;
-}
-const locale = localStorage.getItem("langStore");
 </script>
 
 <style scoped></style>

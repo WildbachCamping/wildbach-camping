@@ -7,7 +7,11 @@
 
 <script setup>
 const config = useRuntimeConfig();
-const locale = localStorage.getItem("langStore");
+
+let locale = "de";
+if (typeof window !== "undefined") {
+  const locale = localStorage.getItem("langStore");
+}
 
 const story = await useAsyncStoryblok("home", {
   version: config.public.version,

@@ -35,7 +35,7 @@ export default defineNuxtConfig({
   sitemap: {
     hostname: "https://wildbach-camping.de",
   },
-  ssr: false,
+  ssr: true,
 
   devtools: {
     // Enable devtools (default: true)

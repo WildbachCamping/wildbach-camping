@@ -1,5 +1,5 @@
 <template>
-    <!-- <div class="flex items-center justify-center">
+  <!-- <div class="flex items-center justify-center">
         <Modal @accept="optIn" @decline="optOut" @close="toggleModal" :modalActive="modalActive">
             <div class="flex flex-col items-center">
                 <h2 class="text-2xl font-bold mb-4">Unsere Website verwendet Cookies</h2>
@@ -13,20 +13,22 @@
 </template>
 
 <script setup lang="ts">
-import { useCookie } from 'vue-cookie-next';
+import { useCookie } from "vue-cookie-next";
 import { useState } from "vue-gtag-next";
 
 const allowCookies = ref<boolean>();
 const { isEnabled } = useState();
 
-const cookie = useCookie();
+let cookie: any;
 
-const modalActive = ref(allowCookies.value === undefined ? true : false)
+if (typeof window !== "undefined") {
+  cookie = useCookie();
+}
+const modalActive = ref(allowCookies.value === undefined ? true : false);
 
 const toggleModal = () => {
-    modalActive.value = !modalActive.value
-}
-
+  modalActive.value = !modalActive.value;
+};
 
 // const optIn = () => {
 //     isEnabled.value = allowCookies.value = true;
@@ -58,5 +60,5 @@ const toggleModal = () => {
 //         }
 //     }
 // });
-// </script>
-
+//
+</script>
