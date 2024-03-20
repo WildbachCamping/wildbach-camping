@@ -5,7 +5,7 @@
   >
     <nav class="flex w-[90%] items-center justify-between py-2 md:py-4">
       <div class="branding pl-4 lg:pl-0">
-        <NuxtLink to="/">
+        <NuxtLink :to="localePath('/')">
           <img
             class="w-44 md:w-60"
             src="~/assets/images/WBC_white.svg"
@@ -20,7 +20,7 @@
         <li class="">
           <NuxtLink
             class="border-b-[2px] border-b-transparent pb-1 transition duration-500 hover:border-b-white"
-            to="/camping"
+            :to="localePath('/camping')"
             >Camping
           </NuxtLink>
         </li>
@@ -39,7 +39,7 @@
             <li class="">
               <NuxtLink
                 class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
-                to="/mietobjekte"
+                :to="localePath('/mietobjekte')"
               >
                 {{ locale == "nl" ? "Huurwoningen" : "Mietobjekte" }}
               </NuxtLink>
@@ -47,7 +47,7 @@
             <li class="pb-1">
               <NuxtLink
                 class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
-                to="/dauercamping"
+                :to="localePath('/dauercamping')"
               >
                 {{
                   locale == "nl" ? "Permanent kamperen" : "Dauercamping"
@@ -57,7 +57,7 @@
             <li class="pb-1">
               <NuxtLink
                 class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
-                to="/events"
+                :to="localePath('/events')"
               >
                 Events</NuxtLink
               >
@@ -65,7 +65,7 @@
             <li class="pb-1">
               <NuxtLink
                 class="border-b-[1px] border-b-transparent transition duration-500 hover:border-b-white"
-                to="/back2basic"
+                :to="localePath('/back2basic')"
               >
                 {{
                   locale == "nl" ? "Back2Basic Weide" : "Back2Basic Wiese"
@@ -77,7 +77,7 @@
         <li>
           <NuxtLink
             class="border-b-[2px] border-transparent pb-1 transition-all duration-500 ease-in-out hover:border-b-white"
-            to="/umgebung"
+            :to="localePath('/umgebung')"
             >{{ locale == "nl" ? "Omgeving" : "Umgebung" }}</NuxtLink
           >
         </li>
@@ -92,7 +92,7 @@
         <li>
           <NuxtLink
             class="border-b-[2px] border-transparent pb-1 transition-all duration-500 ease-in-out hover:border-b-white"
-            to="/termine"
+            :to="localePath('/termine')"
             >{{ locale == "nl" ? "Data" : "Termine" }}</NuxtLink
           >
         </li>
@@ -104,6 +104,11 @@
           >
             {{ locale == "nl" ? "Boek nu" : "Jetzt buchen" }}</NuxtLink
           >
+        </li>
+        <li v-for="lang in availableLocales" :key="lang">
+          <NuxtLink :to="switchLocalePath(lang)" class="uppercase">
+            {{ lang }}
+          </NuxtLink>
         </li>
       </ul>
       <div
@@ -234,8 +239,16 @@
   </header>
 </template>
 
-<script setup clientOnlySymbol>
+<script setup>
 import { ChevronDownIcon } from "@heroicons/vue/24/solid";
+
+const localePath = useLocalePath();
+const { locale, locales } = useI18n();
+const switchLocalePath = useSwitchLocalePath();
+
+const availableLocales = computed(() => {
+  return locales.value.filter((i) => i.code !== locale.value);
+});
 const scrolledNav = ref(null);
 const mobile = ref(null);
 const mobileNav = ref(null);

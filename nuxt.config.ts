@@ -32,14 +32,14 @@ export default defineNuxtConfig({
       ],
     },
   },
-  sitemap: {
-    hostname: "https://wildbach-camping.de",
-  },
+  // sitemap: {
+  //   hostname: "https://wildbach-camping.de",
+  // },
   ssr: true,
 
   devtools: {
     // Enable devtools (default: true)
-    enabled: true,
+    enabled: false,
     // VS Code Server options
     vscode: {},
     // ...other options
@@ -56,9 +56,22 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxt/devtools",
+    [
+      "@weareheavy/nuxt-cookie-consent",
+      { provider: "cookiebot", cbid: process.env.COOKIE_PROVIDER },
+    ],
+    [
+      "@nuxtjs/i18n",
+      {
+        strategy: "prefix_except_default",
+        locales: ["de", "nl"],
+        defaultLocale: "de",
+      },
+    ],
+    ["nuxt-gtag", { id: process.env.GOOGLE_ANALYTICS_ID }],
     "@vueuse/nuxt",
     "@nuxtjs/robots",
-    "nuxt-simple-sitemap",
+    "@nuxtjs/sitemap",
     ["@storyblok/nuxt", { accessToken: process.env.STORYBLOK_ACCESS_TOKEN }],
 
     // ...

@@ -86,94 +86,9 @@
         alt="Nachhaltiges Reiseziel"
       />
     </div>
-
-    <Teleport to="body" class="flex items-center justify-center">
-      <Modal
-        @accept="optIn"
-        @decline="optOut"
-        @close="toggleModal"
-        :modalActive="modalActive"
-      >
-        <div class="z-10 flex flex-col items-center">
-          <h2 class="mb-4 text-2xl font-bold">
-            {{
-              locale == "nl"
-                ? "Onze website gebruikt cookies"
-                : `Unsere
-                    Website verwendet Cookies`
-            }}
-          </h2>
-          <p class="mb-4 text-justify text-base">
-            {{
-              locale == "nl"
-                ? `We gebruiken cookies om het verkeer
-                    naar onze website naar analyseren.`
-                : `Wir verwenden Cookies, um die Zugriffe auf unsere Website
-                    zu analysieren.`
-            }}
-          </p>
-        </div>
-      </Modal>
-    </Teleport>
-    <Teleport to="body">
-      <LangSwitcher class="fixed bottom-2 left-5" />
-    </Teleport>
   </footer>
 </template>
 
 <script setup>
-import { useCookie } from "vue-cookie-next";
-import { useState } from "vue-gtag-next";
-
-const allowCookies = ref();
-const { isEnabled } = useState();
-
-let cookie;
-
-if (typeof window !== "undefined") {
-  cookie = useCookie();
-  const modalActive = ref(allowCookies.value === undefined ? true : false);
-
-  const toggleModal = () => {
-    modalActive.value = !modalActive.value;
-  };
-
-  const optIn = () => {
-    isEnabled.value = allowCookies.value = true;
-    modalActive.value = false;
-  };
-  const optOut = () => {
-    isEnabled.value = allowCookies.value = modalActive.value = false;
-  };
-
-  if (cookie.isCookieAvailable("cookie_consent")) {
-    if (cookie.getCookie("cookie_consent") === "true") {
-      optIn();
-    } else {
-      optOut();
-    }
-  } else {
-    allowCookies.value = undefined;
-  }
-
-  watch(allowCookies, () => {
-    if (allowCookies.value != undefined) {
-      cookie.setCookie("cookie_consent", allowCookies.value.toString(), {
-        expire: "90d",
-      });
-      if (allowCookies.value) {
-        optIn();
-      } else {
-        optOut();
-      }
-    }
-  });
-  let locale = "de";
-  if (typeof window !== "undefined") {
-    const locale = localStorage.getItem("langStore");
-  }
-}
-
-// const modalActive = ref(false)
-// uncomment when going live
+const { locale } = useI18n();
 </script>

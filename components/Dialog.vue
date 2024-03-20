@@ -63,7 +63,6 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
 import {
   TransitionRoot,
   TransitionChild,
@@ -75,9 +74,6 @@ import {
 const isOpen = ref(true);
 
 function closeModal() {
-  isOpen.value = false;
-}
-function openModal() {
-  isOpen.value = true;
+  isOpen.value = !isOpen.value;
 }
 </script>

@@ -3,30 +3,25 @@
     <ul class="flex w-20 gap-2">
       <li
         class="px cursor-pointer bg-gray-50"
-        v-for="locale in locales"
-        @click="changeLang(locale)"
+        v-for="locale in availableLocales"
       >
-        <img
-          :src="`/${locale}.svg`"
-          :alt="locale"
-          class="min-w-10 max-h-[20px] min-h-[20px] object-cover"
-        />
+        <NuxtLink :to="switchLocalePath(lang)">
+          <img
+            :src="`/${locale}.svg`"
+            :alt="locale"
+            class="max-h-[20px] min-h-[20px] min-w-10 object-cover"
+          />
+        </NuxtLink>
       </li>
     </ul>
   </div>
 </template>
 
 <script setup>
-import { usePreferredLanguages } from "@vueuse/core";
+const { locale, locales } = useI18n();
+const switchLocalePath = useSwitchLocalePath();
 
-const languages = usePreferredLanguages();
-
-const locales = reactive({ de: "de", nl: "nl" });
-
-if (typeof window !== "undefined") {
-  const changeLang = (locale) => {
-    localStorage.setItem("langStore", `${locale}`);
-    location.reload();
-  };
-}
+const availableLocales = computed(() => {
+  return locales.value.filter((i) => i.code !== locale.value);
+});
 </script>
