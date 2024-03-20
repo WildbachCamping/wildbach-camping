@@ -67,10 +67,10 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxt/devtools",
-    [
-      "@weareheavy/nuxt-cookie-consent",
-      { provider: "cookiebot", cbid: process.env.COOKIEBOT_ID },
-    ],
+    // [
+    //   "@weareheavy/nuxt-cookie-consent",
+    //   { provider: "cookiebot", cbid: process.env.COOKIEBOT_ID },
+    // ],
     [
       "@nuxtjs/i18n",
       {
