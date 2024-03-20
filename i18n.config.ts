@@ -1,0 +1,30 @@
+export default defineI18nConfig(() => ({
+  legacy: false,
+  locale: "de",
+  messages: {
+    de: {
+      bookNow: "Buchen",
+      dates: "Termine",
+      gallery: "Galerie",
+      back2Basic: "Back2Basic Wiese",
+      permanentCamping: "Dauercamping",
+      rentalObjects: "Mietobjekte",
+      moreOffers: "Weitere Angebote",
+      camping: "Camping",
+      events: "Events",
+      surroundings: "Umgebung",
+    },
+    nl: {
+      bookNow: "Boek",
+      dates: "Data",
+      gallery: "Galerij",
+      back2Basic: "Back2Basic Weide",
+      permanentCamping: "Permanent kamperen",
+      rentalObjects: "Huurwoningen",
+      moreOffers: "Meer offertes",
+      camping: "Kamperen",
+      events: "Events",
+      surroundings: "Omgeving",
+    },
+  },
+}));
