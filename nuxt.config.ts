@@ -96,9 +96,11 @@ export default defineNuxtConfig({
     [
       "@nuxtjs/robots",
       {
-        UserAgent: "*",
-        Disallow: "/",
-        Sitemap: "https://www.wildbach-camping.de/sitemap.xml",
+        rules: {
+          UserAgent: "*",
+          Disallow: "/",
+          Sitemap: "https://www.wildbach-camping.de/sitemap.xml",
+        },
       },
     ],
     "@nuxtjs/sitemap",
