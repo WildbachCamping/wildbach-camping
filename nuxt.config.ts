@@ -67,10 +67,10 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxt/devtools",
-    // [
-    //   "@weareheavy/nuxt-cookie-consent",
-    //   { provider: "cookiebot", cbid: process.env.COOKIEBOT_ID },
-    // ],
+    [
+      "@weareheavy/nuxt-cookie-consent",
+      { provider: "cookiebot", cbid: process.env.COOKIEBOT_ID },
+    ],
     [
       "@nuxtjs/i18n",
       {
@@ -79,26 +79,26 @@ export default defineNuxtConfig({
         defaultLocale: "de",
       },
     ],
-    // [
-    //   "nuxt-gtag",
-    //   {
-    //     id: process.env.GOOGLE_TAG_ID,
-    //     initCommands: [
-    //       // Setup up consent mode
-    //       [
-    //         "consent",
-    //         "default",
-    //         {
-    //           ad_user_data: "denied",
-    //           ad_personalization: "denied",
-    //           ad_storage: "denied",
-    //           analytics_storage: "denied",
-    //           wait_for_update: 500,
-    //         },
-    //       ],
-    //     ],
-    //   },
-    // ],
+    [
+      "nuxt-gtag",
+      {
+        id: process.env.GOOGLE_TAG_ID,
+        initCommands: [
+          // Setup up consent mode
+          [
+            "consent",
+            "default",
+            {
+              ad_user_data: "denied",
+              ad_personalization: "denied",
+              ad_storage: "denied",
+              analytics_storage: "denied",
+              wait_for_update: 500,
+            },
+          ],
+        ],
+      },
+    ],
     "@vueuse/nuxt",
     "@nuxtjs/robots",
     "@nuxtjs/sitemap",
