@@ -11,7 +11,7 @@ export default defineNuxtConfig({
       script: [
         {
           type: "text/javascript",
-          src: `https://consent.cookiebot.com/uc.js?cbid=${process.env.COOKIE_PROVIDER}`,
+          src: `https://consent.cookiebot.com/uc.js?cbid=${process.env.COOKIEBOT_ID}`,
         },
       ],
       meta: [
@@ -65,7 +65,7 @@ export default defineNuxtConfig({
     "@nuxt/devtools",
     [
       "@weareheavy/nuxt-cookie-consent",
-      { provider: "cookiebot", cbid: process.env.COOKIE_PROVIDER },
+      { provider: "cookiebot", cbid: process.env.COOKIEBOT_ID },
     ],
     [
       "@nuxtjs/i18n",
@@ -78,7 +78,7 @@ export default defineNuxtConfig({
     [
       "nuxt-gtag",
       {
-        id: process.env.GOOGLE_ANALYTICS_ID,
+        id: process.env.GOOGLE_TAG_ID,
         initCommands: [
           // Setup up consent mode
           [
