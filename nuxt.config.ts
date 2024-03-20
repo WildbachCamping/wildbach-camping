@@ -8,12 +8,12 @@ export default defineNuxtConfig({
 
     head: {
       title: "Wildbach Camping in der Eifel",
-      // script: [
-      //   {
-      //     type: "text/javascript",
-      //     src: `https://consent.cookiebot.com/uc.js?cbid=${process.env.COOKIEBOT_ID}`,
-      //   },
-      // ],
+      script: [
+        {
+          type: "text/javascript",
+          src: `https://consent.cookiebot.com/${process.env.COOKIEBOT_ID}/cd.js`,
+        },
+      ],
       meta: [
         {
           name: "description",
