@@ -1,12 +1,12 @@
 <script setup>
-import { useCookie } from "vue-cookie-next";
+// import { useCookie } from "vue-cookie-next";
 
-const cookie = useCookie();
+// const cookie = useCookie();
 
-const cookieConsent = computed(() => {
-  return cookie.getCookie("cookie_consent") === "true";
-});
-
+// const cookieConsent = computed(() => {
+//   return cookie.getCookie("cookie_consent") === "true";
+// });
+const cookieConsent = true;
 const endpoint = `https://wyyk4q3zxh.execute-api.eu-central-1.amazonaws.com/default/SendWildbachEmail`;
 
 const form = reactive({

@@ -41,9 +41,6 @@ dependencies:
   swiper:
     specifier: ^8.4.7
     version: 8.4.7
-  vue-gtag-next:
-    specifier: ^1.14.0
-    version: 1.14.0(vue@3.4.21)
 
 devDependencies:
   '@nuxtjs/i18n':
@@ -7662,14 +7659,6 @@ packages:
 
   /vue-devtools-stub@0.1.0:
     resolution: {integrity: sha512-RutnB7X8c5hjq39NceArgXg28WZtZpGc3+J16ljMiYnFhKvd8hITxSWQSQ5bvldxMDU6gG5mkxl1MTQLXckVSQ==}
-
-  /vue-gtag-next@1.14.0(vue@3.4.21):
-    resolution: {integrity: sha512-iJl+cOG2GU5NuxqzSSIpt03WVOvZqyKB9TOy7d55KiuvRklcnb2nlqxW5B/a3/sbIt7fla+XEkRyMCcoz0zAHw==}
-    peerDependencies:
-      vue: ^3.0.0-rc.11
-    dependencies:
-      vue: 3.4.21
-    dev: false
 
   /vue-i18n@9.10.2(vue@3.4.21):
     resolution: {integrity: sha512-ECJ8RIFd+3c1d3m1pctQ6ywG5Yj8Efy1oYoAKQ9neRdkLbuKLVeW4gaY5HPkD/9ssf1pOnUrmIFjx2/gkGxmEw==}

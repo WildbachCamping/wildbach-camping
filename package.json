@@ -29,7 +29,6 @@
     "@tailwindcss/typography": "^0.5.10",
     "@weareheavy/nuxt-cookie-consent": "^1.0.1",
     "aos": "^2.3.4",
-    "swiper": "^8.4.7",
-    "vue-gtag-next": "^1.14.0"
+    "swiper": "^8.4.7"
   }
 }

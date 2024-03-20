@@ -5,8 +5,15 @@ export default defineNuxtConfig({
   },
   app: {
     pageTransition: { name: "page", mode: "out-in" },
+
     head: {
       title: "Wildbach Camping in der Eifel",
+      script: [
+        {
+          type: "text/javascript",
+          src: `https://consent.cookiebot.com/uc.js?cbid=${process.env.COOKIE_PROVIDER}`,
+        },
+      ],
       meta: [
         {
           name: "description",
@@ -68,7 +75,26 @@ export default defineNuxtConfig({
         defaultLocale: "de",
       },
     ],
-    ["nuxt-gtag", { id: process.env.GOOGLE_ANALYTICS_ID }],
+    [
+      "nuxt-gtag",
+      {
+        id: process.env.GOOGLE_ANALYTICS_ID,
+        initCommands: [
+          // Setup up consent mode
+          [
+            "consent",
+            "default",
+            {
+              ad_user_data: "denied",
+              ad_personalization: "denied",
+              ad_storage: "denied",
+              analytics_storage: "denied",
+              wait_for_update: 500,
+            },
+          ],
+        ],
+      },
+    ],
     "@vueuse/nuxt",
     "@nuxtjs/robots",
     "@nuxtjs/sitemap",
