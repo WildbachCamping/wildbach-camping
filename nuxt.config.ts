@@ -30,21 +30,23 @@ export default defineNuxtConfig({
           hreflang: "de",
           href: "https://www.wildbach-camping.de",
         },
+        {
+          rel: "alternate",
+          hreflang: "nl",
+          href: "https://www.wildbach-camping.de/nl",
+        },
       ],
     },
   },
-  // sitemap: {
-  //   hostname: "https://wildbach-camping.de",
-  // },
+  site: {
+    name: "Wildbach Camping",
+    description:
+      "Wildbach Camping in Hellenthal am Nationalpark Eifel I Familienfreundliche und entspannte Atmosphäre I Naturbelassen am Bach mit Feuerstellen I Auszeit und Urlaub in der Natur",
+    url: "https://www.wildbach-camping.de",
+    trailingSlash: true,
+  },
   ssr: true,
 
-  devtools: {
-    // Enable devtools (default: true)
-    enabled: false,
-    // VS Code Server options
-    vscode: {},
-    // ...other options
-  },
   build: {
     transpile: ["fsevents"],
   },
@@ -90,18 +92,15 @@ export default defineNuxtConfig({
       },
     ],
     "@vueuse/nuxt",
-    "@nuxtjs/robots",
+    [
+      "@nuxtjs/robots",
+      {
+        UserAgent: "*",
+        Disallow: "/",
+        Sitemap: "https://www.wildbach-camping.de/sitemap.xml",
+      },
+    ],
     "@nuxtjs/sitemap",
     ["@storyblok/nuxt", { accessToken: process.env.STORYBLOK_ACCESS_TOKEN }],
   ],
 });
-export type NuxtCookieConsentOptionsProviderCookieBot = {
-  provider: "cookiebot";
-  cbid: string;
-  consentMode?: boolean;
-  consentModeDefaults?: boolean;
-};
-export type NuxtCookieConsentOptionsLoadStrategy = {
-  init: boolean;
-  dev: boolean;
-};
