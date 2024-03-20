@@ -8,12 +8,6 @@ export default defineNuxtConfig({
 
     head: {
       title: "Wildbach Camping in der Eifel",
-      // script: [
-      //   {
-      //     type: "text/javascript",
-      //     src: `https://consent.cookiebot.com/${process.env.COOKIEBOT_ID}/cd.js`,
-      //   },
-      // ],
       meta: [
         {
           name: "description",
@@ -59,17 +53,13 @@ export default defineNuxtConfig({
       version: process.env.VERSION,
     },
   },
-  // cookieConsent: {
-  //   provider: "cookiebot",
-  //   cbid: process.env.COOKIEBOT_ID,
-  // },
 
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxt/devtools",
     [
       "@weareheavy/nuxt-cookie-consent",
-      { provider: "cookiebot", cbid: process.env.COOKIEBOT_ID },
+      { provider: "cookiebot", cbid: process.env.COOKIEBOT_ID, dev: true },
     ],
     [
       "@nuxtjs/i18n",
@@ -105,3 +95,13 @@ export default defineNuxtConfig({
     ["@storyblok/nuxt", { accessToken: process.env.STORYBLOK_ACCESS_TOKEN }],
   ],
 });
+export type NuxtCookieConsentOptionsProviderCookieBot = {
+  provider: "cookiebot";
+  cbid: string;
+  consentMode?: boolean;
+  consentModeDefaults?: boolean;
+};
+export type NuxtCookieConsentOptionsLoadStrategy = {
+  init: boolean;
+  dev: boolean;
+};
