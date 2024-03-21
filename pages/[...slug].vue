@@ -8,7 +8,7 @@
 const { locale } = useI18n();
 const { slug } = useRoute().params;
 
-const story = await useAsyncStoryblok(
+const story = await useStoryblok(
   slug && slug.length > 0 ? slug.join("/") : "home",
   { version: "draft", language: locale.value }
 );

@@ -3,7 +3,7 @@ export default defineI18nConfig(() => ({
   locale: "de",
   messages: {
     de: {
-      bookNow: "Buchen",
+      bookNow: "Jetzt buchen",
       dates: "Termine",
       gallery: "Galerie",
       back2Basic: "Back2Basic Wiese",
@@ -13,9 +13,10 @@ export default defineI18nConfig(() => ({
       camping: "Camping",
       events: "Events",
       surroundings: "Umgebung",
+      learnMore: "Mehr erfahren",
     },
     nl: {
-      bookNow: "Boek",
+      bookNow: "Boek nu",
       dates: "Data",
       gallery: "Galerij",
       back2Basic: "Back2Basic Weide",
@@ -25,6 +26,7 @@ export default defineI18nConfig(() => ({
       camping: "Kamperen",
       events: "Events",
       surroundings: "Omgeving",
+      learnMore: "Meer weten",
     },
   },
 }));

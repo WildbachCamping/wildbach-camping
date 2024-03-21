@@ -1,54 +1,48 @@
 <template>
-  <Menu as="div" class="relative inline-block text-center uppercase">
-    <div>
-      <MenuButton
-        class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold uppercase text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-      >
-        {{ locale }}
-        <ChevronDownIcon
-          class="-mr-1 h-5 w-5 text-gray-400"
-          aria-hidden="true"
-        />
-      </MenuButton>
-    </div>
+  <Popover class="relative">
+    <PopoverButton
+      class="inline-flex items-center gap-x-1 border-b-[2px] border-transparent pb-1 font-semibold leading-6 text-white transition-all duration-500 ease-in-out hover:border-b-white"
+    >
+      <span>{{ $t("moreOffers") }}</span>
+      <ChevronDownIcon class="h-5 w-5" aria-hidden="true" />
+    </PopoverButton>
 
     <transition
-      enter-active-class="transition ease-out duration-100"
-      enter-from-class="transform opacity-0 scale-95"
-      enter-to-class="transform opacity-100 scale-100"
-      leave-active-class="transition ease-in duration-75"
-      leave-from-class="transform opacity-100 scale-100"
-      leave-to-class="transform opacity-0 scale-95"
+      enter-active-class="transition ease-out duration-200"
+      enter-from-class="opacity-0 translate-y-1"
+      enter-to-class="opacity-100 translate-y-0"
+      leave-active-class="transition ease-in duration-150"
+      leave-from-class="opacity-100 translate-y-0"
+      leave-to-class="opacity-0 translate-y-1"
     >
-      <MenuItems
-        class="absolute right-0 z-10 mt-2 w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+      <PopoverPanel
+        class="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4"
       >
-        <div class="py-1">
-          <MenuItem
-            v-for="lang in availableLocales"
-            :key="availableLocales"
-            v-slot="{ active }"
-          >
-            <NuxtLink
-              :to="switchLocalePath(lang)"
-              :class="[
-                active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                'block px-4 py-2 text-sm',
-              ]"
-            >
-              {{ lang }}
-            </NuxtLink>
-          </MenuItem>
+        <div
+          class="text-md w-56 shrink rounded-xl bg-white p-4 font-semibold leading-6 text-gray-900 shadow-lg"
+        >
+          <NuxtLink
+            v-for="item in submenu"
+            :key="item.name"
+            :to="localePath(item.to)"
+            class="block rounded-lg p-2 hover:bg-gray-50"
+            >{{ $t(item.name) }}
+          </NuxtLink>
         </div>
-      </MenuItems>
+      </PopoverPanel>
     </transition>
-  </Menu>
+  </Popover>
 </template>
 
 <script setup>
-import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/vue";
+import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue";
 import { ChevronDownIcon } from "@heroicons/vue/20/solid";
-defineProps(["availableLocales"]);
-const switchLocalePath = useSwitchLocalePath();
-const { locale } = useI18n();
+const { t } = useI18n();
+
+const submenu = [
+  { name: "rentalObjects", to: "/mietobjekte" },
+  { name: "permanentCamping", to: "/dauercamping" },
+  { name: "events", to: "/events" },
+  { name: "back2Basic", to: "/back2basic" },
+];
 </script>
