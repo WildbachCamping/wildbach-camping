@@ -22,7 +22,7 @@ const props = defineProps({
         </svg>
 
         <div
-          class="relative px-6 py-10 py-32 sm:py-20 md:py-40 lg:px-8 lg:py-56 lg:pr-0"
+          class="relative px-6 py-10 sm:py-20 md:py-40 lg:px-8 lg:py-56 lg:pr-0"
         >
           <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
             <h1
