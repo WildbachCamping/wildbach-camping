@@ -33,7 +33,7 @@ const props = defineProps({
       </a>
     </div>
   </div>
-  <Dialog />
+  <!-- <Dialog /> -->
   <div
     class="relative max-h-[92vh] bg-cover bg-bottom bg-no-repeat md:mt-6 md:max-h-[90vh] md:bg-top"
     :style="{ backgroundImage: `url(${blok.image.filename})` }"
