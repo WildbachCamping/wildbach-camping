@@ -28,12 +28,12 @@ export default defineNuxtConfig({
         {
           rel: "alternate",
           hreflang: "de",
-          href: "https://www.wildbach-camping.de",
+          href: "https://wildbach-camping.de",
         },
         {
           rel: "alternate",
           hreflang: "nl",
-          href: "https://www.wildbach-camping.de/nl",
+          href: "https://wildbach-camping.de/nl",
         },
       ],
     },
@@ -42,7 +42,7 @@ export default defineNuxtConfig({
     name: "Wildbach Camping",
     description:
       "Wildbach Camping in Hellenthal am Nationalpark Eifel I Familienfreundliche und entspannte Atmosphäre I Naturbelassen am Bach mit Feuerstellen I Auszeit und Urlaub in der Natur",
-    url: "https://www.wildbach-camping.de",
+    url: "https://wildbach-camping.de",
     trailingSlash: true,
   },
   ssr: true,

@@ -21,7 +21,9 @@ const props = defineProps({
           <polygon points="0,0 90,0 50,100 0,100" />
         </svg>
 
-        <div class="relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0">
+        <div
+          class="relative px-6 py-10 py-32 sm:py-20 md:py-40 lg:px-8 lg:py-56 lg:pr-0"
+        >
           <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
             <h1
               class="text-4xl font-bold tracking-tight text-primary-grey sm:text-6xl"
@@ -39,7 +41,7 @@ const props = defineProps({
                 >{{ $t("bookNow") }}</NuxtLink
               >
               <NuxtLink
-                to="/camping"
+                to="#welcome"
                 class="text-sm font-semibold leading-6 text-gray-900"
                 >{{ $t("learnMore") }}
                 <span aria-hidden="true">→</span></NuxtLink
