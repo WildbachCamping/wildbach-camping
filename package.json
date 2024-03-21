@@ -16,11 +16,11 @@
     "prettier-plugin-tailwindcss": "^0.3.0"
   },
   "dependencies": {
+    "@cheers-io/nuxt-storyblok-sitemap": "^1.4.0",
     "@headlessui/vue": "^1.7.19",
-    "nuxt-gtag": "^2.0.5",
-    "@nuxtjs/i18n": "^8.2.0",
     "@heroicons/vue": "^2.1.1",
     "@nuxt/devtools": "^1.0.8",
+    "@nuxtjs/i18n": "^8.2.0",
     "@nuxtjs/robots": "^3.0.0",
     "@nuxtjs/sitemap": "^5.1.2",
     "@nuxtjs/tailwindcss": "^6.11.4",
@@ -29,6 +29,7 @@
     "@tailwindcss/typography": "^0.5.10",
     "@weareheavy/nuxt-cookie-consent": "^1.0.1",
     "aos": "^2.3.4",
+    "nuxt-gtag": "^2.0.5",
     "swiper": "^8.4.7"
   }
 }

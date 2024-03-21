@@ -1,8 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  typescript: {
-    shim: false,
-  },
+  ssr: true,
   app: {
     pageTransition: { name: "page", mode: "out-in" },
 
@@ -38,14 +36,30 @@ export default defineNuxtConfig({
       ],
     },
   },
-  site: {
-    name: "Wildbach Camping",
-    description:
-      "Wildbach Camping in Hellenthal am Nationalpark Eifel I Familienfreundliche und entspannte Atmosphäre I Naturbelassen am Bach mit Feuerstellen I Auszeit und Urlaub in der Natur",
-    url: "https://wildbach-camping.de",
-    trailingSlash: true,
+  // site: {
+  //   name: "Wildbach Camping",
+  //   description:
+  //     "Wildbach Camping in Hellenthal am Nationalpark Eifel I Familienfreundliche und entspannte Atmosphäre I Naturbelassen am Bach mit Feuerstellen I Auszeit und Urlaub in der Natur",
+  //   url: process.env.NUXT_PUBLIC_SITE_URL || "https://wildbach-camping.de",
+  //   trailingSlash: true,
+  // },
+
+  sitemap: {
+    urls: async () => {
+      const response = await fetch(
+        "https://api.storyblok.com/v2/cdn/links?token=5BPLR1IRtWmAD0Thtqd4mgtt&version=published"
+      );
+      const { links } = await response.json();
+
+      const linksArray = Object.values(links).map((link) => link);
+      return linksArray.map((link) => ({
+        url: link?.real_path,
+        lastmod: new Date(),
+        changefreq: "weekly",
+        priority: 0.8,
+      }));
+    },
   },
-  ssr: true,
 
   build: {
     transpile: ["fsevents"],
@@ -70,6 +84,16 @@ export default defineNuxtConfig({
         locales: ["de", "nl"],
         defaultLocale: "de",
         vueI18n: "./i18n.config.ts", // if you are using custom path, default
+      },
+    ],
+    [
+      "@cheers-io/nuxt-storyblok-sitemap",
+      {
+        accessToken: process.env.STORYBLOK_ACCESS_TOKEN,
+        version: "published",
+        baseUrl: "https://www.wildbach-camping.de",
+        apiUrl: "http://api.storyblok.com/v2/cdn/links",
+        uri: "/_sitemap.xml",
       },
     ],
     [

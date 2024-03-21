@@ -28,15 +28,7 @@
             }}</NuxtLink
           >
         </li>
-        <li class="cursor-pointer" @click="toggleModal">
-          <NuxtLink
-            class="ease border-b-[2px] border-transparent transition-all duration-500 hover:border-b-white"
-            to=""
-            >{{
-              locale == "nl" ? "Cookie-instellingen" : "Cookie-Einstellungen"
-            }}</NuxtLink
-          >
-        </li>
+
         <li class="my-1 flex">
           <NuxtLink
             class="ease border-b-[2px] border-transparent transition-all duration-500 hover:border-b-white"
