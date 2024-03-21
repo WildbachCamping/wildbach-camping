@@ -9,34 +9,52 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="flex flex-col items-center">
-    <div
-      class="absolute bottom-[50%] z-10 mt-10 rounded-sm bg-primary-white/[.7] p-6 font-bold tracking-widest text-secondary-green md:p-20"
-      data-aos="fade-up"
-      data-aos-duration="2500"
-      data-aos-delay="500"
-    >
-      <div class="flex flex-col items-center text-center">
-        <h1
-          class="min-w-max pb-5 text-4xl font-bold text-secondary-green md:text-5xl"
+  <div class="relative">
+    <div class="mx-auto max-w-7xl">
+      <div class="relative z-10 pt-14 lg:w-full lg:max-w-2xl">
+        <svg
+          class="absolute inset-y-0 right-8 hidden h-full w-80 translate-x-1/2 transform fill-white lg:block"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+          aria-hidden="true"
         >
-          {{ blok.title }}
-        </h1>
-        <div class="text-xl">{{ blok.subtitle }}</div>
+          <polygon points="0,0 90,0 50,100 0,100" />
+        </svg>
+
+        <div class="relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0">
+          <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
+            <h1
+              class="text-4xl font-bold tracking-tight text-primary-grey sm:text-6xl"
+            >
+              {{ blok.title }}
+            </h1>
+            <p class="mt-6 text-lg leading-8 text-gray-600">
+              {{ blok.subtitle }}
+            </p>
+            <div class="mt-10 flex items-center gap-x-6">
+              <NuxtLink
+                to="https://wildbach-camping.campalot.de/de"
+                target="_blank"
+                class="rounded-md bg-secondary-green px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-secondary-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-green"
+                >{{ $t("bookNow") }}</NuxtLink
+              >
+              <NuxtLink
+                to="/camping"
+                class="text-sm font-semibold leading-6 text-gray-900"
+                >{{ $t("learnMore") }}
+                <span aria-hidden="true">→</span></NuxtLink
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div
-      class="min-w-screen absolute bottom-10 z-10 mx-auto flex h-10 w-10 animate-bounce items-center justify-center rounded-full bg-primary-green shadow-lg"
-    >
-      <a href="#welcome">
-        <ArrowDownIcon class="h-8 w-8" />
-      </a>
+    <div class="bg-gray-50 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+      <img
+        class="aspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full"
+        :src="blok.image.filename"
+        alt=""
+      />
     </div>
   </div>
-  <!-- <Dialog /> -->
-  <div
-    class="relative max-h-[92vh] bg-cover bg-bottom bg-no-repeat md:mt-6 md:max-h-[90vh] md:bg-top"
-    :style="{ backgroundImage: `url(${blok.image.filename})` }"
-    style="height: 100vh"
-  ></div>
 </template>

@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Eurostile';
-  src: local(Eurostile), url(~/assets/fonts/eurostile.ttf) format('truetype');
+  font-family: "Eurostile";
+  src: local(Eurostile), url(~/assets/fonts/eurostile.ttf) format("truetype");
 }
 
 @layer base {
@@ -13,17 +13,17 @@
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
   }
-  .router-link-active,
+  /* .router-link-active,
   .router-link-exact-active {
     @apply border-b-[2px] border-b-secondary-green;
-  }
+  } */
   h1,
   h2,
   h3 {
-    @apply font-normal md:font-bold text-primary-grey;
+    @apply font-normal text-primary-grey md:font-bold;
   }
   h1 {
-    @apply text-3xl sm:text-4xl md:text-5xl mb-4;
+    @apply mb-4 text-3xl sm:text-4xl md:text-5xl;
   }
 
   h2,
@@ -39,17 +39,17 @@
     pointer-events: auto !important;
   }
 
-  html:not(.no-js) [data-aos^='fade'][data-aos^='fade'] {
+  html:not(.no-js) [data-aos^="fade"][data-aos^="fade"] {
     opacity: 1 !important;
   }
 
-  html:not(.no-js) [data-aos='fade-up'] {
+  html:not(.no-js) [data-aos="fade-up"] {
     transform: none !important;
   }
-  html:not(.no-js) [data-aos='fade-left'] {
+  html:not(.no-js) [data-aos="fade-left"] {
     transform: none !important;
   }
-  html:not(.no-js) [data-aos='fade-right'] {
+  html:not(.no-js) [data-aos="fade-right"] {
     transform: none !important;
   }
 }
