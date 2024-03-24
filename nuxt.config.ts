@@ -45,6 +45,11 @@ export default defineNuxtConfig({
   // },
 
   sitemap: {
+    xslColumns: [
+      { label: "URL", width: "50%" },
+      { label: "Last Modified", select: "sitemap:lastmod", width: "25%" },
+      { label: "Hreflangs", select: "count(xhtml)", width: "25%" },
+    ],
     urls: async () => {
       const response = await fetch(
         "https://api.storyblok.com/v2/cdn/links?token=5BPLR1IRtWmAD0Thtqd4mgtt&version=published"
