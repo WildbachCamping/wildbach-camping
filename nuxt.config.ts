@@ -62,6 +62,7 @@ export default defineNuxtConfig({
         lastmod: new Date(),
         changefreq: "weekly",
         priority: 0.8,
+        _i18nTransform: true,
       }));
     },
   },
