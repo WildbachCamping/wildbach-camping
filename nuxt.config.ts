@@ -36,13 +36,13 @@ export default defineNuxtConfig({
       ],
     },
   },
-  // site: {
-  //   name: "Wildbach Camping",
-  //   description:
-  //     "Wildbach Camping in Hellenthal am Nationalpark Eifel I Familienfreundliche und entspannte Atmosphäre I Naturbelassen am Bach mit Feuerstellen I Auszeit und Urlaub in der Natur",
-  //   url: process.env.NUXT_PUBLIC_SITE_URL || "https://wildbach-camping.de",
-  //   trailingSlash: true,
-  // },
+  site: {
+    name: "Wildbach Camping",
+    description:
+      "Wildbach Camping in Hellenthal am Nationalpark Eifel I Familienfreundliche und entspannte Atmosphäre I Naturbelassen am Bach mit Feuerstellen I Auszeit und Urlaub in der Natur",
+    url: process.env.NUXT_PUBLIC_SITE_URL || "https://wildbach-camping.de",
+    trailingSlash: true,
+  },
 
   sitemap: {
     xslColumns: [
