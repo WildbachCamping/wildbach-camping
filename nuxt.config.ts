@@ -43,6 +43,9 @@ export default defineNuxtConfig({
       ],
     },
   },
+  robots: {
+    sitemap: ["/de-sitemap.xml", "/nl-sitemap.xml"],
+  },
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL || "https://wildbach-camping.de",
     trailingSlash: true,
@@ -108,17 +111,8 @@ export default defineNuxtConfig({
       },
     ],
     "@vueuse/nuxt",
-    [
-      "@nuxtjs/robots",
-      {
-        rules: {
-          UserAgent: "*",
-          Disallow: "/",
-          Sitemap: "https://www.wildbach-camping.de/sitemap.xml",
-        },
-      },
-    ],
-    "@nuxtjs/sitemap",
+
+    "@nuxtjs/seo",
     ["@storyblok/nuxt", { accessToken: process.env.STORYBLOK_ACCESS_TOKEN }],
   ],
 });
