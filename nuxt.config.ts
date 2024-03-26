@@ -44,6 +44,7 @@ export default defineNuxtConfig({
     },
   },
   robots: {
+    allow: "*",
     sitemap: ["/de-sitemap.xml", "/nl-sitemap.xml"],
   },
   site: {
