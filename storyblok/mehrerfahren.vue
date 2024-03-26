@@ -8,12 +8,14 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="container mt-28 flex flex-col items-center justify-center gap-6">
+  <div
+    class="container flex flex-col items-center justify-center gap-6 py-4 md:mt-28"
+  >
     <h2 class="text-center text-3xl">
       {{ blok.more }}
     </h2>
     <div
-      class="container mt-8 flex flex-col items-center justify-center gap-6 lg:flex-row"
+      class="container flex flex-col items-center justify-center gap-6 lg:flex-row"
     >
       <div class="flex flex-col items-center md:pt-12">
         <h2>{{ blok.header1 }}</h2>
