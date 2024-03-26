@@ -22,7 +22,6 @@
         <li class="cursor-pointer">
           <NuxtLink
             class="ease border-b-[2px] border-transparent transition-all duration-500 hover:border-b-white"
-            to="/datenschutz"
             :to="localePath('/datenschutz')"
             >{{ $t("dataProtection") }}</NuxtLink
           >
