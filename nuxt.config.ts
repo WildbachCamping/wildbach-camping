@@ -1,13 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: true,
-  nitro: {
-    prerender: {
-      crawlLinks: true,
-      routes: ["/", "/nl", "/sitemap_index.xml", "/nl-sitemap.xml"],
-      // ignore: ['/tak', '/konfiguration', '/checkout'],
-    },
-  },
+  // nitro: {
+  //   prerender: {
+  //     crawlLinks: true,
+  //     routes: ["/", "/nl", "/sitemap_index.xml", "/nl-sitemap.xml"],
+  //     // ignore: ['/tak', '/konfiguration', '/checkout'],
+  //   },
+  // },
   app: {
     pageTransition: { name: "page", mode: "out-in" },
 
