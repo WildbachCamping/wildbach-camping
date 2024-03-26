@@ -1,6 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: true,
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ["/", "/nl", "/sitemap_index.xml", "/nl-sitemap.xml"],
+      // ignore: ['/tak', '/konfiguration', '/checkout'],
+    },
+  },
   app: {
     pageTransition: { name: "page", mode: "out-in" },
 
@@ -37,39 +44,26 @@ export default defineNuxtConfig({
     },
   },
   site: {
-    name: "Wildbach Camping",
-    description:
-      "Wildbach Camping in Hellenthal am Nationalpark Eifel I Familienfreundliche und entspannte Atmosphäre I Naturbelassen am Bach mit Feuerstellen I Auszeit und Urlaub in der Natur",
     url: process.env.NUXT_PUBLIC_SITE_URL || "https://wildbach-camping.de",
     trailingSlash: true,
   },
-
   sitemap: {
-    xslColumns: [
-      { label: "URL", width: "50%" },
-      { label: "Last Modified", select: "sitemap:lastmod", width: "25%" },
-      { label: "Hreflangs", select: "count(xhtml)", width: "25%" },
-    ],
+    // sources: ["/api/__sitemap__/urls"],
     urls: async () => {
       const response = await fetch(
-        "https://api.storyblok.com/v2/cdn/links?token=5BPLR1IRtWmAD0Thtqd4mgtt&version=published"
+        `https://api.storyblok.com/v2/cdn/links?token=${process.env.STORYBLOK_ACCESS_TOKEN}&version=published`
       );
       const { links } = await response.json();
 
       const linksArray = Object.values(links).map((link) => link);
       return linksArray.map((link) => ({
-        url: link?.real_path,
+        loc: link?.real_path,
         lastmod: new Date(),
-        changefreq: "weekly",
-        priority: 0.8,
         _i18nTransform: true,
       }));
     },
   },
 
-  build: {
-    transpile: ["fsevents"],
-  },
   runtimeConfig: {
     public: {
       version: process.env.VERSION,
@@ -92,16 +86,7 @@ export default defineNuxtConfig({
         vueI18n: "./i18n.config.ts", // if you are using custom path, default
       },
     ],
-    [
-      "@cheers-io/nuxt-storyblok-sitemap",
-      {
-        accessToken: process.env.STORYBLOK_ACCESS_TOKEN,
-        version: "published",
-        baseUrl: "https://www.wildbach-camping.de",
-        apiUrl: "http://api.storyblok.com/v2/cdn/links",
-        uri: "/_sitemap.xml",
-      },
-    ],
+
     [
       "nuxt-gtag",
       {

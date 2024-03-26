@@ -16,7 +16,6 @@
     "prettier-plugin-tailwindcss": "^0.3.0"
   },
   "dependencies": {
-    "@cheers-io/nuxt-storyblok-sitemap": "^1.4.0",
     "@headlessui/vue": "^1.7.19",
     "@heroicons/vue": "^2.1.1",
     "@nuxt/devtools": "^1.0.8",
