@@ -12,14 +12,7 @@ const props = defineProps({
     <div class="w-full text-center">
       <h2 class="mb-4 text-3xl">{{ blok.title }}</h2>
     </div>
-    <div
-      v-if="blok.subtitle"
-      class="pt-6 text-center"
-      data-aos="fade-right"
-      data-aos-delay="700"
-      data-aos-offset="500"
-      data-aos-duration="2000"
-    >
+    <div v-if="blok.subtitle" class="pt-6 text-center">
       <h2 class="mb-4 text-5xl">{{ blok.subtitle }}</h2>
     </div>
   </section>

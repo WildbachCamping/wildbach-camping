@@ -9,25 +9,13 @@ const props = defineProps({
 
 <template>
   <div class="container mt-28 flex flex-col items-center justify-center gap-6">
-    <h2
-      class="text-center text-3xl"
-      data-aos="fade-up"
-      data-aos-duration="2500"
-      data-aos-delay="500"
-      data-aos-offset="350"
-    >
+    <h2 class="text-center text-3xl">
       {{ blok.more }}
     </h2>
     <div
       class="container mt-8 flex flex-col items-center justify-center gap-6 lg:flex-row"
     >
-      <div
-        class="flex flex-col items-center md:pt-12"
-        data-aos="fade-up"
-        data-aos-duration="2500"
-        data-aos-offset="450"
-        data-aos-delay="500"
-      >
+      <div class="flex flex-col items-center md:pt-12">
         <h2>{{ blok.header1 }}</h2>
         <img
           :src="blok.image1.filename"
@@ -43,13 +31,7 @@ const props = defineProps({
           </NuxtLink>
         </button>
       </div>
-      <div
-        class="flex flex-col items-center pt-12"
-        data-aos="fade-up"
-        data-aos-duration="2500"
-        data-aos-offset="450"
-        data-aos-delay="500"
-      >
+      <div class="flex flex-col items-center pt-12">
         <h2>{{ blok.header2 }}</h2>
         <img
           :src="blok.image2.filename"
@@ -65,13 +47,7 @@ const props = defineProps({
           </NuxtLink>
         </button>
       </div>
-      <div
-        class="flex flex-col items-center pt-12"
-        data-aos="fade-up"
-        data-aos-duration="2500"
-        data-aos-offset="450"
-        data-aos-delay="500"
-      >
+      <div class="flex flex-col items-center pt-12">
         <h2>{{ blok.header3 }}</h2>
         <img
           :src="blok.image3.filename"

@@ -15,12 +15,7 @@ const props = defineProps({
           :class="blok.type === 'left' ? 'lg:flex-row-reverse' : 'lg:flex-row'"
         >
           <!-- Image -->
-          <div
-            class="mb-10 flex flex-1 justify-center lg:mb-0"
-            :data-aos="blok.animation"
-            data-aos-duration="2000"
-            data-aos-offset="250"
-          >
+          <div class="mb-10 flex flex-1 justify-center lg:mb-0">
             <img
               class="rounded-md shadow-lg"
               :src="blok.image.filename"
@@ -28,12 +23,7 @@ const props = defineProps({
             />
           </div>
           <!-- Content -->
-          <div
-            class="flex flex-1 flex-col items-center lg:items-start"
-            :data-aos="blok.animation"
-            data-aos-duration="2000"
-            data-aos-offset="250"
-          >
+          <div class="flex flex-1 flex-col items-center lg:items-start">
             <h2 class="text-center text-3xl">{{ blok.title }}</h2>
             <p class="my-4 text-justify lg:text-left" v-if="blok.subtitle">
               {{ blok.subtitle }}
