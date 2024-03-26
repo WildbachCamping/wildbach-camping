@@ -43,7 +43,7 @@
             >
             <NuxtLink
               class="border-b-[2px] border-transparent pb-1 transition-all duration-500 ease-in-out hover:border-b-white"
-              to="/galerie"
+              :to="localePath('/galerie')"
               >{{ $t("gallery") }}</NuxtLink
             >
             <NuxtLink
@@ -95,7 +95,7 @@
         <DisclosureButton class="block">
           <NuxtLink
             class="border-b-[2px] border-transparent pb-1 transition-all duration-500 ease-in-out hover:border-b-white"
-            to="/galerie"
+            :to="localePath('/galerie')"
             >{{ $t("gallery") }}</NuxtLink
           ></DisclosureButton
         >

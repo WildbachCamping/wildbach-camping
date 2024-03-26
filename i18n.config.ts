@@ -14,6 +14,9 @@ export default defineI18nConfig(() => ({
       events: "Events",
       surroundings: "Umgebung",
       learnMore: "Mehr erfahren",
+      contact: "Kontakt",
+      dataProtection: "Datenschutz",
+      imprint: "Impressum",
     },
     nl: {
       bookNow: "Boek nu",
@@ -27,6 +30,9 @@ export default defineI18nConfig(() => ({
       events: "Events",
       surroundings: "Omgeving",
       learnMore: "Meer weten",
+      contact: "Contact",
+      dataProtection: "Gegevensbescherming",
+      imprint: "Afdruk",
     },
   },
 }));

@@ -7,25 +7,24 @@
         <li class="cursor-pointer">
           <NuxtLink
             class="ease border-b-[2px] border-transparent transition-all duration-500 hover:border-b-white"
-            to="/kontakt"
-            >{{ locale == "nl" ? "Contact" : "Kontakt" }}</NuxtLink
+            :to="localePath('/kontakt')"
+            >{{ $t("contact") }}</NuxtLink
           >
         </li>
 
         <li class="cursor-pointer">
           <NuxtLink
             class="ease border-b-[2px] border-transparent transition-all duration-500 hover:border-b-white"
-            to="/impressum"
-            >{{ locale == "nl" ? "Afdruk" : "Impressum" }}</NuxtLink
+            :to="localePath('/impressum')"
+            >{{ $t("imprint") }}</NuxtLink
           >
         </li>
         <li class="cursor-pointer">
           <NuxtLink
             class="ease border-b-[2px] border-transparent transition-all duration-500 hover:border-b-white"
             to="/datenschutz"
-            >{{
-              locale == "nl" ? "Gegevensbescherming" : "Datenschutz"
-            }}</NuxtLink
+            :to="localePath('/datenschutz')"
+            >{{ $t("dataProtection") }}</NuxtLink
           >
         </li>
 
@@ -82,5 +81,5 @@
 </template>
 
 <script setup>
-const { locale } = useI18n();
+const localePath = useLocalePath();
 </script>
