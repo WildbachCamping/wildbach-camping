@@ -33,22 +33,22 @@ export default defineNuxtConfig({
         {
           rel: "alternate",
           hreflang: "de",
-          href: "https://wildbach-camping.de",
+          href: "https://www.wildbach-camping.de",
         },
         {
           rel: "alternate",
           hreflang: "nl",
-          href: "https://wildbach-camping.de/nl",
+          href: "https://www.wildbach-camping.de/nl",
         },
       ],
     },
   },
   robots: {
-    allow: "*",
+    allow: "/",
     sitemap: ["/de-sitemap.xml", "/nl-sitemap.xml"],
   },
   site: {
-    url: process.env.NUXT_PUBLIC_SITE_URL || "https://wildbach-camping.de",
+    url: process.env.NUXT_PUBLIC_SITE_URL || "https://www.wildbach-camping.de",
     trailingSlash: true,
   },
   sitemap: {
