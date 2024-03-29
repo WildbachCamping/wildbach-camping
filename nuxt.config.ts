@@ -12,14 +12,6 @@ export default defineNuxtConfig({
     pageTransition: { name: "page", mode: "out-in" },
 
     head: {
-      title: "Wildbach Camping in der Eifel",
-      meta: [
-        {
-          name: "description",
-          content:
-            " Wildbach Camping in Hellenthal am Nationalpark Eifel I Familienfreundliche und entspannte Atmosphäre I Naturbelassen am Bach mit Feuerstellen I Auszeit und Urlaub in der Natur",
-        },
-      ],
       link: [
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
         {
@@ -30,26 +22,28 @@ export default defineNuxtConfig({
         { rel: "icon", sizes: "32x32", href: "/favicon-32x32.png" },
         { rel: "icon", sizes: "16x16", href: "/favicon-16x16.png" },
         { rel: "manifest", href: "/site.webmanifest" },
-        {
-          rel: "alternate",
-          hreflang: "de",
-          href: "https://www.wildbach-camping.de",
-        },
-        {
-          rel: "alternate",
-          hreflang: "nl",
-          href: "https://www.wildbach-camping.de/nl",
-        },
+        // {
+        //   rel: "alternate",
+        //   hreflang: "de",
+        //   href: "https://www.wildbach-camping.de",
+        // },
+        // {
+        //   rel: "alternate",
+        //   hreflang: "nl",
+        //   href: "https://www.wildbach-camping.de/nl",
+        // },
       ],
     },
   },
   robots: {
-    allow: "/",
     sitemap: ["/de-sitemap.xml", "/nl-sitemap.xml"],
   },
   site: {
-    url: process.env.NUXT_PUBLIC_SITE_URL || "https://www.wildbach-camping.de",
+    url: process.env.NUXT_PUBLIC_SITE_URL || "https://www.wildbach-camping.de/",
     trailingSlash: true,
+    description:
+      'Wildbach Camping in Hellenthal am Nationalpark Eifel I Familienfreundliche und entspannte Atmosphäre I Naturbelassen am Bach mit Feuerstellen I Auszeit und Urlaub in der Natur"',
+    name: "Wildbach Camping",
   },
   sitemap: {
     // sources: ["/api/__sitemap__/urls"],
@@ -85,9 +79,13 @@ export default defineNuxtConfig({
       "@nuxtjs/i18n",
       {
         strategy: "prefix_except_default",
-        locales: ["de", "nl"],
+        locales: [
+          { code: "de", iso: "de-DE" },
+          { code: "nl", iso: "nl-NL" },
+        ],
         defaultLocale: "de",
-        vueI18n: "./i18n.config.ts", // if you are using custom path, default
+        excludeAppSources: true,
+        seo: true,
       },
     ],
 

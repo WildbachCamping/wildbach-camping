@@ -46,6 +46,8 @@ const { locale, locales } = useI18n();
 const switchLocalePath = useSwitchLocalePath();
 
 const availableLocales = computed(() => {
-  return locales.value.filter((i) => i.code !== locale.value);
+  const lang = locales.value.map((locale) => locale.code);
+  console.log(lang);
+  return lang.filter((i) => i.code !== locale.value);
 });
 </script>
