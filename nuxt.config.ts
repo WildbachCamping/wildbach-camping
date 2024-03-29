@@ -36,7 +36,7 @@ export default defineNuxtConfig({
     },
   },
   robots: {
-    sitemap: ["/de-sitemap.xml", "/nl-sitemap.xml"],
+    sitemap: ["/de-DE-sitemap.xml", "/nl-NL-sitemap.xml"],
   },
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL || "https://www.wildbach-camping.de/",
