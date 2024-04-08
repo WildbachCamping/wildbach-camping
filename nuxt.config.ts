@@ -69,6 +69,7 @@ export default defineNuxtConfig({
       "@nuxtjs/i18n",
       {
         strategy: "prefix_except_default",
+        baseUrl: "https://www.wildbach-camping.de",
         locales: [
           { code: "de", iso: "de-DE" },
           { code: "nl", iso: "nl-NL" },
