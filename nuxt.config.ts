@@ -75,6 +75,7 @@ export default defineNuxtConfig({
       {
         siteKey: process.env.TURNSTILE_SITE_KEY,
         addValidateEndpoint: true,
+        size: "compact",
       },
     ],
 

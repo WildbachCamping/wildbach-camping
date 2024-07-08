@@ -16,7 +16,6 @@ const form = reactive({
 });
 const token = ref();
 
-console.log(token);
 function resetForm() {
   form.senderEmail = "";
   form.senderName = "";
@@ -36,7 +35,7 @@ async function onSubmit() {
       token: token.value,
     },
   });
-  if (!response1.value.success) {
+  if (!response.value.success) {
     alert("You are a bot!");
     return;
   }
@@ -161,12 +160,12 @@ const props = defineProps({
           <p class="col-span-4 text-sm">* {{ blok.required }}</p>
           <NuxtTurnstile v-model="token" class="col-span-4" />
           <button
-            :disabled="!token"
             class="h-8 w-24 rounded-full bg-gray-800/90 text-white duration-300 hover:bg-gray-800/70"
           >
             {{ blok.button }}
           </button>
         </form>
+        <!-- <pre>{{ token }}</pre> -->
       </div>
     </div>
   </section>
