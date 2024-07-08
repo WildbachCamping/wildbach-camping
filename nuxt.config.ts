@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: true,
+
   // nitro: {
   //   prerender: {
   //     crawlLinks: true,
@@ -25,9 +26,11 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   robots: {
     sitemap: ["/de-DE-sitemap.xml", "/nl-NL-sitemap.xml"],
   },
+
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL || "https://www.wildbach-camping.de",
 
@@ -35,6 +38,7 @@ export default defineNuxtConfig({
       'Wildbach Camping in Hellenthal am Nationalpark Eifel I Familienfreundliche und entspannte Atmosphäre I Naturbelassen am Bach mit Feuerstellen I Auszeit und Urlaub in der Natur"',
     name: "Campingplatz in der Eifel: Wildbach Camping",
   },
+
   sitemap: {
     // sources: ["/api/__sitemap__/urls"],
     urls: async () => {
@@ -56,11 +60,24 @@ export default defineNuxtConfig({
     public: {
       version: process.env.VERSION,
     },
+    turnstile: {
+      // This can be overridden at runtime via the NUXT_TURNSTILE_SECRET_KEY
+      // environment variable.
+      secretKey: "0x4AAAAAAAeo_BY4xSfqg6U4RC_wk0QyirE",
+    },
   },
 
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxt/devtools",
+    [
+      "@nuxtjs/turnstile",
+      {
+        siteKey: process.env.TURNSTILE_SITE_KEY,
+        addValidateEndpoint: true,
+      },
+    ],
+
     [
       "@weareheavy/nuxt-cookie-consent",
       { provider: "cookiebot", cbid: process.env.COOKIEBOT_ID, dev: true },
@@ -105,4 +122,6 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     ["@storyblok/nuxt", { accessToken: process.env.STORYBLOK_ACCESS_TOKEN }],
   ],
+
+  compatibilityDate: "2024-07-08",
 });

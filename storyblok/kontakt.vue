@@ -1,12 +1,4 @@
-<script setup>
-// import { useCookie } from "vue-cookie-next";
-
-// const cookie = useCookie();
-
-// const cookieConsent = computed(() => {
-//   return cookie.getCookie("cookie_consent") === "true";
-// });
-const cookieConsent = true;
+<script setup lang="ts">
 const endpoint = `https://wyyk4q3zxh.execute-api.eu-central-1.amazonaws.com/default/SendWildbachEmail`;
 
 const form = reactive({
@@ -22,7 +14,9 @@ const form = reactive({
     country: "",
   },
 });
+const token = ref();
 
+console.log(token);
 function resetForm() {
   form.senderEmail = "";
   form.senderName = "";
@@ -34,10 +28,25 @@ function resetForm() {
   form.senderAddress.postcode = "";
   form.senderAddress.country = "";
 }
+const response = ref("");
+async function onSubmit() {
+  response.value = await $fetch("/api/submit", {
+    method: "POST",
+    body: {
+      token: token.value,
+    },
+  });
+  if (!response1.value.success) {
+    alert("You are a bot!");
+    return;
+  }
+  sendMessage();
+}
 
 async function sendMessage() {
   $fetch(endpoint, { method: "post", body: form, mode: "no-cors" });
   window.alert("Deine Anfrage wurde versendet.");
+
   resetForm();
 }
 const props = defineProps({
@@ -78,7 +87,7 @@ const props = defineProps({
         <h2 class="mb-4 mt-4 text-4xl md:mt-0">{{ blok.header4 }}</h2>
         <h2 class="mb-4 text-2xl">{{ blok.header5 }}</h2>
         <form
-          @submit.prevent="sendMessage"
+          @submit.prevent="onSubmit"
           name="wildbach"
           method="POST"
           class="grid grid-flow-row grid-cols-4 gap-2"
@@ -150,7 +159,9 @@ const props = defineProps({
             class="col-span-4"
           ></textarea>
           <p class="col-span-4 text-sm">* {{ blok.required }}</p>
+          <NuxtTurnstile v-model="token" class="col-span-4" />
           <button
+            :disabled="!token"
             class="h-8 w-24 rounded-full bg-gray-800/90 text-white duration-300 hover:bg-gray-800/70"
           >
             {{ blok.button }}
