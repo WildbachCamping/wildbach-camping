@@ -1,5 +1,6 @@
 <template>
   <main role="main" class="min-h-screen">
+    <!-- <Dialog /> -->
     <StoryblokComponent v-if="story" :blok="story.content" />
   </main>
 </template>

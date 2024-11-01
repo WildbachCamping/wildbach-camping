@@ -31,17 +31,24 @@
             >
               <DialogTitle
                 as="h3"
-                class="text-3xl font-medium leading-6 text-gray-900"
+                class="pb-3 text-3xl font-medium leading-6 text-gray-900"
               >
-                Winterpause
+                {{ $t("bannerText.title") }}
               </DialogTitle>
               <div class="mt-2">
                 <p class="text-sm text-gray-500">
-                  Liebe Gäste, wir gehen am 1. November in die Winterpause und
-                  sind ab Ostern 2024 wieder für euch da. Die Stellplätze für
-                  2024 sind ab dem 15.12.2023 über unsere Website buchbar. Wir
-                  wünschen euch einen schönen Winter und freuen uns auf ein
-                  Wiedersehen in der nächsten Saison.
+                  {{ $t("bannerText.firstLine") }}
+                </p>
+                <p class="text-sm text-gray-500">
+                  {{ $t("bannerText.secondLine") }}
+                </p>
+                <br />
+                <p class="text-sm text-gray-500">
+                  {{ $t("bannerText.thirdLine") }}
+                </p>
+                <br />
+                <p class="text-sm text-gray-500">
+                  {{ $t("bannerText.fourthLine") }}
                 </p>
               </div>
 
