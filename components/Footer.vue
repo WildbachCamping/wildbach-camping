@@ -60,7 +60,7 @@
         target="_blank"
         rel="noopener"
         ><img
-          class="w-[150px]"
+          class="w-[130px]"
           src="@/assets/images/award1.png"
           alt="BeyondCamping Campingplatz Auszeichnung"
       /></a>
