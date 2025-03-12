@@ -26,7 +26,7 @@ const props = defineProps({
             <div class="my-4 flex flex-col gap-4 text-justify lg:text-left">
               <h2>{{ blok.title }}</h2>
               <p>{{ blok.text }}</p>
-              <p>
+              <p v-if="blok.anmeldung">
                 Anmeldung:
                 <a
                   class="underline underline-offset-2"
