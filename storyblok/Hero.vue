@@ -58,6 +58,6 @@ const props = defineProps({
         alt=""
       />
     </div>
-    <Dialog />
+     <!-- <Dialog /> -->
   </div>
 </template>
